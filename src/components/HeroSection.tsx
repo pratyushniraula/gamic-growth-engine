@@ -7,20 +7,20 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-            B2B Service Providers & SaaS Companies
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-primary/20 text-primary text-sm font-semibold mb-8 border border-primary/20">
+            ✨ Premium B2B Lead Generation Agency
           </div>
           
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            We Book You 
-            <span className="bg-gradient-hero bg-clip-text text-transparent"> Qualified Meetings</span>
-            <br />On Complete Autopilot
+            Transform Cold Prospects Into 
+            <span className="bg-gradient-hero bg-clip-text text-transparent"> Hot Meetings</span>
+            <br />While You Sleep
           </h1>
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Our AI-powered outbound system uses Clay and personalized cold email to book qualified sales meetings with your dream prospects. You only pay for results.
+            Gamic Media's hyper-personalized outbound engine uses advanced AI and Clay intelligence to fill your calendar with qualified prospects. Performance-based pricing means you only pay for booked meetings.
           </p>
           
           {/* Value Props */}
