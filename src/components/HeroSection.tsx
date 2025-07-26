@@ -1,0 +1,74 @@
+import { Button } from "@/components/ui/button";
+import { CheckCircle, ArrowRight } from "lucide-react";
+
+const HeroSection = () => {
+  return (
+    <section className="pt-24 pb-16 bg-gradient-subtle">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+            B2B Service Providers & SaaS Companies
+          </div>
+          
+          {/* Main Headline */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+            We Book You 
+            <span className="bg-gradient-hero bg-clip-text text-transparent"> Qualified Meetings</span>
+            <br />On Complete Autopilot
+          </h1>
+          
+          {/* Subheadline */}
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            Our AI-powered outbound system uses Clay and personalized cold email to book qualified sales meetings with your dream prospects. You only pay for results.
+          </p>
+          
+          {/* Value Props */}
+          <div className="flex flex-wrap justify-center gap-6 mb-10">
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="w-5 h-5 text-primary" />
+              <span className="text-muted-foreground">Performance-Based Pricing</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="w-5 h-5 text-primary" />
+              <span className="text-muted-foreground">$200-300 Per Qualified Meeting</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <CheckCircle className="w-5 h-5 text-primary" />
+              <span className="text-muted-foreground">Done-For-You System</span>
+            </div>
+          </div>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button variant="hero" size="xl" className="group">
+              Book Your Free Strategy Call
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+            <Button variant="outline" size="xl">
+              See Our Results
+            </Button>
+          </div>
+          
+          {/* Social Proof Numbers */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 pt-8 border-t border-border">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">$2.5M+</div>
+              <div className="text-sm text-muted-foreground">Revenue Generated for Clients</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">500+</div>
+              <div className="text-sm text-muted-foreground">Qualified Meetings Booked</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-2">98%</div>
+              <div className="text-sm text-muted-foreground">Client Satisfaction Rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
