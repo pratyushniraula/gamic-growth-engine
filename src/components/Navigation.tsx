@@ -18,8 +18,8 @@ const Navigation = () => {
           <a href="#case-studies" className="text-muted-foreground hover:text-foreground transition-colors">
             Case Studies
           </a>
-          <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors">
-            Results
+          <a href="https://youtube.com/@gamicmedia" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+            YouTube
           </a>
         </div>
         

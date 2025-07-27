@@ -39,14 +39,25 @@ const HeroSection = () => {
             </div>
           </div>
           
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="xl" className="group">
+          {/* YouTube Video */}
+          <div className="mb-8">
+            <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-premium hover:shadow-glow transition-all duration-500 border border-primary/20">
+              <iframe 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example&autoplay=0&mute=1&controls=1&rel=0" 
+                title="Gamic Media - B2B Lead Generation" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="flex justify-center">
+            <Button variant="hero" size="xl" className="group animate-pulse hover:animate-none">
               Book Your Free Strategy Call
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button variant="outline" size="xl">
-              See Our Results
             </Button>
           </div>
           
