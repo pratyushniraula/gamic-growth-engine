@@ -6,9 +6,10 @@ const HeroSection = () => {
     <section className="pt-24 pb-16 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-primary/20 text-primary text-sm font-semibold mb-8 border border-primary/20">
-            ✨ Premium B2B Lead Generation Agency
+          {/* Status Indicator */}
+          <div className="inline-flex items-center px-4 py-2 rounded-lg bg-primary/10 text-primary text-xs font-medium mb-6 border border-primary/20">
+            <div className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></div>
+            Now Booking - Limited Spots Available
           </div>
           
           {/* Main Headline */}

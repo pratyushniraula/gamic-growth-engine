@@ -110,11 +110,6 @@ const CaseStudies = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button variant="premium" size="lg">
-            See More Success Stories
-          </Button>
-        </div>
       </div>
     </section>
   );

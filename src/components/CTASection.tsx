@@ -28,18 +28,31 @@ const CTASection = () => {
             </div>
           </div>
 
-          <div className="space-y-4 mb-10">
-            <Button 
-              variant="secondary" 
-              size="xl" 
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-xl hover:shadow-2xl hover:scale-[1.02] group"
-            >
-              Book Your Free Strategy Call
-              <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <p className="text-sm opacity-75">
-              Free 30-minute strategy session • No obligations • See if you qualify
-            </p>
+          <div className="flex flex-col lg:flex-row gap-8 items-center justify-center mb-10">
+            <div className="space-y-4">
+              <Button 
+                variant="secondary" 
+                size="xl" 
+                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-xl hover:shadow-2xl hover:scale-[1.02] group"
+              >
+                Book Your Free Strategy Call
+                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+              </Button>
+              <p className="text-sm opacity-75">
+                Free 30-minute strategy session • No obligations • See if you qualify
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-4 shadow-premium">
+              <iframe 
+                src="https://calendly.com/your-calendly-link"
+                width="320" 
+                height="400"
+                frameBorder="0"
+                title="Schedule a meeting"
+                className="rounded-lg"
+              ></iframe>
+            </div>
           </div>
 
           <div className="bg-primary-foreground/10 rounded-2xl p-6 backdrop-blur-sm">
