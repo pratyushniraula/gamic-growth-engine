@@ -117,7 +117,14 @@ const CaseStudies = () => {
 
                 {/* Expand/Collapse Button */}
                 <CollapsibleTrigger asChild>
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-200">
+                  <Button 
+                    variant="outline" 
+                    className={`w-full transition-colors ${
+                      openCards[index] 
+                        ? 'bg-primary text-primary-foreground shadow-glow' 
+                        : 'hover:bg-primary hover:text-primary-foreground hover:shadow-glow'
+                    }`}
+                  >
                     {openCards[index] ? 'Show Less' : 'Read Full Case Study'}
                     {openCards[index] ? 
                       <ChevronUp className="w-4 h-4 ml-2" /> : 
