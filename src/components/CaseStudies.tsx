@@ -46,6 +46,42 @@ const CaseStudies = () => {
       problem: "Jennifer's consulting firm had great results for clients but struggled to consistently fill their pipeline with enterprise prospects.",
       solution: "We developed a targeted approach focusing on Fortune 500 companies, resulting in higher-value meetings and faster deal cycles.",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      company: "DataFlow Systems",
+      industry: "Data Analytics",
+      founder: "Robert Kim",
+      role: "CTO",
+      timeline: "Within 35 Days",
+      meetings: "41",
+      revenue: "$220K",
+      problem: "Robert's data analytics company had excellent technical capabilities but struggled to reach decision-makers at enterprise level.",
+      solution: "We created a multi-touch campaign targeting CTOs and data leaders at Fortune 1000 companies, resulting in high-value enterprise meetings.",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      company: "CloudSync Pro",
+      industry: "Cloud Services",
+      founder: "Amanda Rodriguez",
+      role: "Head of Sales",
+      timeline: "Within 50 Days",
+      meetings: "46",
+      revenue: "$315K",
+      problem: "Amanda's cloud services team was relying too heavily on referrals and needed a scalable way to generate new business consistently.",
+      solution: "We built an automated outreach system targeting IT directors and CTOs, creating a predictable pipeline that scaled their business 3x.",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      company: "FinTech Innovations",
+      industry: "Financial Technology",
+      founder: "David Chen",
+      role: "Founder & CEO",
+      timeline: "Within 40 Days",
+      meetings: "33",
+      revenue: "$180K",
+      problem: "David's fintech startup needed to break into the traditional banking sector but lacked the network to reach key decision-makers.",
+      solution: "We developed a targeted approach focusing on innovation leaders at regional banks, resulting in pilot programs and enterprise contracts.",
+      image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face"
     }
   ];
 
@@ -61,7 +97,7 @@ const CaseStudies = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cases.map((caseStudy, index) => (
             <Collapsible key={index} open={openCards[index]} onOpenChange={() => toggleCard(index)}>
               <div className="bg-card rounded-2xl p-8 shadow-card hover:shadow-premium transition-all duration-300 group">

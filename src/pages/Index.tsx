@@ -1,8 +1,8 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import TrustedBy from "@/components/TrustedBy";
-import ProcessSection from "@/components/ProcessSection";
 import CaseStudies from "@/components/CaseStudies";
+import FreeResources from "@/components/FreeResources";
 import Testimonials from "@/components/Testimonials";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -13,8 +13,8 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <TrustedBy />
-      <ProcessSection />
       <CaseStudies />
+      <FreeResources />
       <Testimonials />
       <CTASection />
       <Footer />
