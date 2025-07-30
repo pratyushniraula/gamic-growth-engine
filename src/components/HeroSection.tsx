@@ -56,7 +56,7 @@ const HeroSection = () => {
 
           {/* CTA Button */}
           <div className="flex justify-center">
-            <Button variant="hero" size="xl" className="group animate-pulse hover:animate-none">
+            <Button variant="hero" size="xl" className="group hover:animate-none">
               Book Your Free Strategy Call
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
