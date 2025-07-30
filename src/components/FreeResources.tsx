@@ -55,17 +55,15 @@ const FreeResources = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {videos.map((video, index) => (
             <div key={index} className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-300 group">
-              <div className="relative aspect-video bg-muted">
-                <img 
-                  src={video.thumbnail} 
-                  alt={video.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-glow">
-                    <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
-                  </div>
-                </div>
+              <div className="relative aspect-video bg-muted rounded-lg overflow-hidden">
+                <iframe 
+                  src={`https://www.youtube.com/embed/${video.embedId}`}
+                  title={video.title}
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
               
               <div className="p-6">
