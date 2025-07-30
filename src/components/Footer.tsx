@@ -38,7 +38,6 @@ const Footer = () => {
             <ul className="space-y-2 text-muted-foreground">
               <li><a href="#" className="hover:text-foreground transition-colors">About Us</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">Case Studies</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Blog</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
             </ul>
           </div>
@@ -48,10 +47,6 @@ const Footer = () => {
           <p className="text-muted-foreground text-sm">
             © 2024 Gamic Media. All rights reserved.
           </p>
-          <div className="flex space-x-6 text-sm text-muted-foreground mt-4 md:mt-0">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
-          </div>
         </div>
       </div>
     </footer>

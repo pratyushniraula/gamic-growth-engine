@@ -98,9 +98,15 @@ const CaseStudies = () => {
                   </div>
                 </div>
 
+                {/* Snippet - always visible */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-foreground mb-2">Challenge:</h4>
+                  <p className="text-sm text-muted-foreground">{caseStudy.problem.substring(0, 100)}...</p>
+                </div>
+
                 <CollapsibleContent className="space-y-4 mb-6">
                   <div>
-                    <h4 className="text-sm font-semibold text-foreground mb-2">Challenge:</h4>
+                    <h4 className="text-sm font-semibold text-foreground mb-2">Full Challenge:</h4>
                     <p className="text-sm text-muted-foreground">{caseStudy.problem}</p>
                   </div>
                   <div>
