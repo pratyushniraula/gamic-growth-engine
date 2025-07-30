@@ -43,11 +43,11 @@ const CTASection = () => {
               </p>
             </div>
             
-            <div className="bg-white rounded-xl p-4 shadow-premium">
+            <div className="bg-white rounded-xl p-6 shadow-premium">
               <iframe 
                 src="https://calendly.com/your-calendly-link"
-                width="320" 
-                height="400"
+                width="400" 
+                height="500"
                 frameBorder="0"
                 title="Schedule a meeting"
                 className="rounded-lg"

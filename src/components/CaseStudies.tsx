@@ -1,7 +1,15 @@
-import { ArrowUpRight, Calendar, DollarSign, Users } from "lucide-react";
+import { Calendar, DollarSign, Users, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { useState } from "react";
 
 const CaseStudies = () => {
+  const [openCards, setOpenCards] = useState<Record<number, boolean>>({});
+
+  const toggleCard = (index: number) => {
+    setOpenCards(prev => ({ ...prev, [index]: !prev[index] }));
+  };
+
   const cases = [
     {
       company: "TechScale Pro",
@@ -55,58 +63,64 @@ const CaseStudies = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {cases.map((caseStudy, index) => (
-            <div key={index} className="bg-card rounded-2xl p-8 shadow-card hover:shadow-premium transition-all duration-300 group">
-              {/* Header */}
-              <div className="flex items-center space-x-4 mb-6">
-                <img 
-                  src={caseStudy.image} 
-                  alt={caseStudy.founder}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
-                <div>
-                  <h3 className="font-bold text-foreground">{caseStudy.founder}</h3>
-                  <p className="text-sm text-muted-foreground">{caseStudy.role} at {caseStudy.company}</p>
-                  <p className="text-xs text-primary font-medium">{caseStudy.industry}</p>
+            <Collapsible key={index} open={openCards[index]} onOpenChange={() => toggleCard(index)}>
+              <div className="bg-card rounded-2xl p-8 shadow-card hover:shadow-premium transition-all duration-300 group">
+                {/* Header */}
+                <div className="flex items-center space-x-4 mb-6">
+                  <img 
+                    src={caseStudy.image} 
+                    alt={caseStudy.founder}
+                    className="w-16 h-16 rounded-full object-cover"
+                  />
+                  <div>
+                    <h3 className="font-bold text-foreground">{caseStudy.founder}</h3>
+                    <p className="text-sm text-muted-foreground">{caseStudy.role} at {caseStudy.company}</p>
+                    <p className="text-xs text-primary font-medium">{caseStudy.industry}</p>
+                  </div>
                 </div>
-              </div>
 
-              {/* Results */}
-              <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-gradient-subtle rounded-lg">
-                <div className="text-center">
-                  <Calendar className="w-5 h-5 text-primary mx-auto mb-1" />
-                  <div className="text-2xl font-bold text-foreground">{caseStudy.meetings}</div>
-                  <div className="text-xs text-muted-foreground">Meetings</div>
+                {/* Results */}
+                <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-gradient-subtle rounded-lg">
+                  <div className="text-center">
+                    <Calendar className="w-5 h-5 text-primary mx-auto mb-1" />
+                    <div className="text-2xl font-bold text-foreground">{caseStudy.meetings}</div>
+                    <div className="text-xs text-muted-foreground">Meetings</div>
+                  </div>
+                  <div className="text-center">
+                    <DollarSign className="w-5 h-5 text-primary mx-auto mb-1" />
+                    <div className="text-2xl font-bold text-foreground">{caseStudy.revenue}</div>
+                    <div className="text-xs text-muted-foreground">Revenue</div>
+                  </div>
+                  <div className="text-center">
+                    <Users className="w-5 h-5 text-primary mx-auto mb-1" />
+                    <div className="text-2xl font-bold text-foreground">{caseStudy.timeline.split(' ')[1]}</div>
+                    <div className="text-xs text-muted-foreground">Days</div>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <DollarSign className="w-5 h-5 text-primary mx-auto mb-1" />
-                  <div className="text-2xl font-bold text-foreground">{caseStudy.revenue}</div>
-                  <div className="text-xs text-muted-foreground">Revenue</div>
-                </div>
-                <div className="text-center">
-                  <Users className="w-5 h-5 text-primary mx-auto mb-1" />
-                  <div className="text-2xl font-bold text-foreground">{caseStudy.timeline.split(' ')[1]}</div>
-                  <div className="text-xs text-muted-foreground">Days</div>
-                </div>
-              </div>
 
-              {/* Problem & Solution */}
-              <div className="space-y-4 mb-6">
-                <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-2">Challenge:</h4>
-                  <p className="text-sm text-muted-foreground">{caseStudy.problem}</p>
-                </div>
-                <div>
-                  <h4 className="text-sm font-semibold text-foreground mb-2">Solution & Results:</h4>
-                  <p className="text-sm text-muted-foreground">{caseStudy.solution}</p>
-                </div>
-              </div>
+                <CollapsibleContent className="space-y-4 mb-6">
+                  <div>
+                    <h4 className="text-sm font-semibold text-foreground mb-2">Challenge:</h4>
+                    <p className="text-sm text-muted-foreground">{caseStudy.problem}</p>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-semibold text-foreground mb-2">Solution & Results:</h4>
+                    <p className="text-sm text-muted-foreground">{caseStudy.solution}</p>
+                  </div>
+                </CollapsibleContent>
 
-              {/* CTA */}
-              <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all">
-                View Full Case Study
-                <ArrowUpRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
+                {/* Expand/Collapse Button */}
+                <CollapsibleTrigger asChild>
+                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                    {openCards[index] ? 'Show Less' : 'Read Full Case Study'}
+                    {openCards[index] ? 
+                      <ChevronUp className="w-4 h-4 ml-2" /> : 
+                      <ChevronDown className="w-4 h-4 ml-2" />
+                    }
+                  </Button>
+                </CollapsibleTrigger>
+              </div>
+            </Collapsible>
           ))}
         </div>
 
