@@ -26,7 +26,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4">
+    <section id="how-we-operate" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -81,9 +81,6 @@ const AboutSection = () => {
                 <p className="text-muted-foreground">Qualified prospects are booked directly into your calendar for high-conversion sales calls.</p>
               </div>
             </div>
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              See How It Works
-            </Button>
           </div>
         </div>
       </div>

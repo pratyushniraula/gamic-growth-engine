@@ -12,7 +12,7 @@ const Navigation = () => {
         </div>
         
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#process" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a href="#how-we-operate" className="text-muted-foreground hover:text-foreground transition-colors">
             Our Process
           </a>
           <a href="#case-studies" className="text-muted-foreground hover:text-foreground transition-colors">
