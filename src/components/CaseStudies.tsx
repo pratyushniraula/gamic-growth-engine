@@ -13,7 +13,6 @@ const CaseStudies = () => {
   const cases = [
     {
       company: "TechScale Pro",
-      industry: "SaaS",
       founder: "Sarah Chen",
       role: "CEO",
       timeline: "Within 60 Days",
@@ -25,7 +24,6 @@ const CaseStudies = () => {
     },
     {
       company: "Revenue Rocket",
-      industry: "Marketing Agency", 
       founder: "Michael Torres",
       role: "Founder",
       timeline: "Within 45 Days",
@@ -37,7 +35,6 @@ const CaseStudies = () => {
     },
     {
       company: "GrowthLabs",
-      industry: "Consulting",
       founder: "Jennifer Park",
       role: "Managing Partner", 
       timeline: "Within 30 Days",
@@ -49,7 +46,6 @@ const CaseStudies = () => {
     },
     {
       company: "DataFlow Systems",
-      industry: "Data Analytics",
       founder: "Robert Kim",
       role: "CTO",
       timeline: "Within 35 Days",
@@ -61,7 +57,6 @@ const CaseStudies = () => {
     },
     {
       company: "CloudSync Pro",
-      industry: "Cloud Services",
       founder: "Amanda Rodriguez",
       role: "Head of Sales",
       timeline: "Within 50 Days",
@@ -73,7 +68,6 @@ const CaseStudies = () => {
     },
     {
       company: "FinTech Innovations",
-      industry: "Financial Technology",
       founder: "David Chen",
       role: "Founder & CEO",
       timeline: "Within 40 Days",
@@ -111,7 +105,6 @@ const CaseStudies = () => {
                   <div>
                     <h3 className="font-bold text-foreground">{caseStudy.founder}</h3>
                     <p className="text-sm text-muted-foreground">{caseStudy.role} at {caseStudy.company}</p>
-                    <p className="text-xs text-primary font-medium">{caseStudy.industry}</p>
                   </div>
                 </div>
 
@@ -142,7 +135,7 @@ const CaseStudies = () => {
 
                 <CollapsibleContent className="space-y-4 mb-6">
                   <div>
-                    <h4 className="text-sm font-semibold text-foreground mb-2">Full Challenge:</h4>
+                    <h4 className="text-sm font-semibold text-foreground mb-2">Challenge:</h4>
                     <p className="text-sm text-muted-foreground">{caseStudy.problem}</p>
                   </div>
                   <div>
