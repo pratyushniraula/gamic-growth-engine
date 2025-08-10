@@ -16,8 +16,15 @@ const Footer = () => {
             <p className="text-muted-foreground mb-6 max-w-md">
               The premium outbound lead generation agency for B2B service providers and SaaS companies. We use AI and Clay to book you qualified meetings on autopilot.
             </p>
-            <Button variant="premium">
-              Book Your Strategy Call
+            <Button asChild variant="premium">
+              <a
+                href="https://calendly.com/gamicmedia/discovery-call-clone?"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Book your strategy call on Calendly"
+              >
+                Book Your Strategy Call
+              </a>
             </Button>
           </div>
 
