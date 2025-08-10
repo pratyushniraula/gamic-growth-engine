@@ -65,7 +65,7 @@ const CaseStudies = () => {
     videoId: "-8c-oSi9doQ",
     image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face"
   }];
-  return <section id="case-studies" className="py-20 bg-background">
+  return <section id="case-studies" className="py-20 bg-background scroll-mt-24 md:scroll-mt-28">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
