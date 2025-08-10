@@ -14,9 +14,7 @@ const HeroSection = () => {
           
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Transform Cold Prospects Into 
-            <span className="bg-gradient-hero bg-clip-text text-transparent"> Hot Meetings</span>
-            <br />While You Sleep
+            We'll Book You 5-12 Qualified Sales Calls Every Month
           </h1>
           
           {/* Subheadline */}
