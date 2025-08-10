@@ -31,12 +31,20 @@ const CTASection = () => {
           <div className="flex flex-col lg:flex-row gap-8 items-center justify-center mb-10">
             <div className="space-y-4">
               <Button 
+                asChild
                 variant="secondary" 
                 size="xl" 
                 className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-xl hover:shadow-2xl hover:scale-[1.02] group"
               >
-                Book Your Free Strategy Call
-                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                <a
+                  href="https://calendly.com/gamicmedia/discovery-call-clone?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Book your free strategy call on Calendly"
+                >
+                  Book Your Free Strategy Call
+                  <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
               <p className="text-sm opacity-75">
                 Free 30-minute strategy session • No obligations • See if you qualify
