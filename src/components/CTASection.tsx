@@ -53,7 +53,7 @@ const CTASection = () => {
             
             <div className="bg-white rounded-xl p-6 shadow-premium">
               <iframe 
-                src="https://calendly.com/your-calendly-link"
+                src="https://calendly.com/gamicmedia/discovery-call-clone?"
                 width="400" 
                 height="500"
                 frameBorder="0"
