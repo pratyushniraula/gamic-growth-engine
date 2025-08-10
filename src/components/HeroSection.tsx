@@ -14,7 +14,7 @@ const HeroSection = () => {
           
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            We'll Book You 5-12 Qualified Sales Calls Every Month
+            We'll Book You <span className="text-primary">5-12 Qualified Sales Calls</span> Every Month
           </h1>
           
           {/* Subheadline */}
