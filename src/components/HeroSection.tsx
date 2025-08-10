@@ -1,13 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight } from "lucide-react";
+
 const HeroSection = () => {
-  return <section className="pt-24 pb-16 bg-gradient-subtle">
+  return (
+    <section className="pt-24 pb-16 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Status Indicator */}
           <div className="inline-flex items-center px-4 py-2 rounded-lg bg-primary/10 text-primary text-xs font-medium mb-6 border border-primary/20">
             <div className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></div>
-            Now Booking - Limited Spots Available
+            AGENCIES & B2B BUSINESSES
           </div>
           
           {/* Main Headline */}
@@ -28,8 +30,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="text-muted-foreground">Personalized Framework
-            </span>
+              <span className="text-muted-foreground">$200-300 Per Qualified Meeting</span>
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-primary" />
@@ -40,14 +41,26 @@ const HeroSection = () => {
           {/* YouTube Video */}
           <div className="mb-8">
             <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-premium hover:shadow-glow transition-all duration-500 border border-primary/20">
-              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example&autoplay=0&mute=1&controls=1&rel=0" title="Gamic Media - B2B Lead Generation" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className="w-full h-full"></iframe>
+              <iframe 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example&autoplay=0&mute=1&controls=1&rel=0" 
+                title="Gamic Media - B2B Lead Generation" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
             </div>
           </div>
 
           {/* CTA Button */}
           <div className="flex justify-center">
             <Button asChild variant="hero" size="xl" className="group hover:animate-none">
-              <a href="https://calendly.com/gamicmedia/discovery-call-clone?" target="_blank" rel="noopener noreferrer" aria-label="Book your free strategy call on Calendly">
+              <a
+                href="https://calendly.com/gamicmedia/discovery-call-clone?"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Book your free strategy call on Calendly"
+              >
                 Book Your Free Strategy Call
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
@@ -71,6 +84,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
