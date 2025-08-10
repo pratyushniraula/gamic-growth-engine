@@ -12,8 +12,8 @@ const CaseStudies = () => {
 
   const cases = [
     {
-      company: "TechScale Pro",
-      founder: "Sarah Chen",
+      company: "Deep Social Brands",
+      founder: "Deepak Sharma",
       role: "CEO",
       results: "Implemented our AI-powered outbound system targeting mid-market SaaS companies, resulting in a 400% increase in qualified meetings and $280K in new revenue within 60 days.",
       problem: "Sarah's team was struggling with inconsistent lead flow and spending too much time on prospecting instead of closing deals.",

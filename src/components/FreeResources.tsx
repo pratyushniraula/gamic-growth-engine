@@ -3,39 +3,39 @@ import { Play } from "lucide-react";
 const FreeResources = () => {
   const videos = [
     {
-      title: "How to Write Cold Emails That Actually Get Responses",
-      description: "Learn the exact framework we use to achieve 15%+ reply rates",
-      embedId: "dQw4w9WgXcQ", // Replace with actual YouTube video IDs
+      title: "How To Scrape Unlimited Leads in 9 Minutes",
+      description: "Learn the exact framework I use to achieve 15%+ reply rates",
+      embedId: "qeWOvfOdpfw", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=225&fit=crop"
     },
     {
-      title: "The Complete Guide to B2B Lead Generation",
-      description: "Master the art of finding and qualifying your ideal prospects",
-      embedId: "dQw4w9WgXcQ", // Replace with actual YouTube video IDs
+      title: "I used Alex Hormozi's $100M Cold Outreach Strategy",
+      description: "Master the art of finding your rythm in cold outreach",
+      embedId: "7ho2VKxJD84", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=225&fit=crop"
     },
     {
-      title: "AI Tools for Sales: 10x Your Outreach Efficiency",
-      description: "Discover the AI tools that can automate and optimize your sales process",
-      embedId: "dQw4w9WgXcQ", // Replace with actual YouTube video IDs
+      title: "It's Boring But, You'll Boook 10-20 Calls A Month",
+      description: "Discover my secret to consistent lead generation",
+      embedId: "lzehNLLoe20", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=225&fit=crop"
     },
     {
-      title: "Building a Predictable Sales Pipeline",
-      description: "Create a systematic approach to consistent revenue growth",
-      embedId: "dQw4w9WgXcQ", // Replace with actual YouTube video IDs
+      title: "The Only Loom Cold Outreach Video You'll Ever Need",
+      description: "Create high-converting Loom videos that get responses",
+      embedId: "I6q5RtMetL4", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=225&fit=crop"
     },
     {
-      title: "Advanced LinkedIn Prospecting Strategies",
-      description: "Turn LinkedIn into your most powerful lead generation tool",
-      embedId: "dQw4w9WgXcQ", // Replace with actual YouTube video IDs
+      title: "How To Use Clay.com For Lead Generation (2025)",
+      description: "Automate your lead generation process with Clay.com",
+      embedId: "zt5kC2jb8nA", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=400&h=225&fit=crop"
     },
     {
-      title: "Scaling Your Sales Team: From 1 to 100",
-      description: "The complete playbook for building and scaling high-performing sales teams",
-      embedId: "dQw4w9WgXcQ", // Replace with actual YouTube video IDs
+      title: "Smartlead AI Review 2025 | How To Book 100+ Sales Calls Per Month",
+      description: "The complete playbook for using Smartlead AI effectively",
+      embedId: "3wFcSL1_fG4", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=225&fit=crop"
     }
   ];
