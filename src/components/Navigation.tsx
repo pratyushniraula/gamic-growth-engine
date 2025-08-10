@@ -23,8 +23,15 @@ const Navigation = () => {
           </a>
         </div>
         
-        <Button variant="premium" size="lg">
-          Book Strategy Call
+        <Button asChild variant="premium" size="lg">
+          <a
+            href="https://calendly.com/gamicmedia/discovery-call-clone?"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Book a strategy call on Calendly"
+          >
+            Book Strategy Call
+          </a>
         </Button>
       </div>
     </nav>
