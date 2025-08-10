@@ -83,6 +83,7 @@ const CaseStudies = () => {
                 <div className="flex items-center space-x-4 mb-6">
                   <img src={caseStudy.image} alt={caseStudy.founder} className="w-16 h-16 rounded-full object-cover" />
                   <div>
+                    <h3 className="text-lg font-semibold text-foreground">{caseStudy.founder}</h3>
                     <p className="text-sm text-muted-foreground">{caseStudy.role} at {caseStudy.company}</p>
                   </div>
                 </div>
@@ -91,11 +92,6 @@ const CaseStudies = () => {
                 <div className="mb-6 p-4 bg-gradient-subtle rounded-lg">
                   <h4 className="text-lg font-semibold text-foreground mb-2">Results:</h4>
                   <p className="text-muted-foreground">{caseStudy.results}</p>
-                </div>
-
-                {/* Name above video */}
-                <div className="mb-4">
-                  <h3 className="text-xl font-bold text-foreground text-center">{caseStudy.founder}</h3>
                 </div>
 
                 {/* YouTube Video */}
