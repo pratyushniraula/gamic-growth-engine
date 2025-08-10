@@ -47,21 +47,21 @@ const CaseStudies = () => {
     videoId: "07RFfrVrACw",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
   }, {
-    company: "CloudSync Pro",
-    founder: "Amanda Rodriguez",
-    role: "Head of Sales",
-    results: "Built an automated outreach system targeting IT directors and CTOs, creating a predictable pipeline with 46 meetings and $315K revenue that scaled their business 3x in 50 days.",
-    problem: "Amanda's cloud services team was relying too heavily on referrals and needed a scalable way to generate new business consistently.",
-    solution: "We built an automated outreach system targeting IT directors and CTOs, creating a predictable pipeline that scaled their business 3x.",
+    company: "Cashion Marketing",
+    founder: "Hayden Cashion",
+    role: "CEO",
+    results: "30+ meetings booked, multiple deals closed",
+    problem: "Cashion Marketing depended only on referrals to get new clients. It worked, but it was unpredictable and made it hard to keep a steady flow of deals.",
+    solution: "After working with us, they now get qualified leads every month from cold email. They've booked over 30 meetings and closed mutliple deals and are now able to scale their business predictably.",
     videoId: "-8c-oSi9doQ",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face"
   }, {
-    company: "FinTech Innovations",
-    founder: "David Chen",
-    role: "Founder & CEO",
-    results: "Developed a targeted approach focusing on innovation leaders at regional banks, resulting in 33 pilot programs and enterprise contracts worth $180K in 40 days.",
-    problem: "David's fintech startup needed to break into the traditional banking sector but lacked the network to reach key decision-makers.",
-    solution: "We developed a targeted approach focusing on innovation leaders at regional banks, resulting in pilot programs and enterprise contracts.",
+    company: "Art & Ode",
+    founder: "Aziz Rawat",
+    role: "Founder",
+    results: "20 meetings booked, 3 meetings closed.",
+    problem: "Art & Ode was a startup who were looking for new ways to get in front of their ideal customers without breaking the bank on advertising",
+    solution: "Since working with us, they've consistently been able to get meetings month after month, scaled their business from the ground up, and fill out their entire sales pipeline with their ideal prospects.",
     videoId: "NmOsiKcQLQU",
     image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face"
   }];
