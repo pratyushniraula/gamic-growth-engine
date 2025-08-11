@@ -19,7 +19,7 @@ const HeroSection = () => {
           
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Gamic Media's hyper-personalized outbound engine uses advanced AI and Clay intelligence to fill your calendar with qualified prospects. Performance-based pricing means you only pay for booked meetings.
+          With Your Ideal Customers on a Pay-Per Meeting Basis
           </p>
           
           {/* Value Props */}
