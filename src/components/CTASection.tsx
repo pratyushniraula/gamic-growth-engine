@@ -38,7 +38,7 @@ const CTASection = () => {
             </div>
             
             <div className="bg-white rounded-xl p-6 shadow-premium w-full md:w-[560px] lg:w-[720px]">
-              <iframe src="https://calendly.com/your-calendly-link" width="100%" height="500" frameBorder="0" title="Schedule a meeting" className="rounded-lg w-full"></iframe>
+              <iframe src="https://calendly.com/gamicmedia/discovery-call-clone" width="100%" height="500" frameBorder="0" title="Schedule a meeting" className="rounded-lg w-full"></iframe>
             </div>
           </div>
 
