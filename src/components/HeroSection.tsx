@@ -7,10 +7,9 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Status Indicator */}
-          <div className="inline-flex items-center px-4 py-2 rounded-lg bg-primary/10 text-primary text-xs font-medium mb-6 border border-primary/20">
-            <div className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></div>
-            AGENCIES & B2B BUSINESSES
-          </div>
+          <div className="text-xl font-bold">
+    AGENCIES & B2B BUSINESSES
+        </div>
           
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
