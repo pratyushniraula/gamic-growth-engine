@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Linkedin, Youtube } from "lucide-react";
+import { Youtube } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
             <p className="text-muted-foreground mb-6 w-full max-w-none">
               The premium outbound lead generation agency for B2B service providers and SaaS companies. We use AI and Clay to book you qualified meetings on autopilot.
             </p>
-            <nav className="flex items-center gap-4 mt-6" aria-label="Social links">
+            <nav className="flex justify-end items-center gap-5 mt-6 w-full" aria-label="Social links">
               <a
                 href="https://www.linkedin.com/"
                 target="_blank"
@@ -25,7 +26,7 @@ const Footer = () => {
                 aria-label="Visit our LinkedIn"
                 className="inline-flex"
               >
-                <Linkedin className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
+                <FaLinkedin size={24} className="text-muted-foreground hover:text-foreground transition-colors" />
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a
@@ -35,7 +36,7 @@ const Footer = () => {
                 aria-label="Visit our YouTube"
                 className="inline-flex"
               >
-                <Youtube className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
+                <Youtube className="h-6 w-6 text-muted-foreground hover:text-foreground transition-colors" />
                 <span className="sr-only">YouTube</span>
               </a>
             </nav>
