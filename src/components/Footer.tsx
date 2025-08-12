@@ -18,7 +18,7 @@ const Footer = () => {
             </p>
             <Button asChild variant="premium">
               <a
-                href="https://calendly.com/gamicmedia/discovery-call-clone?"
+                href="https://calendly.com/gamicmedia/discovery-call-clone"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Book your strategy call on Calendly"
@@ -28,31 +28,13 @@ const Footer = () => {
             </Button>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Services</h3>
-            <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-colors">Lead Generation</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Email Marketing</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">AI Personalization</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Meeting Booking</a></li>
-            </ul>
-          </div>
+          {/* Links */}
 
-          {/* Company */}
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Company</h3>
-            <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Case Studies</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
-            </ul>
-          </div>
         </div>
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 Gamic Media. All rights reserved.
+            © 2025 Gamic Media. All rights reserved.
           </p>
         </div>
       </div>
