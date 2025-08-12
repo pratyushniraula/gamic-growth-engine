@@ -14,7 +14,7 @@ const Footer = () => {
               </div>
               <span className="text-xl font-bold text-foreground">Gamic Media</span>
             </div>
-            <p className="text-muted-foreground mb-6 max-w-md">
+            <p className="text-muted-foreground mb-6 w-full max-w-none">
               The premium outbound lead generation agency for B2B service providers and SaaS companies. We use AI and Clay to book you qualified meetings on autopilot.
             </p>
             <nav className="flex items-center gap-4 mt-6" aria-label="Social links">
