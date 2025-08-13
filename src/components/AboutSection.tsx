@@ -28,7 +28,7 @@ const AboutSection = () => {
   return (
     <section id="how-we-operate" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 md:p-12 mb-16 md:mb-24">
+        <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 md:p-12 mb-16 md:mb-24 shadow-sm transition-shadow hover:shadow-xl">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-3xl font-bold mb-6">Are you a struggling Business?</h3>
             <div className="grid md:grid-cols-3 gap-8 mb-8">
