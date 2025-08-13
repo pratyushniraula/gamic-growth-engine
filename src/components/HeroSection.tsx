@@ -30,7 +30,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="text-muted-foreground">$200-300 Per Qualified Meeting</span>
+              <span className="text-muted-foreground">Personalized Outreach Framework</span>
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-primary" />
