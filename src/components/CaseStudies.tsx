@@ -72,7 +72,7 @@ const CaseStudies = () => {
             Real Results from <span className="text-primary">Real Clients</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            See how we've helped Agencies, B2B service providers, and SaaS companies consistently book more qualified meetings and close more deals.
+          See how we've helped B2B companies consistently book qualified meetings and close deals.
           </p>
         </div>
 
