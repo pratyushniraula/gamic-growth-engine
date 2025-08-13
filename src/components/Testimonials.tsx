@@ -11,16 +11,6 @@ const Testimonials = () => {
       media: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=400&h=300&fit=crop&crop=face",
       mediaType: "image",
       results: "52 meetings booked, $280K revenue"
-    },
-    {
-      content: "The best part about working with Gamic is that it's completely hands-off for us. They handle everything from lead research to booking meetings. Our team can focus entirely on what we do best - closing deals and serving clients.",
-      author: "Michael Torres", 
-      company: "Revenue Rocket",
-      role: "Founder",
-      rating: 5,
-      media: "dQw4w9WgXcQ", // YouTube video ID
-      mediaType: "video",
-      results: "38 meetings booked, $190K revenue"
     }
   ];
 
