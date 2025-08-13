@@ -16,7 +16,7 @@ const AboutSection = () => {
     {
       icon: <Users className="h-6 w-6 text-primary" />,
       title: "Qualified Lead Generation",
-      description: "We don't just generate leads - we qualify them to ensure they're genuinely interested and ready to buy."
+      description: "We don't just generate leads, we qualify them to ensure they're genuinely interested and ready to buy."
     },
     {
       icon: <CheckCircle className="h-6 w-6 text-primary" />,
