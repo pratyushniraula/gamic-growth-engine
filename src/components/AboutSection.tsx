@@ -30,7 +30,7 @@ const AboutSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 md:p-12 mb-16 md:mb-24 shadow-sm transition-shadow hover:shadow-xl">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-bold mb-6">Are you a struggling Business?</h3>
+            <h3 className="text-3xl font-bold mb-6">Are You a Struggling Business?</h3>
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
