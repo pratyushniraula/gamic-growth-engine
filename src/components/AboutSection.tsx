@@ -26,7 +26,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="how-we-operate" className="py-20 px-4">
+    <section id="how-we-operate" className="pt-20 pb-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 md:p-12 mb-16 md:mb-24 shadow-sm transition-shadow hover:shadow-xl">
           <div className="max-w-4xl mx-auto text-center">
