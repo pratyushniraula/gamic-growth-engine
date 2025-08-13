@@ -41,14 +41,16 @@ const HeroSection = () => {
           {/* YouTube Video */}
           <div className="mb-8">
             <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-premium hover:shadow-glow transition-all duration-500 border border-primary/20">
-              <iframe 
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=example&autoplay=0&mute=1&controls=1&rel=0" 
-                title="Gamic Media - B2B Lead Generation" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              <iframe
+                src="https://fast.wistia.net/embed/iframe/c2tknwrvcg?seo=false&videoFoam=true"
+                title="Gamic Media - Overview Video"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="w-full h-full"
               ></iframe>
+              <script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
             </div>
           </div>
 
