@@ -1,6 +1,9 @@
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const Testimonials = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
   const testimonials = [
     {
       content: "Gamic completely transformed our lead generation process. We went from struggling to book 2-3 meetings per month to consistently getting 15-20 qualified prospects on our calendar every week. The ROI has been incredible.",
@@ -8,21 +11,24 @@ const Testimonials = () => {
       company: "TechScale Pro",
       role: "CEO",
       rating: 5,
-      media: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=400&h=300&fit=crop&crop=face",
+      media: [
+        "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=600&h=400&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=400&fit=crop&crop=face",
+        "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=600&h=400&fit=crop&crop=face"
+      ],
       mediaType: "image",
       results: "52 meetings booked, $280K revenue"
-    },
-    {
-      content: "The best part about working with Gamic is that it's completely hands-off for us. They handle everything from lead research to booking meetings. Our team can focus entirely on what we do best - closing deals and serving clients.",
-      author: "Michael Torres", 
-      company: "Revenue Rocket",
-      role: "Founder",
-      rating: 5,
-      media: "dQw4w9WgXcQ", // YouTube video ID
-      mediaType: "video",
-      results: "38 meetings booked, $190K revenue"
     }
   ];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % testimonials[0].media.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + testimonials[0].media.length) % testimonials[0].media.length);
+  };
 
   return (
     <section id="testimonials" className="py-20 bg-gradient-subtle">
@@ -36,27 +42,52 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-300">
               {/* Media Section */}
               <div className="relative aspect-video bg-muted">
-                {testimonial.mediaType === "video" ? (
-                  <iframe 
-                    src={`https://www.youtube.com/embed/${testimonial.media}`}
-                    title={`${testimonial.author} testimonial`}
-                    className="w-full h-full"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                ) : (
+                <div className="relative w-full h-full">
                   <img 
-                    src={testimonial.media} 
-                    alt={`${testimonial.author} testimonial`}
+                    src={Array.isArray(testimonial.media) ? testimonial.media[currentImageIndex] : testimonial.media} 
+                    alt={`${testimonial.author} testimonial ${currentImageIndex + 1}`}
                     className="w-full h-full object-cover"
                   />
-                )}
+                  
+                  {/* Navigation Buttons */}
+                  {Array.isArray(testimonial.media) && testimonial.media.length > 1 && (
+                    <>
+                      <button
+                        onClick={prevImage}
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-200"
+                        aria-label="Previous image"
+                      >
+                        <ChevronLeft className="w-5 h-5" />
+                      </button>
+                      <button
+                        onClick={nextImage}
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-200"
+                        aria-label="Next image"
+                      >
+                        <ChevronRight className="w-5 h-5" />
+                      </button>
+                      
+                      {/* Image Indicators */}
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        {testimonial.media.map((_, imgIndex) => (
+                          <button
+                            key={imgIndex}
+                            onClick={() => setCurrentImageIndex(imgIndex)}
+                            className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                              imgIndex === currentImageIndex ? 'bg-white' : 'bg-white/50'
+                            }`}
+                            aria-label={`Go to image ${imgIndex + 1}`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
               </div>
               
               <div className="p-8">
