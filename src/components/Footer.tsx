@@ -16,12 +16,11 @@ const Footer = () => {
               <span className="text-xl font-bold text-foreground">Gamic Media</span>
             </div>
             <p className="text-muted-foreground mb-6 w-full max-w-none">
-              The premium outbound lead generation agency for Agencies, B2B service providers, and SaaS companies. <br />We use a mixture of AI outbound tools to book you qualified meetings on autopilot.
-              <br /> All while you focus on closing deals and growing your business.
+              The premium outbound lead generation agency for Agencies, B2B service providers, and SaaS companies. <br />We use a mixture of AI outbound tools to book you qualified meetings on autopilot. All while you focus on closing deals and growing your business.
             </p>
             <nav className="flex justify-end items-center gap-5 mt-6 w-full" aria-label="Social links">
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/aryan-aryal-0b1b60256/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit our LinkedIn"
@@ -31,7 +30,7 @@ const Footer = () => {
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a
-                href="https://www.youtube.com/"
+                href="https://www.youtube.com/@AryanAryal3"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit our YouTube"
