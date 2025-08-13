@@ -26,11 +26,11 @@ const HeroSection = () => {
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="text-muted-foreground">Performance-Based Pricing</span>
+              <span className="text-muted-foreground">Performance Based Pricing</span>
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="text-muted-foreground">Personalized Outreach Framework</span>
+              <span className="text-muted-foreground">Personalized Outreach Strategy</span>
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-primary" />
@@ -72,11 +72,11 @@ const HeroSection = () => {
           {/* Social Proof Numbers */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 pt-8 border-t border-border">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">$2.5M+</div>
+              <div className="text-3xl font-bold text-primary mb-2">$1M+</div>
               <div className="text-sm text-muted-foreground">Revenue Generated for Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">500+</div>
+              <div className="text-3xl font-bold text-primary mb-2">1,000+</div>
               <div className="text-sm text-muted-foreground">Qualified Meetings Booked</div>
             </div>
             <div className="text-center">
