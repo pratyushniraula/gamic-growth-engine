@@ -91,7 +91,7 @@ const CaseStudies = () => {
                 {/* Results */}
                 <div className="mb-6 p-4 bg-gradient-subtle rounded-lg">
                   <h4 className="text-lg font-semibold text-foreground mb-2">Results:</h4>
-                  <p className="text-muted-foreground">{caseStudy.results}</p>
+                  <p className="text-xl font-bold text-foreground">{caseStudy.results}</p>
                 </div>
 
                 {/* YouTube Video */}
