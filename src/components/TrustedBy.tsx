@@ -16,7 +16,7 @@ const TrustedBy = () => {
         
         <div className="max-w-3xl mx-auto text-center">
           <blockquote className="text-xl text-muted-foreground italic">
-            "Gamic completely transformed our lead generation. We went from struggling to book 2-3 meetings per month to consistently getting 15-20 qualified prospects on our calendar every week."
+            "Working with you has single-handedly kept my company alive."
           </blockquote>
           <cite className="text-primary font-semibold mt-4 block">— Deepak Sharma, CEO of Deep Social Brands</cite>
         </div>
