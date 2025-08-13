@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Target, Users, Zap } from "lucide-react";
+import { CheckCircle, Target, Users, Zap, AlertTriangle, Handshake, TrendingUp } from "lucide-react";
 
 const AboutSection = () => {
   const features = [
@@ -57,25 +57,28 @@ const AboutSection = () => {
 
         <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 md:p-12">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-3xl font-bold mb-6">How We Operate</h3>
+            <h3 className="text-3xl font-bold mb-6">Are you a struggling Business?</h3>
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
-                <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  1
+                <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
+                  <AlertTriangle className="h-6 w-6" aria-hidden="true" />
+                  <span className="sr-only">Step 1 icon</span>
                 </div>
                 <h4 className="text-lg font-semibold mb-2">Research & Strategy</h4>
                 <p className="text-muted-foreground">We analyze your ideal customer profile and develop a targeted outreach strategy.</p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  2
+                <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Handshake className="h-6 w-6" aria-hidden="true" />
+                  <span className="sr-only">Step 2 icon</span>
                 </div>
                 <h4 className="text-lg font-semibold mb-2">Execute & Engage</h4>
                 <p className="text-muted-foreground">Our team launches personalized campaigns across multiple channels to engage prospects.</p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  3
+                <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="h-6 w-6" aria-hidden="true" />
+                  <span className="sr-only">Step 3 icon</span>
                 </div>
                 <h4 className="text-lg font-semibold mb-2">Deliver & Convert</h4>
                 <p className="text-muted-foreground">Qualified prospects are booked directly into your calendar for high-conversion sales calls.</p>
