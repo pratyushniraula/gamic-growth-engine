@@ -45,12 +45,12 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-300">
               {/* Media Section */}
-              <div className="relative aspect-video bg-muted">
-                <div className="relative w-full h-full">
+              <div className="relative bg-muted rounded-t-2xl overflow-hidden">
+                <div className="relative w-full">
                   <img 
                     src={Array.isArray(testimonial.media) ? testimonial.media[currentImageIndex] : testimonial.media} 
                     alt={`${testimonial.author} testimonial ${currentImageIndex + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                   
                   {/* Navigation Buttons */}
