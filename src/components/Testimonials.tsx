@@ -4,11 +4,11 @@ const Testimonials = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const testimonials = [{
     content: "Gamic completely transformed our lead generation process. We went from struggling to book 2-3 meetings per month to consistently getting 15-20 qualified prospects on our calendar every week. The ROI has been incredible.",
-    author: "Sarah Chen",
+    author: "Eric Allen",
     company: "TechScale Pro",
     role: "CEO",
     rating: 5,
-    media: ["/ERA1.PNG", "/ERA2.PNG", "/ERA3.PNG"],
+    media: ["/IMG_4342.jpg", "/IMG_4343.jpg", "/IMG_4344.jpg"],
     mediaType: "image",
     results: "$54,000 Added to Saas Company's Pipeline in 5 Months"
   }];
