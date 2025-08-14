@@ -37,24 +37,24 @@ const AboutSection = () => {
                   <AlertTriangle className="h-6 w-6" aria-hidden="true" />
                   <span className="sr-only">Step 1 icon</span>
                 </div>
-                <h4 className="text-lg font-semibold mb-2">Research & Strategy</h4>
-                <p className="text-muted-foreground">We analyze your ideal customer profile and develop a targeted outreach strategy.</p>
+                <h4 className="text-lg font-semibold mb-2">Inconsistent Lead Flow?</h4>
+                <p className="text-muted-foreground">Is lead flow in your agency currently inconsistent? Are some months better than others in terms of getting new leads?</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
                   <Handshake className="h-6 w-6" aria-hidden="true" />
                   <span className="sr-only">Step 2 icon</span>
                 </div>
-                <h4 className="text-lg font-semibold mb-2">Execute & Engage</h4>
-                <p className="text-muted-foreground">Our team launches personalized campaigns across multiple channels to engage prospects.</p>
+                <h4 className="text-lg font-semibold mb-2">Reliance On Referrals</h4>
+                <p className="text-muted-foreground">Are referrals and word of mouth the only way you get new business in through the door? Do you want new ways to get clients without soley relying on word of mouth?</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="h-6 w-6" aria-hidden="true" />
                   <span className="sr-only">Step 3 icon</span>
                 </div>
-                <h4 className="text-lg font-semibold mb-2">Deliver & Convert</h4>
-                <p className="text-muted-foreground">Qualified prospects are booked directly into your calendar for high-conversion sales calls.</p>
+                <h4 className="text-lg font-semibold mb-2">Lack Of Time</h4>
+                <p className="text-muted-foreground">Do you not have the time to try different acquisition channels? Do you want to try new ways to get meetings on your calendar but just are busy running your agency?</p>
               </div>
             </div>
           </div>
