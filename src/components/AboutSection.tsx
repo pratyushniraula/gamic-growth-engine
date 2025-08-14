@@ -37,7 +37,7 @@ const AboutSection = () => {
                   <AlertTriangle className="h-6 w-6" aria-hidden="true" />
                   <span className="sr-only">Step 1 icon</span>
                 </div>
-                <h4 className="text-lg font-semibold mb-2">Inconsistent Lead Flow?</h4>
+                <h4 className="text-lg font-semibold mb-2">Inconsistent Lead Flow</h4>
                 <p className="text-muted-foreground">Is lead flow in your agency currently inconsistent? Are some months better than others in terms of getting new leads?</p>
               </div>
               <div className="text-center">
