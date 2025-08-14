@@ -12,13 +12,12 @@ const Testimonials = () => {
       role: "CEO",
       rating: 5,
       media: [
-        "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=600&h=400&fit=crop&crop=face",
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop&crop=face",
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=400&fit=crop&crop=face",
-        "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=600&h=400&fit=crop&crop=face"
+        "/ERA1.PNG",
+        "/ERA2.PNG",
+        "/ERA3.PNG"
       ],
       mediaType: "image",
-      results: "52 meetings booked, $280K revenue"
+      results: "$54,000 Added to Saas Company's Pipeline in 5 Months"
     }
   ];
 
