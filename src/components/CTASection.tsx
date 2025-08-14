@@ -54,12 +54,12 @@ const CTASection = () => {
                 <span>Custom strategy for your specific market</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4" />
-                <span>AI personalization opportunities analysis</span>
+                
+           
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4" />
-                <span>ROI projection for your business</span>
+               
+               
               </div>
             </div>
           </div>
