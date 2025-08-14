@@ -14,27 +14,27 @@ const CaseStudies = () => {
     company: "Deep Social Brands",
     founder: "Deepak Sharma",
     role: "CEO",
-    results: "270,000 of revenue in 8 months",
-    problem: "Only relied on referrals and word-of-mouth, struggling to scale their client base.",
-    solution: "We used their case studies to target prospects similar to their previous clients. Leading to many booked meetings and closing multiple deals, including a Nasdaq listed company.",
+    results: "$270,000 of Revenue In 8 Months",
+    problem: "Only relied on referrals and word-of-mouth, struggling to scale their client base",
+    solution: "We used their case studies to target prospects similar to their previous clients. Leading to many booked meetings and closing multiple deals, including a Nasdaq listed company",
     videoId: "oy9ACwC1-uM",
     image: "/faces/DEEP.jpeg"
   }, {
     company: "First Rank Digital",
     founder: "Rene Ramirez",
     role: "COO",
-    results: "70+ meetings booked, 13 clients signed",
-    problem: "First Rank Digital relied on cold calls to get leads and book meetings. While it did work, it required a lot of manual effort to keep their pipeline full.",
-    solution: "Since partnering with us, they\'ve consistently filled their calendar with new leads. With automated lead generation, they\'ve signed multiple new clients while saving their time and resources for more strategic tasks.",
+    results: "70+ Meetings Booked, 13 Clients Signed",
+    problem: "First Rank Digital relied on cold calls to get leads and book meetings. While it did work, it required a lot of manual effort to keep their pipeline full",
+    solution: "Since partnering with us, they\'ve consistently filled their calendar with new leads. With automated lead generation, they\'ve signed multiple new clients while saving their time and resources for more strategic tasks",
     videoId: "mKgSmpGUS-4",
     image: "/faces/Rene.jpeg"
   }, {
     company: "Magnasan Films",
     founder: "Mathias Magnasan",
     role: "Founder",
-    results: "25 meetings booked, 3 deals closed",
-    problem: "Magnason Film purely relied on their previous work to get new clients but it wasn't a reliable method of client acquisition.",
-    solution: "Since working with us, they've been getting a steady flow of leads every month and closed 3 new deals, including a dream client who plans to work with them for life!",
+    results: "25 Meetings Booked, 3 Deals Closed",
+    problem: "Magnason Film purely relied on their previous work to get new clients but it wasn't a reliable method of client acquisition",
+    solution: "Since working with us, they've been getting a steady flow of leads every month and closed 3 new deals, including a dream client who plans to work with them for life",
     videoId: "Fkst4al5y-Q",
     image: "/faces/Mathias.jpeg"
   }, {
@@ -42,26 +42,26 @@ const CaseStudies = () => {
     founder: "Dru Sutton",
     role: "Co-Founder",
     results: "15 Meetings Booked, Multiple Deals Closed",
-    problem: "Shore Point Productions only relied on refferals and a bit of LinkedIn outreach with no stable method of client acquisition.",
-    solution: "Now they consistently get new leads month after month and have been able to close multiple deals and built a pipeline that keeps growing.",
+    problem: "Shore Point Productions only relied on refferals and a bit of LinkedIn outreach with no stable method of client acquisition",
+    solution: "Now they consistently get new leads month after month and have been able to close multiple deals and built a pipeline that keeps growing",
     videoId: "07RFfrVrACw",
     image: "/faces/DruFCe.jpeg"
   }, {
     company: "Cashion Marketing",
     founder: "Hayden Cashion",
     role: "CEO",
-    results: "30+ meetings booked, multiple deals closed",
-    problem: "Cashion Marketing depended only on referrals to get new clients. It worked, but it was unpredictable and made it hard to keep a steady flow of deals.",
-    solution: "After working with us, they now get qualified leads every month from cold email. They've booked over 30 meetings and closed mutliple deals and are now able to scale their business predictably.",
+    results: "30+ Meetings Booked, Multiple Deals Closed",
+    problem: "Cashion Marketing depended only on referrals to get new clients. It worked, but it was unpredictable and made it hard to keep a steady flow of deals",
+    solution: "After working with us, they now get qualified leads every month from cold email. They've booked over 30 meetings and closed mutliple deals and are now able to scale their business predictably",
     videoId: "-8c-oSi9doQ",
     image: "/faces/HaydenCashion.jpeg"
   }, {
     company: "Art & Ode",
     founder: "Aziz Rawat",
     role: "Founder",
-    results: "20 meetings booked, 3 meetings closed.",
+    results: "20 Meetings Booked, 3 Meetings Closed",
     problem: "Art & Ode was a startup who were looking for new ways to get in front of their ideal customers without breaking the bank on advertising",
-    solution: "Since working with us, they've consistently been able to get meetings month after month, scaled their business from the ground up, and fill out their entire sales pipeline with their ideal prospects.",
+    solution: "Since working with us, they've consistently been able to get meetings month after month, scaled their business from the ground up, and fill out their entire sales pipeline with their ideal prospects",
     videoId: "NmOsiKcQLQU",
     image: "/faces/Aziz.jpeg"
   }];
