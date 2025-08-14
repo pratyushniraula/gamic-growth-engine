@@ -48,7 +48,7 @@ const FreeResources = () => {
             Our <span className="text-primary">Free Resources</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Access our library of proven strategies, frameworks, and actionable insights to help you master B2B sales and lead generation.
+            Access our library of proven strategies, frameworks, and actionable insights to help you master cold outreach and lead generation
           </p>
         </div>
 

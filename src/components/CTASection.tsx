@@ -7,7 +7,7 @@ const CTASection = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Ready to Fill Your Calendar with Qualified Meetings?
           </h2>
-          <p className="text-xl mb-8 opacity-90">Join the companies already using our AI-powered system to consistently book qualified sales meetings. Only pay for results.</p>
+          <p className="text-xl mb-8 opacity-90">Join the dozens of B2B companies already using our AI-powered system to consistently book qualified sales meetings.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             <div className="flex items-center space-x-3 justify-center">
@@ -54,12 +54,12 @@ const CTASection = () => {
                 <span>Custom strategy for your specific market</span>
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4" />
-                <span>AI personalization opportunities analysis</span>
+                
+           
               </div>
               <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4" />
-                <span>ROI projection for your business</span>
+               
+               
               </div>
             </div>
           </div>
