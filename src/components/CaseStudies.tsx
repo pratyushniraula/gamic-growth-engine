@@ -72,7 +72,7 @@ const CaseStudies = () => {
             Real Results from <span className="text-primary">Real Clients</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            See how we've helped Agencies, B2B service providers, and SaaS companies consistently book more qualified meetings and close more deals.
+          See how we've helped B2B companies consistently book qualified meetings and close deals.
           </p>
         </div>
 
@@ -90,8 +90,7 @@ const CaseStudies = () => {
 
                 {/* Results */}
                 <div className="mb-6 p-4 bg-gradient-subtle rounded-lg">
-                  <h4 className="text-lg font-semibold text-foreground mb-2">Results:</h4>
-                  <p className="text-muted-foreground">{caseStudy.results}</p>
+                  <p className="text-xl font-bold text-foreground">Results: {caseStudy.results}</p>
                 </div>
 
                 {/* YouTube Video */}
