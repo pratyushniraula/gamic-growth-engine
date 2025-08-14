@@ -22,6 +22,16 @@ const AboutSection = () => {
       icon: <CheckCircle className="h-6 w-6 text-primary" />,
       title: "Seamless Handoff",
       description: "Pre-qualified prospects are delivered directly to your calendar, ready for meaningful sales conversations."
+    },
+    {
+      icon: <TrendingUp className="h-6 w-6 text-primary" />,
+      title: "Performance Tracking",
+      description: "Monitor campaign performance with detailed analytics and insights to continuously optimize your lead generation results."
+    },
+    {
+      icon: <Handshake className="h-6 w-6 text-primary" />,
+      title: "Partnership Approach",
+      description: "We work as an extension of your team, understanding your business goals and adapting our strategy accordingly."
     }
   ];
 
