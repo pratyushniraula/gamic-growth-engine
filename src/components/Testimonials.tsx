@@ -12,9 +12,9 @@ const Testimonials = () => {
       role: "CEO",
       rating: 5,
       media: [
-        "/ERA1.PNG",
-        "/ERA2.PNG",
-        "/ERA3.PNG"
+        "/IMG_4342.jpg",
+        "/IMG_4343.jpg",
+        "/IMG_4344.jpg"
       ],
       mediaType: "image",
       results: "$54,000 Added to Saas Company's Pipeline in 5 Months"
