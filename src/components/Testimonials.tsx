@@ -99,13 +99,13 @@ const Testimonials = () => {
 
                 {/* Content */}
                 <blockquote className="text-muted-foreground mb-6 leading-relaxed">
-                  "{testimonial.content}"
+                  {testimonial.content}
                 </blockquote>
 
                 {/* Results */}
-                <div className="bg-primary/5 rounded-lg p-3 mb-6">
-                  <div className="text-sm font-semibold text-primary">Results:</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.results}</div>
+                <div className="bg-primary/5 rounded-lg p-6 mb-6">
+                  <div className="text-base font-semibold text-primary">Results:</div>
+                  <div className="text-base text-muted-foreground font-medium">{testimonial.results}</div>
                 </div>
 
                 {/* Author */}
