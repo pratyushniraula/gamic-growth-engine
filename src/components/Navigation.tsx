@@ -5,8 +5,8 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <div className="w-9 h-9 rounded-full flex items-center justify-center">
-            <img src="/favicon.ico" alt="Gamic Media Logo" className="w-9 h-9 rounded-full" />
+          <div className="w-10 h-10 rounded-full flex items-center justify-center">
+            <img src="/favicon.ico" alt="Gamic Media Logo" className="w-10 h-10 rounded-full" />
           </div>
           <span className="text-xl font-bold text-foreground">Gamic Media</span>
         </div>
