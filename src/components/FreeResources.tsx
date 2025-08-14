@@ -17,7 +17,7 @@ const FreeResources = () => {
     {
       title: "It's Boring But, You'll Boook 10-20 Calls A Month",
       description: "Discover my secret to consistent lead generation",
-      embedId: "lzehNLLoe20", // Replace with actual YouTube video IDs
+      embedId: "9WTUNlaqx0Q", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=225&fit=crop"
     },
     {
@@ -29,7 +29,7 @@ const FreeResources = () => {
     {
       title: "How To Use Clay.com For Lead Generation (2025)",
       description: "Automate your lead generation process with Clay.com",
-      embedId: "zt5kC2jb8nA", // Replace with actual YouTube video IDs
+      embedId: "UsM5SLxobPk", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=400&h=225&fit=crop"
     },
     {

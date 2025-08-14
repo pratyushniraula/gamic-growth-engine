@@ -29,8 +29,8 @@ const CaseStudies = () => {
     videoId: "mKgSmpGUS-4",
     image: "/faces/Rene.jpeg"
   }, {
-    company: "Magnasan Films",
-    founder: "Mathias Magnasan",
+    company: "Magnason Films",
+    founder: "Mathias Magnason",
     role: "Founder",
     results: "25 Meetings Booked, 3 Deals Closed",
     problem: "Magnason Film purely relied on their previous work to get new clients but it wasn't a reliable method of client acquisition",
@@ -59,7 +59,7 @@ const CaseStudies = () => {
     company: "Art & Ode",
     founder: "Aziz Rawat",
     role: "Founder",
-    results: "20 Meetings Booked, 3 Meetings Closed.",
+    results: "20 Meetings Booked, 3 Meetings Closed",
     problem: "Art & Ode was a startup who were looking for new ways to get in front of their ideal customers without breaking the bank on advertising",
     solution: "Since working with us, they've consistently been able to get meetings month after month, scaled their business from the ground up, and fill out their entire sales pipeline with their ideal prospects",
     videoId: "NmOsiKcQLQU",

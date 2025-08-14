@@ -5,33 +5,33 @@ const AboutSection = () => {
   const features = [
     {
       icon: <Target className="h-6 w-6 text-primary" />,
-      title: "Precision Targeting",
-      description: "We identify and reach your ideal prospects using advanced data analytics and proven targeting strategies."
+      title: "Hyper Targeted Lead Lists",
+      description: "We'll build you a list of whoever you want to work with depending on company headcount, revenue, location, industry and much more."
     },
     {
       icon: <Zap className="h-6 w-6 text-primary" />,
-      title: "Automated Outreach",
-      description: "Our sophisticated automation systems handle initial contact and follow-ups while maintaining a personal touch."
+      title: "Tailored Solutions",
+      description: "We understand that not every business is the same. Hence, our approach is entirely customized to align with your objectives, audience, and industry."
     },
     {
       icon: <Users className="h-6 w-6 text-primary" />,
-      title: "Qualified Lead Generation",
-      description: "We don't just generate leads, we qualify them to ensure they're genuinely interested and ready to buy."
+      title: "Steady Lead Flow",
+      description: "Parterning with us guarantees a dependable stream of qualified leads, thanks to our refined methods and continuous optimization efforts."
     },
     {
       icon: <CheckCircle className="h-6 w-6 text-primary" />,
-      title: "Seamless Handoff",
-      description: "Pre-qualified prospects are delivered directly to your calendar, ready for meaningful sales conversations."
+      title: "Efficiency and Resource Optimization",
+      description: "Entrusting your lead generation to us grants you the freedom to use your time and resources towards core business functions, knowing that part of your business is in capable hands."
     },
     {
       icon: <TrendingUp className="h-6 w-6 text-primary" />,
-      title: "Performance Tracking",
-      description: "Monitor campaign performance with detailed analytics and insights to continuously optimize your lead generation results."
+      title: "Seasoned Expertise",
+      description: "Our team possesses extensive knowledge and hands-on experience in anything cold email and lead generation related that has come, through years of dedicated practice."
     },
     {
       icon: <Handshake className="h-6 w-6 text-primary" />,
-      title: "Partnership Approach",
-      description: "We work as an extension of your team, understanding your business goals and adapting our strategy accordingly."
+      title: "Transparant Performance Tracking",
+      description: "With our analytics and reporting tools, you gain full insight into the effectiveness of your campaigns, helping you to maximize returns."
     }
   ];
 
@@ -72,7 +72,7 @@ const AboutSection = () => {
 
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            What <span className="text-primary">Gamic Media</span> Does
+            Why Work With <span className="text-primary">Gamic Media</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             We're a specialized lead generation agency that helps B2B companies scale their sales by 

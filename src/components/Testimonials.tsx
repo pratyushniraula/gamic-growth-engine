@@ -5,7 +5,7 @@ const Testimonials = () => {
   const testimonials = [{
     content: "Gamic completely transformed our lead generation process. We went from struggling to book 2-3 meetings per month to consistently getting 15-20 qualified prospects on our calendar every week. The ROI has been incredible.",
     author: "Eric Allen",
-    company: "TechScale Pro",
+    company: "ERA Fit App",
     role: "CEO",
     rating: 5,
     media: ["/IMG_4342.jpg", "/IMG_4343.jpg", "/IMG_4344.jpg"],
