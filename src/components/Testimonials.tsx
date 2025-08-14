@@ -64,8 +64,8 @@ const Testimonials = () => {
 
                 {/* Results */}
                 <div className="bg-primary/5 rounded-lg p-3 mb-6">
-                  <div className="text-sm font-semibold text-primary">Results:</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.results}</div>
+                  <div className="text-base font-semibold text-primary">Results:</div>
+                  <div className="text-base text-muted-foreground">{testimonial.results}</div>
                 </div>
 
                 {/* Author */}
