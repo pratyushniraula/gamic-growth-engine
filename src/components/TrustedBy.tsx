@@ -1,5 +1,5 @@
 const TrustedBy = () => {
-  const logos = ["Deep Social Brands", "First Rank Digital", "Magnason Films", "Shore Point Productions", "Cashion Marketing", "Art&Ode", "ERA Fit", "Live Media Digital"];
+  const logos = ["Deep Social Brands", "First Rank Digital", "Magnason Films", "Shore Point Productions", "Cashion Marketing", "Art&Ode", "ERA Fit", "Live Media Digital"]; 
   return <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
