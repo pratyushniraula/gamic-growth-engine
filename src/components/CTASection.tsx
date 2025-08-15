@@ -11,16 +11,16 @@ const CTASection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             <div className="flex items-center space-x-3 justify-center">
-              <Clock className="w-6 h-6" />
-              <span>Setup in 7 Days</span>
+              
+              <span></span>
             </div>
             <div className="flex items-center space-x-3 justify-center">
-              <DollarSign className="w-6 h-6" />
-              <span>Performance-Based Pricing</span>
+            
+              <span></span>
             </div>
             <div className="flex items-center space-x-3 justify-center">
-              <CheckCircle className="w-6 h-6" />
-              <span>Guaranteed Results</span>
+            
+              <span></span>
             </div>
           </div>
 
