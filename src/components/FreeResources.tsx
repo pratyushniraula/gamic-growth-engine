@@ -15,8 +15,8 @@ const FreeResources = () => {
       thumbnail: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=225&fit=crop"
     },
     {
-      title: "It's Boring But, You'll Boook 10-20 Calls A Month",
-      description: "Discover my secret to consistent lead generation",
+      title: "53 Minutes of The BEST Cold Email Training To Sign Clients In 2025",
+      description: "Watch as I walk you through how to set up cold emails and scale them to 1000+ a day and how to write your scripts to get replies",
       embedId: "9WTUNlaqx0Q", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=225&fit=crop"
     },
@@ -27,8 +27,8 @@ const FreeResources = () => {
       thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=225&fit=crop"
     },
     {
-      title: "How To Use Clay.com For Lead Generation (2025)",
-      description: "Automate your lead generation process with Clay.com",
+      title: "22 Minutes Of The Best Cold Email Deliverability Advice (2025)",
+      description: "Watch as this video breaks down everything you'd need to know to handle deliverbaility and get your email read",
       embedId: "UsM5SLxobPk", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=400&h=225&fit=crop"
     },
