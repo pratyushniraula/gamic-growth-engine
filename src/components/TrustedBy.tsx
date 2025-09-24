@@ -31,7 +31,7 @@ const TrustedBy = () => {
             }}
             plugins={[
               Autoplay({
-                delay: 1,
+                delay: 80,
                 stopOnInteraction: false,
                 stopOnMouseEnter: true,
               }),
