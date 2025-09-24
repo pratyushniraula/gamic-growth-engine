@@ -19,7 +19,7 @@ const TrustedBy = () => {
   return <section className="py-16 bg-blue-50 dark:bg-blue-950/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-lg font-semibold text-blue-700 dark:text-blue-300 mb-8">
+          <h2 className="text-lg font-semibold text-muted-foreground mb-8">
             Trusted by Leading B2B Companies
           </h2>
           
