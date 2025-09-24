@@ -1,5 +1,19 @@
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+
+// Easy to manage companies list - add/remove companies here
+const companies = [
+  { name: "Deep Social Brands" },
+  { name: "First Rank Digital" },
+  { name: "Magnason Films" },
+  { name: "Shore Point Productions" },
+  { name: "Cashion Marketing" },
+  { name: "Art&Ode" },
+  { name: "ERA Fit" },
+  { name: "Live Media Digital" },
+];
+
 const TrustedBy = () => {
-  const logos = ["Deep Social Brands", "First Rank Digital", "Magnason Films", "Shore Point Productions", "Cashion Marketing", "Art&Ode", "ERA Fit", "Live Media Digital"]; 
   return <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -7,11 +21,28 @@ const TrustedBy = () => {
             Trusted by Leading B2B Companies
           </h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center">
-            {logos.map((logo, index) => <div key={index} className="flex items-center justify-center h-12 px-4 text-muted-foreground font-medium text-sm hover:text-foreground transition-colors opacity-60 hover:opacity-100">
-                {logo}
-              </div>)}
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 2000,
+              }),
+            ]}
+            className="w-full max-w-4xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {companies.map((company, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                  <div className="flex items-center justify-center h-12 px-4 text-muted-foreground font-medium text-sm hover:text-foreground transition-colors opacity-60 hover:opacity-100">
+                    {company.name}
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
         
         <div className="max-w-3xl mx-auto text-center">
