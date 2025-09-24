@@ -26,12 +26,13 @@ const TrustedBy = () => {
               align: "start",
               loop: true,
               dragFree: true,
-              duration: 60,
+              duration: 120,
               skipSnaps: true,
+              containScroll: false,
             }}
             plugins={[
               Autoplay({
-                delay: 600,
+                delay: 1000,
                 stopOnInteraction: false,
                 stopOnMouseEnter: true,
               }),
