@@ -2,7 +2,7 @@
 const companies = [
   { name: "Deep Social Brands" },
   { name: "First Rank Digital" },
-  { name: "Magnason Films" },
+  { name: "Magnasan Films" },
   { name: "Shore Point Productions" },
   { name: "Cashion Marketing" },
   { name: "Art&Ode" },
