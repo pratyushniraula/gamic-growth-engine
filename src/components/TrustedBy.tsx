@@ -14,10 +14,10 @@ const companies = [
 ];
 
 const TrustedBy = () => {
-  return <section className="py-16 bg-background">
+  return <section className="py-16 bg-blue-50 dark:bg-blue-950/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-lg font-semibold text-muted-foreground mb-8">
+          <h2 className="text-lg font-semibold text-blue-700 dark:text-blue-300 mb-8">
             Trusted by Leading B2B Companies
           </h2>
           
@@ -31,7 +31,7 @@ const TrustedBy = () => {
             }}
             plugins={[
               Autoplay({
-                delay: 0,
+                delay: 4000,
                 stopOnInteraction: false,
                 stopOnMouseEnter: true,
               }),
@@ -41,7 +41,7 @@ const TrustedBy = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {companies.map((company, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/5">
-                  <div className="flex items-center justify-center h-14 px-6 rounded-lg bg-blue-50/80 border border-blue-200/50 text-blue-700 font-medium text-sm hover:text-blue-900 hover:bg-blue-100/90 hover:border-blue-300/60 transition-all duration-300 hover:scale-105 backdrop-blur-sm dark:bg-blue-950/30 dark:border-blue-800/30 dark:text-blue-300 dark:hover:text-blue-100 dark:hover:bg-blue-900/40 dark:hover:border-blue-700/50">
+                  <div className="flex items-center justify-center h-14 px-6 rounded-lg bg-white/60 text-blue-800 font-medium text-sm hover:text-blue-900 hover:bg-white/80 transition-all duration-300 hover:scale-105 backdrop-blur-sm dark:bg-white/10 dark:text-blue-200 dark:hover:text-blue-100 dark:hover:bg-white/20">
                     {company.name}
                   </div>
                 </CarouselItem>
