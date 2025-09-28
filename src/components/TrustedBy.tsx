@@ -26,7 +26,7 @@ const TrustedBy = () => {
           <div className="w-full max-w-5xl mx-auto overflow-hidden">
             <div className="flex animate-scroll gap-8" style={{ animation: 'scroll 30s linear infinite' }}>
               {companies.map((company, index) => (
-                <div key={index} className="flex-shrink-0 flex items-center justify-center h-14 px-6 rounded-lg bg-blue-100/70 text-primary font-medium text-sm hover:text-primary/80 hover:bg-blue-200/80 transition-all duration-300 hover:scale-105 backdrop-blur-sm dark:bg-blue-900/30 dark:text-primary dark:hover:text-primary/80 dark:hover:bg-blue-800/40 min-w-[200px]">
+                <div key={index} className="flex-shrink-0 flex items-center justify-center h-14 px-6 bg-blue-100/70 text-primary font-medium text-sm hover:text-primary/80 hover:bg-blue-200/80 transition-all duration-300 hover:scale-105 backdrop-blur-sm dark:bg-blue-900/30 dark:text-primary dark:hover:text-primary/80 dark:hover:bg-blue-800/40 min-w-[200px]">
                   {company.name}
                 </div>
               ))}
