@@ -1,5 +1,5 @@
 // Easy to manage companies list - add/remove companies here
-const companies = [
+const baseCompanies = [
   { name: "Deep Social Brands" },
   { name: "First Rank Digital" },
   { name: "Magnason Film" },
@@ -8,12 +8,10 @@ const companies = [
   { name: "Art&Ode" },
   { name: "ERA Fit" },
   { name: "Live Media Digital" },
-  // Duplicate for seamless loop
-  { name: "Deep Social Brands" },
-  { name: "First Rank Digital" },
-  { name: "Magnason Films" },
-  { name: "Shore Point Productions" },
 ];
+
+// Create seamless loop by duplicating the array
+const companies = [...baseCompanies, ...baseCompanies];
 
 const TrustedBy = () => {
   return <section className="py-16 bg-blue-50 dark:bg-blue-950/20">
@@ -24,9 +22,9 @@ const TrustedBy = () => {
           </h2>
           
           <div className="w-full max-w-5xl mx-auto overflow-hidden">
-            <div className="flex animate-scroll gap-8" style={{ animation: 'scroll 30s linear infinite' }}>
+            <div className="flex animate-scroll gap-8">
               {companies.map((company, index) => (
-                <div key={index} className="flex-shrink-0 flex items-center justify-center h-14 px-6 rounded-lg bg-blue-100/70 text-primary font-medium text-sm hover:text-primary/80 hover:bg-blue-200/80 transition-all duration-300 hover:scale-105 backdrop-blur-sm dark:bg-blue-900/30 dark:text-primary dark:hover:text-primary/80 dark:hover:bg-blue-800/40 min-w-[200px]">
+                <div key={index} className="flex-shrink-0 flex items-center justify-center h-14 px-6 bg-blue-100/70 text-primary font-medium text-sm hover:text-primary/80 hover:bg-blue-200/80 transition-all duration-300 hover:scale-105 backdrop-blur-sm dark:bg-blue-900/30 dark:text-primary dark:hover:text-primary/80 dark:hover:bg-blue-800/40 min-w-[200px]">
                   {company.name}
                 </div>
               ))}
