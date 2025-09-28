@@ -9,7 +9,7 @@ const FreeResources = () => {
     },
     {
       title: "I used Alex Hormozi's $100M Cold Outreach Strategy",
-      description: "Master the art of finding your rythm in cold outreach",
+      description: "Learn how to apply Alex Hormozi's cold outreach strategy to your business",
       embedId: "7ho2VKxJD84", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=225&fit=crop"
     },
