@@ -3,10 +3,9 @@ import { Play } from "lucide-react";
 const FreeResources = () => {
   const videos = [
     {
-      title: "How To Scrape Unlimited Leads in 9 Minutes",
-      description: "Learn the exact framework I use to achieve 15%+ reply rates",
-      embedId: "qeWOvfOdpfw", // Replace with actual YouTube video IDs
-      thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=225&fit=crop"
+      title: "FREE Cold Email Marketing Course for 2025 (2+ HRS)",
+      description: "Here's the ultimate guide to start your cold email marketing agency",
+      embedId:  "LrINcz2eOdw"
     },
     {
       title: "I used Alex Hormozi's $100M Cold Outreach Strategy",
@@ -21,16 +20,16 @@ const FreeResources = () => {
       thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=225&fit=crop"
     },
     {
+      title: "How To Scrape Unlimited Leads in 9 Minutes",
+      description: "Learn the exact framework I use to achieve 15%+ reply rates",
+      embedId: "qeWOvfOdpfw", // Replace with actual YouTube video IDs
+      thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=225&fit=crop"
+    },
+    {
       title: "The Only Loom Cold Outreach Video You'll Ever Need",
       description: "Create high-converting Loom videos that get responses",
       embedId: "I6q5RtMetL4", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=225&fit=crop"
-    },
-    {
-      title: "22 Minutes Of The Best Cold Email Deliverability Advice (2025)",
-      description: "Watch as this video breaks down everything you'd need to know to handle deliverbaility and get your email read",
-      embedId: "UsM5SLxobPk", // Replace with actual YouTube video IDs
-      thumbnail: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=400&h=225&fit=crop"
     },
     {
       title: "Smartlead AI Review 2025 | How To Book 100+ Sales Calls Per Month",
