@@ -1,1 +1,4 @@
 project_id = "llwxgdtnntghluaatezk"
+
+[functions.rag-chat]
+verify_jwt = true

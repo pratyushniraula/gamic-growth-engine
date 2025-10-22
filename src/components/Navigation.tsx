@@ -21,6 +21,9 @@ const Navigation = () => {
           <a href="https://www.youtube.com/@AryanAryal3" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
             YouTube
           </a>
+          <a href="/chat" className="text-muted-foreground hover:text-foreground transition-colors">
+            AI Chat
+          </a>
         </div>
         
         <Button asChild variant="premium" size="lg">
