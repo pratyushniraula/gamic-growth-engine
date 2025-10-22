@@ -29,6 +29,7 @@ const Chat = () => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [promptCount, setPromptCount] = useState(0);
+  const [isApproved, setIsApproved] = useState<boolean | null>(null);
   const navigate = useNavigate();
   const { toast } = useToast();
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -44,7 +45,10 @@ const Chat = () => {
       }
 
       setUser(session.user);
-      await fetchPromptCount(session.user.id);
+      const approved = await checkApprovalStatus(session.user.id);
+      if (approved) {
+        await fetchPromptCount(session.user.id);
+      }
     };
 
     checkAuth();
@@ -60,6 +64,22 @@ const Chat = () => {
 
     return () => subscription.unsubscribe();
   }, [navigate]);
+
+  const checkApprovalStatus = async (userId: string) => {
+    const { data, error } = await supabase
+      .from("profiles")
+      .select("approved")
+      .eq("id", userId)
+      .single();
+
+    if (error) {
+      console.error("Error checking approval status:", error);
+      return false;
+    }
+
+    setIsApproved(data?.approved ?? false);
+    return data?.approved ?? false;
+  };
 
   const fetchPromptCount = async (userId: string) => {
     const today = new Date();
@@ -184,10 +204,44 @@ const Chat = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  if (!user) {
+  if (!user || isApproved === null) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p>Loading...</p>
+      </div>
+    );
+  }
+
+  if (!isApproved) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
+        <header className="border-b border-border bg-background/80 backdrop-blur-md">
+          <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 className="text-2xl font-bold text-foreground">AI Chat Assistant</h1>
+            <div className="flex gap-4 items-center">
+              <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+                Home
+              </a>
+              <Button variant="outline" onClick={handleSignOut}>
+                Sign Out
+              </Button>
+            </div>
+          </div>
+        </header>
+        <main className="container mx-auto px-4 py-8 max-w-4xl">
+          <Card>
+            <CardContent className="p-8 text-center space-y-4">
+              <h2 className="text-2xl font-bold text-foreground">Account Pending Approval</h2>
+              <p className="text-muted-foreground">
+                Your account is currently pending approval by an administrator. 
+                You will receive access to the chat once your account has been approved.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Note: Unapproved accounts will be automatically deleted after 7 days.
+              </p>
+            </CardContent>
+          </Card>
+        </main>
       </div>
     );
   }
