@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -13,9 +14,32 @@ serve(async (req) => {
   }
 
   try {
-    const { message } = await req.json();
+    // Validate input
+    const messageSchema = z.object({
+      message: z.string()
+        .trim()
+        .min(1, 'Message cannot be empty')
+        .max(5000, 'Message must be less than 5000 characters')
+    });
 
-    console.log("Received message:", message);
+    const body = await req.json();
+    const validationResult = messageSchema.safeParse(body);
+    
+    if (!validationResult.success) {
+      return new Response(
+        JSON.stringify({ 
+          error: 'Invalid input', 
+          details: validationResult.error.errors 
+        }),
+        { 
+          status: 400, 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
+      );
+    }
+
+    const { message } = validationResult.data;
+    console.log("Received validated message:", message);
 
     // ============================================
     // TODO: IMPLEMENT RAG STUFF HERE
