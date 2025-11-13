@@ -3,73 +3,69 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
+  if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
     // Create Supabase client with user's JWT
-    const supabaseClient = createClient(
-      Deno.env.get('SUPABASE_URL') ?? '',
-      Deno.env.get('SUPABASE_ANON_KEY') ?? '',
-      {
-        global: {
-          headers: { Authorization: req.headers.get('Authorization')! },
-        },
-      }
-    );
+    const supabaseClient = createClient(Deno.env.get("SUPABASE_URL") ?? "", Deno.env.get("SUPABASE_ANON_KEY") ?? "", {
+      global: {
+        headers: { Authorization: req.headers.get("Authorization")! },
+      },
+    });
 
     // Verify user is authenticated
-    const { data: { user }, error: authError } = await supabaseClient.auth.getUser();
-    
+    const {
+      data: { user },
+      error: authError,
+    } = await supabaseClient.auth.getUser();
+
     if (authError || !user) {
-      return new Response(
-        JSON.stringify({ error: 'Unauthorized' }),
-        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
     // Check if user is approved
-    const { data: profile } = await supabaseClient
-      .from('profiles')
-      .select('approved')
-      .eq('id', user.id)
-      .single();
+    const { data: profile } = await supabaseClient.from("profiles").select("approved").eq("id", user.id).single();
 
     if (!profile?.approved) {
-      return new Response(
-        JSON.stringify({ error: 'Account not approved' }),
-        { status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
+      return new Response(JSON.stringify({ error: "Account not approved" }), {
+        status: 403,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      });
     }
 
     // Validate input
     const messageSchema = z.object({
-      message: z.string()
+      message: z
+        .string()
         .trim()
-        .min(1, 'Message cannot be empty')
-        .max(5000, 'Message must be less than 5000 characters')
+        .min(1, "Message cannot be empty")
+        .max(5000, "Message must be less than 5000 characters"),
     });
 
     const body = await req.json();
     const validationResult = messageSchema.safeParse(body);
-    
+
     if (!validationResult.success) {
       return new Response(
-        JSON.stringify({ 
-          error: 'Invalid input', 
-          details: validationResult.error.errors 
+        JSON.stringify({
+          error: "Invalid input",
+          details: validationResult.error.errors,
         }),
-        { 
-          status: 400, 
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
-        }
+        {
+          status: 400,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        },
       );
     }
 
@@ -85,35 +81,38 @@ serve(async (req) => {
     // 4. Combine retrieved context with user message
     // 5. Call your LLM (OpenAI, Anthropic, etc.) with augmented prompt
     // 6. Return the generated response
-    
+
     // Example structure:
     // const relevantDocs = await searchVectorDB(message);
     // const context = relevantDocs.join('\n');
     // const augmentedPrompt = `Context: ${context}\n\nUser: ${message}`;
     // const response = await callLLM(augmentedPrompt);
-    
+
     // ============================================
     // END OF RAG IMPLEMENTATION AREA
     // ============================================
 
     // Mock response for now
     const mockResponse = {
-      response: "This is a placeholder response. Implement your RAG logic here to provide intelligent answers based on your knowledge base.",
+      response: "placeholder blah blah blah",
       timestamp: new Date().toISOString(),
     };
 
     console.log("Sending response:", mockResponse);
 
     return new Response(JSON.stringify(mockResponse), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.error('Error in rag-chat function:', error);
-    return new Response(JSON.stringify({ 
-      error: error instanceof Error ? error.message : "Unknown error occurred" 
-    }), {
-      status: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
+    console.error("Error in rag-chat function:", error);
+    return new Response(
+      JSON.stringify({
+        error: error instanceof Error ? error.message : "Unknown error occurred",
+      }),
+      {
+        status: 500,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      },
+    );
   }
 });
