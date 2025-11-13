@@ -113,7 +113,9 @@ const Admin = () => {
   };
 
   const deleteUser = async (userId: string) => {
-    const { error } = await supabase.auth.admin.deleteUser(userId);
+    const { data, error } = await supabase.functions.invoke('admin-delete-user', {
+      body: { userId }
+    });
 
     if (error) {
       toast({
