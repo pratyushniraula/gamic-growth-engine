@@ -14,6 +14,41 @@ serve(async (req) => {
   }
 
   try {
+    // Create Supabase client with user's JWT
+    const supabaseClient = createClient(
+      Deno.env.get('SUPABASE_URL') ?? '',
+      Deno.env.get('SUPABASE_ANON_KEY') ?? '',
+      {
+        global: {
+          headers: { Authorization: req.headers.get('Authorization')! },
+        },
+      }
+    );
+
+    // Verify user is authenticated
+    const { data: { user }, error: authError } = await supabaseClient.auth.getUser();
+    
+    if (authError || !user) {
+      return new Response(
+        JSON.stringify({ error: 'Unauthorized' }),
+        { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Check if user is approved
+    const { data: profile } = await supabaseClient
+      .from('profiles')
+      .select('approved')
+      .eq('id', user.id)
+      .single();
+
+    if (!profile?.approved) {
+      return new Response(
+        JSON.stringify({ error: 'Account not approved' }),
+        { status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     // Validate input
     const messageSchema = z.object({
       message: z.string()
@@ -39,7 +74,7 @@ serve(async (req) => {
     }
 
     const { message } = validationResult.data;
-    console.log("Received validated message:", message);
+    console.log(`User ${user.id} sent validated message:`, message);
 
     // ============================================
     // TODO: IMPLEMENT RAG STUFF HERE
