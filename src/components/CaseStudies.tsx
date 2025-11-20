@@ -64,7 +64,18 @@ const CaseStudies = () => {
     solution: "Since working with us, they've consistently been able to get meetings month after month, scaled their business from the ground up, and fill out their entire sales pipeline with their ideal prospects",
     videoId: "NmOsiKcQLQU",
     image: "/faces/Aziz.jpeg"
-  }];
+  },
+  {
+    company: "Brand Face Media",
+    founder: "Bernardo Montanez",
+    role: "CEO",
+    results: "15 Meetings Booked, 2 Deals Closed",
+    problem: "Brand Face Media was struggling to find a reliable way to get in front of their ideal clients and book meetings consistently",
+    solution: "After partnering with us, they were able to fill their calendar with qualified meetings and close multiple deals, allowing them to scale their business efficiently",
+    videoId: "bUemz8iQhi4",
+    image: "/faces/Bernardo.jpeg"
+  }
+  ];
   return <section id="case-studies" className="py-20 bg-background scroll-mt-24 md:scroll-mt-28">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
