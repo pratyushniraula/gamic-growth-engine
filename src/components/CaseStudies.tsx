@@ -5,97 +5,120 @@ import { useState } from "react";
 const CaseStudies = () => {
   const [openCards, setOpenCards] = useState<Record<number, boolean>>({});
   const toggleCard = (index: number) => {
-    setOpenCards(prev => ({
+    setOpenCards((prev) => ({
       ...prev,
-      [index]: !prev[index]
+      [index]: !prev[index],
     }));
   };
-  const cases = [{
-    company: "Deep Social Brands",
-    founder: "Deepak Sharma",
-    role: "CEO",
-    results: "$270,000 of Revenue In 8 Months",
-    problem: "Only relied on referrals and word-of-mouth, struggling to scale their client base",
-    solution: "We used their case studies to target prospects similar to their previous clients. Leading to many booked meetings and closing multiple deals, including a Nasdaq listed company",
-    videoId: "oy9ACwC1-uM",
-    image: "/faces/DEEP.jpeg"
-  }, {
-    company: "First Rank Digital",
-    founder: "Rene Ramirez",
-    role: "COO",
-    results: "70+ Meetings Booked, 13 Clients Signed",
-    problem: "First Rank Digital relied on cold calls to get leads and book meetings. While it did work, it required a lot of manual effort to keep their pipeline full",
-    solution: "Since partnering with us, they\'ve consistently filled their calendar with new leads. With automated lead generation, they\'ve signed multiple new clients while saving their time and resources for more strategic tasks",
-    videoId: "mKgSmpGUS-4",
-    image: "/faces/Rene.jpeg"
-  }, {
-    company: "Magnason Film",
-    founder: "Mathias Magnason",
-    role: "Founder",
-    results: "25 Meetings Booked, 3 Deals Closed",
-    problem: "Magnason Film purely relied on their previous work to get new clients but it wasn't a reliable method of client acquisition",
-    solution: "Since working with us, they've been getting a steady flow of leads every month and closed 3 new deals, including a dream client who plans to work with them for life",
-    videoId: "Fkst4al5y-Q",
-    image: "/faces/Mathias.jpeg"
-  }, {
-    company: "Shore Point Productions",
-    founder: "Dru Sutton",
-    role: "Co-Founder",
-    results: "15 Meetings Booked, Multiple Deals Closed",
-    problem: "Shore Point Productions only relied on refferals and a bit of LinkedIn outreach with no stable method of client acquisition",
-    solution: "Now they consistently get new leads month after month and have been able to close multiple deals and built a pipeline that keeps growing",
-    videoId: "07RFfrVrACw",
-    image: "/faces/DruFCe.jpeg"
-  }, {
-    company: "Cashion Marketing",
-    founder: "Hayden Cashion",
-    role: "CEO",
-    results: "30+ Meetings Booked, Multiple Deals Closed",
-    problem: "Cashion Marketing depended only on referrals to get new clients. It worked, but it was unpredictable and made it hard to keep a steady flow of deals",
-    solution: "After working with us, they now get qualified leads every month from cold email. They've booked over 30 meetings and closed mutliple deals and are now able to scale their business predictably",
-    videoId: "-8c-oSi9doQ",
-    image: "/faces/HaydenCashion.jpeg"
-  }, {
-    company: "Art & Ode",
-    founder: "Aziz Rawat",
-    role: "Founder",
-    results: "20 Meetings Booked, 3 Meetings Closed",
-    problem: "Art & Ode was a startup who were looking for new ways to get in front of their ideal customers without breaking the bank on advertising",
-    solution: "Since working with us, they've consistently been able to get meetings month after month, scaled their business from the ground up, and fill out their entire sales pipeline with their ideal prospects",
-    videoId: "NmOsiKcQLQU",
-    image: "/faces/Aziz.jpeg"
-  },
-  {
-    company: "Brand Face Media",
-    founder: "Bernardo Montanez",
-    role: "CEO",
-    results: "15 Meetings Booked, 2 Deals Closed",
-    problem: "Brand Face Media was struggling to find a reliable way to get in front of their ideal clients and book meetings consistently",
-    solution: "After partnering with us, they were able to fill their calendar with qualified meetings and close multiple deals, allowing them to scale their business efficiently",
-    videoId: "bUemz8iQhi4",
-    image: "/faces/Bernardo.jpeg"
-  }
+  const cases = [
+    {
+      company: "Deep Social Brands",
+      founder: "Deepak Sharma",
+      role: "CEO",
+      results: "$270,000 of Revenue In 8 Months",
+      problem: "Only relied on referrals and word-of-mouth, struggling to scale their client base",
+      solution:
+        "We used their case studies to target prospects similar to their previous clients. Leading to many booked meetings and closing multiple deals, including a Nasdaq listed company",
+      videoId: "oy9ACwC1-uM",
+      image: "/faces/DEEP.jpeg",
+    },
+    {
+      company: "First Rank Digital",
+      founder: "Rene Ramirez",
+      role: "COO",
+      results: "70+ Meetings Booked, 13 Clients Signed",
+      problem:
+        "First Rank Digital relied on cold calls to get leads and book meetings. While it did work, it required a lot of manual effort to keep their pipeline full",
+      solution:
+        "Since partnering with us, they\'ve consistently filled their calendar with new leads. With automated lead generation, they\'ve signed multiple new clients while saving their time and resources for more strategic tasks",
+      videoId: "mKgSmpGUS-4",
+      image: "/faces/Rene.jpeg",
+    },
+    {
+      company: "Magnason Film",
+      founder: "Mathias Magnason",
+      role: "Founder",
+      results: "25 Meetings Booked, 3 Deals Closed",
+      problem:
+        "Magnason Film purely relied on their previous work to get new clients but it wasn't a reliable method of client acquisition",
+      solution:
+        "Since working with us, they've been getting a steady flow of leads every month and closed 3 new deals, including a dream client who plans to work with them for life",
+      videoId: "Fkst4al5y-Q",
+      image: "/faces/Mathias.jpeg",
+    },
+    {
+      company: "Shore Point Productions",
+      founder: "Dru Sutton",
+      role: "Co-Founder",
+      results: "15 Meetings Booked, Multiple Deals Closed",
+      problem:
+        "Shore Point Productions only relied on refferals and a bit of LinkedIn outreach with no stable method of client acquisition",
+      solution:
+        "Now they consistently get new leads month after month and have been able to close multiple deals and built a pipeline that keeps growing",
+      videoId: "07RFfrVrACw",
+      image: "/faces/DruFCe.jpeg",
+    },
+    {
+      company: "Cashion Marketing",
+      founder: "Hayden Cashion",
+      role: "CEO",
+      results: "30+ Meetings Booked, Multiple Deals Closed",
+      problem:
+        "Cashion Marketing depended only on referrals to get new clients. It worked, but it was unpredictable and made it hard to keep a steady flow of deals",
+      solution:
+        "After working with us, they now get qualified leads every month from cold email. They've booked over 30 meetings and closed mutliple deals and are now able to scale their business predictably",
+      videoId: "-8c-oSi9doQ",
+      image: "/faces/HaydenCashion.jpeg",
+    },
+    {
+      company: "Art & Ode",
+      founder: "Aziz Rawat",
+      role: "Founder",
+      results: "20 Meetings Booked, 3 Meetings Closed",
+      problem:
+        "Art & Ode was a startup who were looking for new ways to get in front of their ideal customers without breaking the bank on advertising",
+      solution:
+        "Since working with us, they've consistently been able to get meetings month after month, scaled their business from the ground up, and fill out their entire sales pipeline with their ideal prospects",
+      videoId: "NmOsiKcQLQU",
+      image: "/faces/Aziz.jpeg",
+    },
+    {
+      company: "Brand Face Media",
+      founder: "Bernardo Montanez",
+      role: "CEO",
+      results: "Multiple Meetings Booked, Multiple Deals Closed",
+      problem:
+        "Brand Face Media was struggling to find a reliable way to get in front of their ideal clients and book meetings consistently",
+      solution:
+        "After partnering with us, they were able to fill their calendar with qualified meetings and close multiple deals, allowing them to scale their business efficiently",
+      videoId: "bUemz8iQhi4",
+      image: "/faces/Bernardo.jpeg",
+    },
   ];
-  return <section id="case-studies" className="py-20 bg-background scroll-mt-24 md:scroll-mt-28">
+  return (
+    <section id="case-studies" className="py-20 bg-background scroll-mt-24 md:scroll-mt-28">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             Real Results from <span className="text-primary">Real Clients</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          See how we've helped B2B companies consistently book qualified meetings and close deals.
+            See how we've helped B2B companies consistently book qualified meetings and close deals.
           </p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
-          {cases.map((caseStudy, index) => <Collapsible key={index} open={openCards[index]} onOpenChange={() => toggleCard(index)}>
+          {cases.map((caseStudy, index) => (
+            <Collapsible key={index} open={openCards[index]} onOpenChange={() => toggleCard(index)}>
               <div className="bg-card rounded-2xl p-8 shadow-card hover:shadow-premium transition-all duration-300 group">
                 {/* Header */}
                 <div className="flex items-center space-x-4 mb-6">
                   <img src={caseStudy.image} alt={caseStudy.founder} className="w-16 h-16 rounded-full object-cover" />
                   <div>
                     <h3 className="text-lg font-semibold text-foreground">{caseStudy.founder}</h3>
-                    <p className="text-sm text-muted-foreground">{caseStudy.role} at {caseStudy.company}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {caseStudy.role} at {caseStudy.company}
+                    </p>
                   </div>
                 </div>
 
@@ -107,7 +130,13 @@ const CaseStudies = () => {
                 {/* YouTube Video */}
                 <div className="mb-6">
                   <div className="aspect-video rounded-lg overflow-hidden">
-                    <iframe src={`https://www.youtube.com/embed/${caseStudy.videoId}`} title={`${caseStudy.founder} - ${caseStudy.company} Case Study`} className="w-full h-full" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                    <iframe
+                      src={`https://www.youtube.com/embed/${caseStudy.videoId}`}
+                      title={`${caseStudy.founder} - ${caseStudy.company} Case Study`}
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
                   </div>
                 </div>
 
@@ -118,7 +147,6 @@ const CaseStudies = () => {
                 </div>
 
                 <CollapsibleContent className="space-y-4 mb-6">
-                  
                   <div>
                     <h4 className="text-sm font-semibold text-foreground mb-2">Solution & Results:</h4>
                     <p className="text-sm text-muted-foreground">{caseStudy.solution}</p>
@@ -127,16 +155,24 @@ const CaseStudies = () => {
 
                 {/* Expand/Collapse Button */}
                 <CollapsibleTrigger asChild>
-                  <Button variant="outline" className={`w-full transition-colors ${openCards[index] ? 'bg-primary text-primary-foreground shadow-glow' : 'hover:bg-primary hover:text-primary-foreground hover:shadow-glow'}`}>
-                    {openCards[index] ? 'Show Less' : 'Read Full Case Study'}
-                    {openCards[index] ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
+                  <Button
+                    variant="outline"
+                    className={`w-full transition-colors ${openCards[index] ? "bg-primary text-primary-foreground shadow-glow" : "hover:bg-primary hover:text-primary-foreground hover:shadow-glow"}`}
+                  >
+                    {openCards[index] ? "Show Less" : "Read Full Case Study"}
+                    {openCards[index] ? (
+                      <ChevronUp className="w-4 h-4 ml-2" />
+                    ) : (
+                      <ChevronDown className="w-4 h-4 ml-2" />
+                    )}
                   </Button>
                 </CollapsibleTrigger>
               </div>
-            </Collapsible>)}
+            </Collapsible>
+          ))}
         </div>
-
       </div>
-    </section>;
+    </section>
+  );
 };
 export default CaseStudies;
