@@ -29,7 +29,7 @@ const CaseStudies = () => {
     videoId: "mKgSmpGUS-4",
     image: "/faces/Rene.jpeg"
   }, {
-    company: "Magnason Films",
+    company: "Magnason Film",
     founder: "Mathias Magnason",
     role: "Founder",
     results: "25 Meetings Booked, 3 Deals Closed",

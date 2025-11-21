@@ -3,34 +3,33 @@ import { Play } from "lucide-react";
 const FreeResources = () => {
   const videos = [
     {
+      title: "FREE Cold Email Marketing Course for 2025 (2+ HRS)",
+      description: "Here's the ultimate guide to start your cold email marketing agency",
+      embedId:  "LrINcz2eOdw"
+    },
+    {
+      title: "I used Alex Hormozi's $100M Cold Outreach Strategy",
+      description: "Learn how to apply Alex Hormozi's cold outreach strategy to your business",
+      embedId: "7ho2VKxJD84", // Replace with actual YouTube video IDs
+      thumbnail: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=225&fit=crop"
+    },
+    {
+      title: "53 Minutes of The BEST Cold Email Training To Sign Clients In 2025",
+      description: "Watch as I walk you through how to set up cold emails and scale them to 1000+ a day and how to write your scripts to get replies",
+      embedId: "9WTUNlaqx0Q", // Replace with actual YouTube video IDs
+      thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=225&fit=crop"
+    },
+    {
       title: "How To Scrape Unlimited Leads in 9 Minutes",
       description: "Learn the exact framework I use to achieve 15%+ reply rates",
       embedId: "qeWOvfOdpfw", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=225&fit=crop"
     },
     {
-      title: "I used Alex Hormozi's $100M Cold Outreach Strategy",
-      description: "Master the art of finding your rythm in cold outreach",
-      embedId: "7ho2VKxJD84", // Replace with actual YouTube video IDs
-      thumbnail: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=225&fit=crop"
-    },
-    {
-      title: "It's Boring But, You'll Boook 10-20 Calls A Month",
-      description: "Discover my secret to consistent lead generation",
-      embedId: "9WTUNlaqx0Q", // Replace with actual YouTube video IDs
-      thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=225&fit=crop"
-    },
-    {
       title: "The Only Loom Cold Outreach Video You'll Ever Need",
       description: "Create high-converting Loom videos that get responses",
       embedId: "I6q5RtMetL4", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=225&fit=crop"
-    },
-    {
-      title: "How To Use Clay.com For Lead Generation (2025)",
-      description: "Automate your lead generation process with Clay.com",
-      embedId: "UsM5SLxobPk", // Replace with actual YouTube video IDs
-      thumbnail: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=400&h=225&fit=crop"
     },
     {
       title: "Smartlead AI Review 2025 | How To Book 100+ Sales Calls Per Month",

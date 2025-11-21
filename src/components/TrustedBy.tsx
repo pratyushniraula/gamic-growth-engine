@@ -1,16 +1,34 @@
+// Easy to manage companies list - add/remove companies here
+const baseCompanies = [
+  { name: "Deep Social Brands" },
+  { name: "First Rank Digital" },
+  { name: "Magnason Film" },
+  { name: "Shore Point Productions" },
+  { name: "Cashion Marketing" },
+  { name: "Art&Ode" },
+  { name: "ERA Fit" },
+  { name: "Live Media Digital" },
+];
+
+// Create seamless loop by duplicating the array
+const companies = [...baseCompanies, ...baseCompanies];
+
 const TrustedBy = () => {
-  const logos = ["Deep Social Brands", "First Rank Digital "," Magnason Films"," Shore Point Productions"," Cashion Marketing"," Art & Ode"];
-  return <section className="py-16 bg-background">
+  return <section className="py-16 bg-blue-50 dark:bg-blue-950/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-lg font-semibold text-muted-foreground mb-8">
+          <h2 className="text-lg font-semibold text-primary mb-8">
             Trusted by Leading B2B Companies
           </h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center">
-            {logos.map((logo, index) => <div key={index} className="flex items-center justify-center h-12 px-4 text-muted-foreground font-medium text-sm hover:text-foreground transition-colors opacity-60 hover:opacity-100">
-                {logo}
-              </div>)}
+          <div className="w-full max-w-5xl mx-auto overflow-hidden">
+            <div className="flex animate-scroll gap-8">
+              {companies.map((company, index) => (
+                <div key={index} className="flex-shrink-0 flex items-center justify-center h-14 px-6 bg-blue-100/70 text-primary font-medium text-sm hover:text-primary/80 hover:bg-blue-200/80 transition-all duration-300 hover:scale-105 backdrop-blur-sm dark:bg-blue-900/30 dark:text-primary dark:hover:text-primary/80 dark:hover:bg-blue-800/40 min-w-[200px]">
+                  {company.name}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         
