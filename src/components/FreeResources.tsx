@@ -4,24 +4,24 @@ const FreeResources = () => {
   const videos = [
     {
       title: "FREE Cold Email Marketing Course for 2025 (2+ HRS)",
-      description: "Here's the ultimate guide to start your cold email marketing agency",
+      description: "Here's the ultimate guide for cold email in 2025",
       embedId:  "LrINcz2eOdw"
     },
     {
-      title: "I used Alex Hormozi's $100M Cold Outreach Strategy",
+      title: "I Tried Alex Hormozi's $100M Cold Outreach Strategy",
       description: "Learn how to apply Alex Hormozi's cold outreach strategy to your business",
       embedId: "7ho2VKxJD84", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=225&fit=crop"
     },
     {
       title: "53 Minutes of The BEST Cold Email Training To Sign Clients In 2025",
-      description: "Watch as I walk you through how to set up cold emails and scale them to 1000+ a day and how to write your scripts to get replies",
+      description: "Watch this live training on how you could use cold email to sign new clients in 2025",
       embedId: "9WTUNlaqx0Q", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=225&fit=crop"
     },
     {
       title: "How To Scrape Unlimited Leads in 9 Minutes",
-      description: "Learn the exact framework I use to achieve 15%+ reply rates",
+      description: "Here's how you can scrape unlimited leads in 9 minutes",
       embedId: "qeWOvfOdpfw", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=225&fit=crop"
     },
@@ -32,8 +32,8 @@ const FreeResources = () => {
       thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=225&fit=crop"
     },
     {
-      title: "Smartlead AI Review 2025 | How To Book 100+ Sales Calls Per Month",
-      description: "The complete playbook for using Smartlead AI effectively",
+      title: "Smartlead.AI Review 2025 | How To Book 100+ Sales Calls Per Month",
+      description: "The complete playbook for using Smartlead.AI effectively",
       embedId: "3wFcSL1_fG4", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=225&fit=crop"
     }
