@@ -6,7 +6,7 @@ const Testimonials = () => {
     {
     content: "Working with Gamic has been a game-changer for our B2B sales strategy. Their targeted approach helped us connect with decision-makers we couldn't reach before. Our conversion rates have more than doubled.",
     author: "Ben Donnison",
-    company: Leadara",
+    company: "Leadara",
     role: "Founder",
     rating: 5,
     media: ["/sarah-mitchell-1.jpg", "/sarah-mitchell-2.jpg", "/sarah-mitchell-3.jpg"],
