@@ -38,8 +38,9 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {testimonials.map((testimonial, index) => <div key={index} className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-300">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {testimonials.map((testimonial, index) => <div key={index} className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-300">
               {/* Media Section */}
               <div className="relative bg-gray-800 rounded-t-2xl overflow-hidden h-64">
                 <div className="relative w-full h-full flex items-center justify-center">
@@ -85,6 +86,7 @@ const Testimonials = () => {
                 </div>
               </div>
             </div>)}
+          </div>
         </div>
 
       </div>
