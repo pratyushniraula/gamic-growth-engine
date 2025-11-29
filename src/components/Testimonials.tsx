@@ -11,6 +11,15 @@ const Testimonials = () => {
     media: ["/IMG_4342.jpg", "/IMG_4343.jpg", "/IMG_4344.jpg"],
     mediaType: "image",
     results: "$54,000 Added to Saas Company's Pipeline in 5 Months"
+  }, {
+    content: "Working with Gamic has been a game-changer for our B2B sales strategy. Their targeted approach helped us connect with decision-makers we couldn't reach before. Our conversion rates have more than doubled.",
+    author: "Sarah Mitchell",
+    company: "TechFlow Solutions",
+    role: "VP of Sales",
+    rating: 5,
+    media: ["/IMG_4342.jpg", "/IMG_4343.jpg"],
+    mediaType: "image",
+    results: "120+ Qualified Leads Generated in 90 Days"
   }];
   const nextImage = () => {
     setCurrentImageIndex(prev => (prev + 1) % testimonials[0].media.length);
