@@ -1,7 +1,7 @@
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 const Testimonials = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageIndices, setCurrentImageIndices] = useState<number[]>([0, 0]);
   const testimonials = [{
     content: "Gamic completely transformed our lead generation process. We went from struggling to book 2-3 meetings per month to consistently getting 15-20 qualified prospects on our calendar every week. The ROI has been incredible.",
     author: "Eric Allen",
@@ -21,11 +21,19 @@ const Testimonials = () => {
     mediaType: "image",
     results: "120+ Qualified Leads Generated in 90 Days"
   }];
-  const nextImage = () => {
-    setCurrentImageIndex(prev => (prev + 1) % testimonials[0].media.length);
+  const nextImage = (testimonialIndex: number, mediaLength: number) => {
+    setCurrentImageIndices(prev => {
+      const newIndices = [...prev];
+      newIndices[testimonialIndex] = (newIndices[testimonialIndex] + 1) % mediaLength;
+      return newIndices;
+    });
   };
-  const prevImage = () => {
-    setCurrentImageIndex(prev => (prev - 1 + testimonials[0].media.length) % testimonials[0].media.length);
+  const prevImage = (testimonialIndex: number, mediaLength: number) => {
+    setCurrentImageIndices(prev => {
+      const newIndices = [...prev];
+      newIndices[testimonialIndex] = (newIndices[testimonialIndex] - 1 + mediaLength) % mediaLength;
+      return newIndices;
+    });
   };
   return <section id="testimonials" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
@@ -44,20 +52,20 @@ const Testimonials = () => {
               {/* Media Section */}
               <div className="relative bg-gray-800 rounded-t-2xl overflow-hidden h-64">
                 <div className="relative w-full h-full flex items-center justify-center">
-                  <img src={Array.isArray(testimonial.media) ? testimonial.media[currentImageIndex] : testimonial.media} alt={`${testimonial.author} testimonial ${currentImageIndex + 1}`} className="max-w-full max-h-full object-contain" />
+                  <img src={Array.isArray(testimonial.media) ? testimonial.media[currentImageIndices[index]] : testimonial.media} alt={`${testimonial.author} testimonial ${currentImageIndices[index] + 1}`} className="max-w-full max-h-full object-contain" />
                   
                   {/* Navigation Buttons */}
                   {Array.isArray(testimonial.media) && testimonial.media.length > 1 && <>
-                      <button onClick={prevImage} className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-200" aria-label="Previous image">
+                      <button onClick={() => prevImage(index, testimonial.media.length)} className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-200" aria-label="Previous image">
                         <ChevronLeft className="w-5 h-5" />
                       </button>
-                      <button onClick={nextImage} className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-200" aria-label="Next image">
+                      <button onClick={() => nextImage(index, testimonial.media.length)} className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-200" aria-label="Next image">
                         <ChevronRight className="w-5 h-5" />
                       </button>
                       
                       {/* Image Indicators */}
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                        {testimonial.media.map((_, imgIndex) => <button key={imgIndex} onClick={() => setCurrentImageIndex(imgIndex)} className={`w-2 h-2 rounded-full transition-all duration-200 ${imgIndex === currentImageIndex ? 'bg-white' : 'bg-white/50'}`} aria-label={`Go to image ${imgIndex + 1}`} />)}
+                        {testimonial.media.map((_, imgIndex) => <button key={imgIndex} onClick={() => setCurrentImageIndices(prev => { const newIndices = [...prev]; newIndices[index] = imgIndex; return newIndices; })} className={`w-2 h-2 rounded-full transition-all duration-200 ${imgIndex === currentImageIndices[index] ? 'bg-white' : 'bg-white/50'}`} aria-label={`Go to image ${imgIndex + 1}`} />)}
                       </div>
                     </>}
                 </div>
