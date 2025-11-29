@@ -13,13 +13,13 @@ const Testimonials = () => {
     results: "$54,000 Added to Saas Company's Pipeline in 5 Months"
   }, {
     content: "Working with Gamic has been a game-changer for our B2B sales strategy. Their targeted approach helped us connect with decision-makers we couldn't reach before. Our conversion rates have more than doubled.",
-    author: "Sarah Mitchell",
-    company: "TechFlow Solutions",
-    role: "VP of Sales",
+    author: "Ben Donnison",
+    company: Leadara",
+    role: "Founder",
     rating: 5,
     media: ["/sarah-mitchell-1.jpg", "/sarah-mitchell-2.jpg", "/sarah-mitchell-3.jpg"],
     mediaType: "image",
-    results: "120+ Qualified Leads Generated in 90 Days"
+    results: "$100,000 Added to Agency's Pipeline in 6 months"
   }];
   const nextImage = (testimonialIndex: number, mediaLength: number) => {
     setCurrentImageIndices(prev => {
