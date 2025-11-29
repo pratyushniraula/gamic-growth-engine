@@ -17,7 +17,7 @@ const Testimonials = () => {
     company: "TechFlow Solutions",
     role: "VP of Sales",
     rating: 5,
-    media: ["/IMG_4342.jpg", "/IMG_4343.jpg"],
+    media: ["/sarah-mitchell-1.jpg", "/sarah-mitchell-2.jpg", "/sarah-mitchell-3.jpg"],
     mediaType: "image",
     results: "120+ Qualified Leads Generated in 90 Days"
   }];
