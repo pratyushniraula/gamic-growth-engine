@@ -2,16 +2,8 @@ import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 const Testimonials = () => {
   const [currentImageIndices, setCurrentImageIndices] = useState<number[]>([0, 0]);
-  const testimonials = [{
-    content: "Gamic completely transformed our lead generation process. We went from struggling to book 2-3 meetings per month to consistently getting 15-20 qualified prospects on our calendar every week. The ROI has been incredible.",
-    author: "Eric Allen",
-    company: "ERA Fit",
-    role: "CEO",
-    rating: 5,
-    media: ["/IMG_4342.jpg", "/IMG_4343.jpg", "/IMG_4344.jpg"],
-    mediaType: "image",
-    results: "$54,000 Added to Saas Company's Pipeline in 5 Months"
-  }, {
+  const testimonials = [
+    {
     content: "Working with Gamic has been a game-changer for our B2B sales strategy. Their targeted approach helped us connect with decision-makers we couldn't reach before. Our conversion rates have more than doubled.",
     author: "Ben Donnison",
     company: Leadara",
@@ -20,6 +12,17 @@ const Testimonials = () => {
     media: ["/sarah-mitchell-1.jpg", "/sarah-mitchell-2.jpg", "/sarah-mitchell-3.jpg"],
     mediaType: "image",
     results: "$100,000 Added to Agency's Pipeline in 6 months"
+    },
+    
+    {
+    content: "Gamic completely transformed our lead generation process. We went from struggling to book 2-3 meetings per month to consistently getting 15-20 qualified prospects on our calendar every week. The ROI has been incredible.",
+    author: "Eric Allen",
+    company: "ERA Fit",
+    role: "CEO",
+    rating: 5,
+    media: ["/IMG_4342.jpg", "/IMG_4343.jpg", "/IMG_4344.jpg"],
+    mediaType: "image",
+    results: "$54,000 Added to Saas Company's Pipeline in 5 Months"
   }];
   const nextImage = (testimonialIndex: number, mediaLength: number) => {
     setCurrentImageIndices(prev => {
