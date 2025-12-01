@@ -10,7 +10,7 @@ const Testimonials = () => {
       company: "Vertech Group",
       role: "Founder",
       rating: 5,
-      media: ["/sarah-mitchell-1.jpg", "/sarah-mitchell-2.jpg", "/sarah-mitchell-3.jpg"],
+      media: ["/sarah-mitchell-3.jpg", "/sarah-mitchell-1.jpg", "/sarah-mitchell-2.jpg"],
       mediaType: "image",
       results: "$100,000 Added to Recruitment Agency's Pipeline in 3 months",
     },
