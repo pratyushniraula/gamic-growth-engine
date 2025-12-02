@@ -131,8 +131,9 @@ const corsHeaders = {
 
 // ---------- ENV VARS ----------
 const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY")!;
-const PINECONE_API_KEY = Deno.env.get("PINECONE_API_KEY")!;
-const PINECONE_INDEX_HOST = Deno.env.get("PINECONE_INDEX_HOST")!;
+const QDRANT_API_KEY = Deno.env.get("QDRANT_API_KEY")!;
+const QDRANT_URL = Deno.env.get("QDRANT_URL")!;
+const QDRANT_COLLECTION = Deno.env.get("QDRANT_COLLECTION") || "documents";
 
 // Models
 const EMBED_MODEL = "text-embedding-3-small";
@@ -166,31 +167,30 @@ async function embed(text: string): Promise<number[]> {
   return data.data[0].embedding;
 }
 
-// ---------- PINECONE QUERY ----------
-async function searchPinecone(vector: number[]) {
-  // Pinecone serverless query URL
-  const url = `https://${PINECONE_INDEX_HOST}/query`;
+// ---------- QDRANT QUERY ----------
+async function searchQdrant(vector: number[]) {
+  const url = `${QDRANT_URL}/collections/${QDRANT_COLLECTION}/points/search`;
 
   const res = await fetch(url, {
     method: "POST",
     headers: {
-      "Api-Key": PINECONE_API_KEY,
+      "api-key": QDRANT_API_KEY,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
       vector,
-      topK: 6,
-      includeMetadata: true,
+      limit: 6,
+      with_payload: true,
     }),
   });
 
   if (!res.ok) {
-    console.error("Pinecone query error:", await res.text());
-    throw new Error("Pinecone query failed");
+    console.error("Qdrant query error:", await res.text());
+    throw new Error("Qdrant query failed");
   }
 
   const data = await res.json();
-  return data.matches ?? [];
+  return data.result ?? [];
 }
 
 // ---------- OPENAI COMPLETION ----------
@@ -253,11 +253,11 @@ serve(async (req) => {
     // 1. Embed the question
     const embedding = await embed(query);
 
-    // 2. Pinecone vector search
-    const results = await searchPinecone(embedding);
+    // 2. Qdrant vector search
+    const results = await searchQdrant(embedding);
 
     const chunks = results
-      .map((m: any) => m.metadata?.text ?? "")
+      .map((m: any) => m.payload?.text ?? "")
       .filter(Boolean);
 
     const context = chunks.join("\n\n---\n\n");
