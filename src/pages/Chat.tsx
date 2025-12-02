@@ -154,30 +154,25 @@ const Chat = () => {
       // Update prompt count
       setPromptCount(prev => prev + 1);
 
-      // ============================================
-      // TODO: IMPLEMENT RAG STUFF HERE
-      // ============================================
-      // Call your RAG edge function here
-      // Example:
-      // const { data, error } = await supabase.functions.invoke('rag-chat', {
-      //   body: { message: input }
-      // });
-      
-      // For now, mock response
-      const mockResponse = "This is where the RAG response will appear. Implement your RAG logic in the edge function.";
-      
-      // ============================================
-      // END OF RAG IMPLEMENTATION AREA
-      // ============================================
+      // Call RAG edge function
+      const { data, error: ragError } = await supabase.functions.invoke('rag-chat', {
+        body: { query: input }
+      });
+
+      if (ragError) {
+        throw new Error(ragError.message || "Failed to get response from AI");
+      }
+
+      const responseText = data?.answer || "Sorry, I couldn't find an answer to your question.";
 
       // Add assistant message to UI
-      const assistantMessage: Message = { role: "assistant", content: mockResponse };
+      const assistantMessage: Message = { role: "assistant", content: responseText };
       setMessages(prev => [...prev, assistantMessage]);
 
       // Update the stored prompt with the response
       await supabase
         .from("user_prompts")
-        .update({ response_text: mockResponse })
+        .update({ response_text: responseText })
         .eq("user_id", user.id)
         .eq("prompt_text", input);
 
