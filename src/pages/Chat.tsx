@@ -8,8 +8,8 @@ import { useToast } from "@/hooks/use-toast";
 import { User } from "@supabase/supabase-js";
 import { z } from "zod";
 
-const MAX_DAILY_PROMPTS = 10;
-const MAX_WORD_COUNT = 500;
+const MAX_DAILY_PROMPTS = 25;
+const MAX_WORD_COUNT = 1500;
 
 const promptSchema = z.object({
   prompt: z.string()
