@@ -27,7 +27,7 @@
 
 //     // Verify user is authenticated
 //     const { data: { user }, error: authError } = await supabaseClient.auth.getUser();
-    
+
 //     if (authError || !user) {
 //       return new Response(
 //         JSON.stringify({ error: 'Unauthorized' }),
@@ -59,16 +59,16 @@
 
 //     const body = await req.json();
 //     const validationResult = messageSchema.safeParse(body);
-    
+
 //     if (!validationResult.success) {
 //       return new Response(
-//         JSON.stringify({ 
-//           error: 'Invalid input', 
-//           details: validationResult.error.errors 
+//         JSON.stringify({
+//           error: 'Invalid input',
+//           details: validationResult.error.errors
 //         }),
-//         { 
-//           status: 400, 
-//           headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+//         {
+//           status: 400,
+//           headers: { ...corsHeaders, 'Content-Type': 'application/json' }
 //         }
 //       );
 //     }
@@ -85,13 +85,13 @@
 //     // 4. Combine retrieved context with user message
 //     // 5. Call your LLM (OpenAI, Anthropic, etc.) with augmented prompt
 //     // 6. Return the generated response
-    
+
 //     // Example structure:
 //     // const relevantDocs = await searchVectorDB(message);
 //     // const context = relevantDocs.join('\n');
 //     // const augmentedPrompt = `Context: ${context}\n\nUser: ${message}`;
 //     // const response = await callLLM(augmentedPrompt);
-    
+
 //     // ============================================
 //     // END OF RAG IMPLEMENTATION AREA
 //     // ============================================
@@ -109,8 +109,8 @@
 //     });
 //   } catch (error) {
 //     console.error('Error in rag-chat function:', error);
-//     return new Response(JSON.stringify({ 
-//       error: error instanceof Error ? error.message : "Unknown error occurred" 
+//     return new Response(JSON.stringify({
+//       error: error instanceof Error ? error.message : "Unknown error occurred"
 //     }), {
 //       status: 500,
 //       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
@@ -118,15 +118,13 @@
 //   }
 // });
 
-
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 // ---------- CORS ----------
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
 // ---------- ENV VARS ----------
@@ -149,7 +147,7 @@ async function embed(text: string): Promise<number[]> {
   const res = await fetch("https://api.openai.com/v1/embeddings", {
     method: "POST",
     headers: {
-      "Authorization": `Bearer ${OPENAI_API_KEY}`,
+      Authorization: `Bearer ${OPENAI_API_KEY}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
@@ -199,27 +197,25 @@ async function generateAnswer(context: string, query: string) {
     {
       role: "system",
       content:
-        "You are a helpful assistant specialized in cold email, outreach, lead generation, and related topics. You can ONLY use the provided context to answer as accurately and concretely as possible. If the answer is not in the context, say you do not know."+
-        "\n\ndo not pitch a call in the first email.\n"+
-        "Always give 3 variations of emails if asked for example emails/templates\n"+
-        "Do not hallucinate any answers.\n"+
-        "Do not make it seem like you are an AI model or that you are pulling data from anywhere specifically. "+
-        "These are all based off of Aryan's notes and teachings.\n"+
-        "Aryan is the name of the person that made the knowledge base. You are talking to the people he is coaching\n"+
+        "You are a helpful assistant. You can ONLY use the provided context. If the answer is not in the context, say you don’t know." +
+        "\n\ndo not pitch a call in the first email.\n" +
+        "Always give 3 variations of emails if asked for example emails/templates\n" +
+        "Do not hallucinate any answers.\n" +
+        "Do not make it seem like you are an AI model or that you are pulling data from anywhere specifically. " +
+        "These are all based off of Aryan's notes and teachings.\n" +
+        "Aryan is the name of the person that made the knowledge base. You are talking to the people he is coaching\n" +
         "Be thorough and detailed in your answers.",
-
     },
     {
       role: "user",
-      content:
-        `CONTEXT:\n${context}\n\nUSER QUERY:\n${query}\n\nGive a clear helpful answer.`,
+      content: `CONTEXT:\n${context}\n\nUSER QUERY:\n${query}\n\nGive a clear helpful answer.`,
     },
   ];
 
   const res = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
-      "Authorization": `Bearer ${OPENAI_API_KEY}`,
+      Authorization: `Bearer ${OPENAI_API_KEY}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
@@ -264,9 +260,7 @@ serve(async (req) => {
     // 2. Qdrant vector search
     const results = await searchQdrant(embedding);
 
-    const chunks = results
-      .map((m: any) => m.payload?.text ?? "")
-      .filter(Boolean);
+    const chunks = results.map((m: any) => m.payload?.text ?? "").filter(Boolean);
 
     const context = chunks.join("\n\n---\n\n");
 
@@ -304,4 +298,3 @@ serve(async (req) => {
     );
   }
 });
-
