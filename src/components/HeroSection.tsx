@@ -19,7 +19,7 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            With Your Ideal Customers using a:
+            With Your Ideal Customers
           </p>
 
           {/* Value Props */}
