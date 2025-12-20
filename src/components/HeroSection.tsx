@@ -11,17 +11,17 @@ const HeroSection = () => {
             <div className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></div>
             AGENCIES & B2B BUSINESSES
           </div>
-          
+
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
             We'll Book You <span className="text-primary">5-12 Qualified Sales Calls</span> Every Month
           </h1>
-          
+
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-          With Your Ideal Customers on a Pay-Per Meeting Basis
+            With Your Ideal Customers using a:
           </p>
-          
+
           {/* Value Props */}
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             <div className="flex items-center space-x-2">
@@ -33,7 +33,7 @@ const HeroSection = () => {
               <span className="text-muted-foreground">Done-For-You System</span>
             </div>
           </div>
-          
+
           {/* YouTube Video */}
           <div className="mb-8">
             <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-premium hover:shadow-glow transition-all duration-500 border border-primary/20">
@@ -64,7 +64,7 @@ const HeroSection = () => {
               </a>
             </Button>
           </div>
-          
+
           {/* Social Proof Numbers */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 pt-8 border-t border-border">
             <div className="text-center">
