@@ -26,10 +26,6 @@ const HeroSection = () => {
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="text-muted-foreground">Performance Based Pricing</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5 text-primary" />
               <span className="text-muted-foreground">Personalized Outreach Strategy</span>
             </div>
             <div className="flex items-center space-x-2">
