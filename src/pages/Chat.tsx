@@ -177,19 +177,27 @@ const Chat = () => {
         .eq("prompt_text", input);
 
     } catch (error: any) {
+      console.error("Chat error:", error);
+      
+      let userMessage = "An error occurred. Please try again.";
+      
       if (error instanceof z.ZodError) {
-        toast({
-          title: "Validation Error",
-          description: error.errors[0].message,
-          variant: "destructive",
-        });
-      } else {
-        toast({
-          title: "Error",
-          description: error.message || "Failed to send message",
-          variant: "destructive",
-        });
+        userMessage = error.errors[0].message;
+      } else if (error.message?.includes("not approved")) {
+        userMessage = "Your account is pending approval.";
+      } else if (error.message?.includes("Daily prompt limit")) {
+        userMessage = "Daily prompt limit reached. Please try again tomorrow.";
+      } else if (error.code === "23505") {
+        userMessage = "This record already exists.";
+      } else if (error.code?.startsWith?.("23")) {
+        userMessage = "Invalid data provided.";
       }
+      
+      toast({
+        title: "Error",
+        description: userMessage,
+        variant: "destructive",
+      });
     } finally {
       setLoading(false);
     }
