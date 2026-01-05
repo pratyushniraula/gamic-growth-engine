@@ -16,7 +16,9 @@ const Footer = () => {
               <span className="text-xl font-bold text-foreground">Gamic Media</span>
             </div>
             <p className="text-muted-foreground mb-6 w-full max-w-none">
-              The premium outbound lead generation agency for Agencies, B2B service providers, and SaaS companies. <br />We use a mixture of AI outbound tools to book you qualified meetings on autopilot.
+              The premium outbound lead generation agency for Agencies, B2B service providers, and SaaS companies.{" "}
+              <br />
+              We use a mixture of AI outbound tools to book you qualified meetings on autopilot.
             </p>
             <nav className="flex justify-end items-center gap-5 mt-6 w-full" aria-label="Social links">
               <a
@@ -53,13 +55,10 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-
         </div>
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">
-            © 2025 Gamic Media. All rights reserved.
-          </p>
+          <p className="text-muted-foreground text-sm">© 2026 Gamic Media. All rights reserved.</p>
         </div>
       </div>
     </footer>
