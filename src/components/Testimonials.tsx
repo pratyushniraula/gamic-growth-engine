@@ -6,7 +6,7 @@ const Testimonials = () => {
     {
       content: "",
       author: "Arrandip Landa",
-      company: "Company Name",
+      company: "Prospect Finder",
       role: "Founder",
       rating: 5,
       media: ["/whatsappupdated.jpg"],
