@@ -119,6 +119,7 @@
 // });
 
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 // ---------- CORS ----------
@@ -132,10 +133,15 @@ const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY")!;
 const QDRANT_API_KEY = Deno.env.get("QDRANT_API_KEY")!;
 const QDRANT_URL = Deno.env.get("QDRANT_URL")!;
 const QDRANT_COLLECTION = Deno.env.get("QDRANT_COLLECTION") || "documents";
+const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
+const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY")!;
 
 // Models
 const EMBED_MODEL = "text-embedding-3-small";
 const CHAT_MODEL = "gpt-4.1-mini";
+
+// Daily prompt limit
+const DAILY_PROMPT_LIMIT = 25;
 
 // ---------- INPUT VALIDATION ----------
 const requestSchema = z.object({
@@ -250,6 +256,70 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       });
     }
+
+    // ---------- AUTHENTICATION ----------
+    const authHeader = req.headers.get("Authorization");
+    if (!authHeader) {
+      console.error("No authorization header provided");
+      return new Response(
+        JSON.stringify({ error: "Unauthorized" }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+      global: { headers: { Authorization: authHeader } },
+    });
+
+    const { data: { user }, error: authError } = await supabaseClient.auth.getUser();
+    if (authError || !user) {
+      console.error("Authentication failed:", authError?.message);
+      return new Response(
+        JSON.stringify({ error: "Unauthorized" }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    console.log(`Authenticated user: ${user.id}`);
+
+    // ---------- APPROVAL STATUS CHECK ----------
+    const { data: profile, error: profileError } = await supabaseClient
+      .from("profiles")
+      .select("approved")
+      .eq("id", user.id)
+      .single();
+
+    if (profileError || !profile?.approved) {
+      console.error("User not approved or profile error:", profileError?.message);
+      return new Response(
+        JSON.stringify({ error: "Account not approved" }),
+        { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // ---------- DAILY PROMPT LIMIT CHECK ----------
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const { count, error: countError } = await supabaseClient
+      .from("user_prompts")
+      .select("*", { count: "exact", head: true })
+      .eq("user_id", user.id)
+      .gte("created_at", today.toISOString());
+
+    if (countError) {
+      console.error("Error checking prompt count:", countError.message);
+    }
+
+    if (count !== null && count >= DAILY_PROMPT_LIMIT) {
+      console.log(`User ${user.id} reached daily limit: ${count}/${DAILY_PROMPT_LIMIT}`);
+      return new Response(
+        JSON.stringify({ error: "Daily prompt limit reached. Please try again tomorrow." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    console.log(`User ${user.id} prompt count today: ${count ?? 0}/${DAILY_PROMPT_LIMIT}`);
 
     // Parse input
     const json = await req.json();
