@@ -9,7 +9,7 @@ const Testimonials = () => {
       company: "Company Name",
       role: "Founder",
       rating: 5,
-      media: ["/placeholder.svg"],
+      media: ["/whatsappupdated.jpg"],
       mediaType: "image",
       results: "$31,500 Added to Marketing Agency in 2.5 Months",
     },
