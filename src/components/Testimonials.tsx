@@ -5,13 +5,13 @@ const Testimonials = () => {
   const testimonials = [
     {
       content: "",
-      author: "Client Name",
+      author: "Arrandip Landa",
       company: "Company Name",
-      role: "Role",
+      role: "Founder",
       rating: 5,
       media: ["/placeholder.svg"],
       mediaType: "image",
-      results: "Results placeholder",
+      results: "$31,500 Added to Marketing Agency in 2.5 Months",
     },
     {
       content:
@@ -148,7 +148,7 @@ const Testimonials = () => {
               </div>
             ))}
           </div>
-          
+
           {/* Third testimonial centered below */}
           <div className="flex justify-center mt-6">
             <div className="w-full md:w-1/2">
