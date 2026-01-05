@@ -143,6 +143,27 @@ const CHAT_MODEL = "gpt-4.1-mini";
 // Daily prompt limit
 const DAILY_PROMPT_LIMIT = 25;
 
+// Rate limiting - requests per minute
+const RATE_LIMIT_WINDOW_MS = 60000; // 1 minute
+const MAX_REQUESTS_PER_WINDOW = 5;
+const rateLimitMap = new Map<string, number[]>();
+
+function checkRateLimit(userId: string): boolean {
+  const now = Date.now();
+  const userRequests = rateLimitMap.get(userId) || [];
+  
+  // Remove requests older than the window
+  const recentRequests = userRequests.filter(t => now - t < RATE_LIMIT_WINDOW_MS);
+  
+  if (recentRequests.length >= MAX_REQUESTS_PER_WINDOW) {
+    return false;
+  }
+  
+  recentRequests.push(now);
+  rateLimitMap.set(userId, recentRequests);
+  return true;
+}
+
 // ---------- INPUT VALIDATION ----------
 const requestSchema = z.object({
   query: z.string().min(1),
@@ -321,6 +342,15 @@ serve(async (req) => {
 
     console.log(`User ${user.id} prompt count today: ${count ?? 0}/${DAILY_PROMPT_LIMIT}`);
 
+    // ---------- REQUEST-LEVEL RATE LIMITING ----------
+    if (!checkRateLimit(user.id)) {
+      console.log(`User ${user.id} rate limited`);
+      return new Response(
+        JSON.stringify({ error: "Too many requests. Please wait a moment before trying again." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     // Parse input
     const json = await req.json();
     const { query } = requestSchema.parse(json);
@@ -360,7 +390,7 @@ serve(async (req) => {
     console.error("ragchat error:", err);
     return new Response(
       JSON.stringify({
-        error: err instanceof Error ? err.message : "Unknown error",
+        error: "An error occurred while processing your request. Please try again.",
       }),
       {
         status: 500,

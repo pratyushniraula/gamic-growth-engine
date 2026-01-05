@@ -79,19 +79,25 @@ const Auth = () => {
         });
       }
     } catch (error: any) {
+      console.error("Auth error:", error);
+      
+      let userMessage = "An error occurred during authentication.";
+      
       if (error instanceof z.ZodError) {
-        toast({
-          title: "Validation Error",
-          description: error.errors[0].message,
-          variant: "destructive",
-        });
-      } else {
-        toast({
-          title: "Error",
-          description: error.message || "An error occurred during authentication.",
-          variant: "destructive",
-        });
+        userMessage = error.errors[0].message;
+      } else if (error.message?.includes("Invalid login credentials")) {
+        userMessage = "Invalid email or password.";
+      } else if (error.message?.includes("Email not confirmed")) {
+        userMessage = "Please confirm your email address.";
+      } else if (error.message?.includes("already registered")) {
+        userMessage = "An account with this email already exists.";
       }
+      
+      toast({
+        title: "Error",
+        description: userMessage,
+        variant: "destructive",
+      });
     } finally {
       setLoading(false);
     }

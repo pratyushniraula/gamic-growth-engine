@@ -74,9 +74,10 @@ const Admin = () => {
       .order("created_at", { ascending: false });
 
     if (error) {
+      console.error("Failed to fetch profiles:", error);
       toast({
         title: "Error",
-        description: "Failed to fetch profiles",
+        description: "Unable to load user profiles. Please try again.",
         variant: "destructive",
       });
       return;
@@ -96,9 +97,10 @@ const Admin = () => {
       .eq("id", userId);
 
     if (error) {
+      console.error("Failed to approve user:", error);
       toast({
         title: "Error",
-        description: "Failed to approve user",
+        description: "Unable to approve user. Please try again.",
         variant: "destructive",
       });
       return;
@@ -118,9 +120,10 @@ const Admin = () => {
     });
 
     if (error) {
+      console.error("Failed to delete user:", error);
       toast({
         title: "Error",
-        description: "Failed to delete user",
+        description: "Unable to delete user. Please try again.",
         variant: "destructive",
       });
       return;
