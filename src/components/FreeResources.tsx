@@ -32,7 +32,7 @@ const FreeResources = () => {
       thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=225&fit=crop",
     },
     {
-      title: "Smartlead.AI Review 2025 | How To Book 100+ Sales Calls Per Month",
+      title: "Smartlead.AI Review 2026 | How To Book 100+ Sales Calls Per Month",
       description: "The complete playbook for using Smartlead.AI effectively",
       embedId: "3wFcSL1_fG4", // Replace with actual YouTube video IDs
       thumbnail: "https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=400&h=225&fit=crop",
