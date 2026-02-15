@@ -24,6 +24,9 @@ const Navigation = () => {
           <a href="/chat" className="text-muted-foreground hover:text-foreground transition-colors">
             AI Chat
           </a>
+          <a href="/resources" className="text-muted-foreground hover:text-foreground transition-colors">
+            Free Playbooks
+          </a>
         </div>
         
         <Button asChild variant="premium" size="lg">
