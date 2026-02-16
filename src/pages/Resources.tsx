@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen, Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import playbookColdEmail from "@/assets/playbook-cold-email.jpg";
 import playbookLeadGen from "@/assets/playbook-lead-gen.jpg";
@@ -20,6 +21,7 @@ interface Playbook {
   category: Category;
   image: string;
   pages: number;
+  slug: string;
 }
 
 const playbooks: Playbook[] = [
@@ -30,6 +32,7 @@ const playbooks: Playbook[] = [
     category: "Cold Outreach",
     image: playbookColdEmail,
     pages: 42,
+    slug: "cold-email",
   },
   {
     title: "Lead Generation Mastery",
@@ -38,6 +41,7 @@ const playbooks: Playbook[] = [
     category: "Lead Generation",
     image: playbookLeadGen,
     pages: 36,
+    slug: "lead-gen",
   },
   {
     title: "B2B Sales Pipeline Guide",
@@ -46,6 +50,7 @@ const playbooks: Playbook[] = [
     category: "Sales",
     image: playbookSalesPipeline,
     pages: 28,
+    slug: "sales-pipeline",
   },
   {
     title: "Outreach Copywriting Secrets",
@@ -54,6 +59,7 @@ const playbooks: Playbook[] = [
     category: "Copywriting",
     image: playbookCopywriting,
     pages: 31,
+    slug: "copywriting",
   },
   {
     title: "Scaling Your Agency to $1M",
@@ -62,6 +68,7 @@ const playbooks: Playbook[] = [
     category: "Growth",
     image: playbookScaling,
     pages: 50,
+    slug: "scaling",
   },
 ];
 
@@ -159,9 +166,11 @@ const Resources = () => {
                     </Badge>
                     <span className="text-xs text-muted-foreground">{playbook.pages} pages</span>
                   </div>
-                  <Button variant="premium" className="mt-4 w-full group/btn">
-                    Download Free
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                  <Button asChild variant="premium" className="mt-4 w-full group/btn">
+                    <Link to={`/download?playbook=${playbook.slug}`}>
+                      Download Free
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                    </Link>
                   </Button>
                 </div>
               </div>
