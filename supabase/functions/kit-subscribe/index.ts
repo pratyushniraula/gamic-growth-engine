@@ -5,6 +5,44 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
+const KIT_API = "https://api.kit.com/v4";
+
+async function kitFetch(path: string, apiKey: string, options: RequestInit = {}) {
+  const res = await fetch(`${KIT_API}${path}`, {
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      "X-Kit-Api-Key": apiKey,
+      ...(options.headers || {}),
+    },
+  });
+  return res;
+}
+
+async function findOrCreateTag(name: string, apiKey: string): Promise<number> {
+  // List tags and find by name
+  const listRes = await kitFetch("/tags", apiKey);
+  if (listRes.ok) {
+    const data = await listRes.json();
+    const tags = data.tags || [];
+    const existing = tags.find((t: { name: string }) => t.name === name);
+    if (existing) return existing.id;
+  }
+
+  // Create if not found
+  const createRes = await kitFetch("/tags", apiKey, {
+    method: "POST",
+    body: JSON.stringify({ name }),
+  });
+  if (!createRes.ok) {
+    const err = await createRes.text();
+    console.error("Failed to create tag:", name, err);
+    throw new Error(`Failed to create tag: ${name}`);
+  }
+  const created = await createRes.json();
+  return created.tag.id;
+}
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -25,7 +63,22 @@ serve(async (req) => {
       });
     }
 
-    // Tag mapping for playbook downloads
+    // 1. Create subscriber
+    const subRes = await kitFetch("/subscribers", KIT_API_KEY, {
+      method: "POST",
+      body: JSON.stringify({ email_address: email.trim() }),
+    });
+
+    if (!subRes.ok) {
+      const errorText = await subRes.text();
+      console.error("Kit create subscriber error:", subRes.status, errorText);
+      throw new Error("Failed to create subscriber");
+    }
+
+    const subData = await subRes.json();
+    const subscriberId = subData.subscriber.id;
+
+    // 2. Build tag names
     const playbookTags: Record<string, string> = {
       "cold-email": "playbook-cold-email",
       "lead-gen": "playbook-lead-gen",
@@ -34,28 +87,21 @@ serve(async (req) => {
       "scaling": "playbook-scaling",
     };
 
-    const tags = [playbookTags[playbook_id] || "playbook-download"];
+    const tagNames = [playbookTags[playbook_id] || "playbook-download"];
     if (newsletter_opt_in) {
-      tags.push("newsletter");
+      tagNames.push("newsletter");
     }
 
-    // Subscribe to Kit.com using the v4 API
-    const response = await fetch("https://api.kit.com/v4/subscribers", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Kit-Api-Key": KIT_API_KEY,
-      },
-      body: JSON.stringify({
-        email_address: email.trim(),
-        tags,
-      }),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error("Kit API error:", response.status, errorText);
-      throw new Error("Failed to subscribe");
+    // 3. Find or create each tag, then tag the subscriber
+    for (const tagName of tagNames) {
+      const tagId = await findOrCreateTag(tagName, KIT_API_KEY);
+      const tagRes = await kitFetch(`/tags/${tagId}/subscribers/${subscriberId}`, KIT_API_KEY, {
+        method: "POST",
+        body: JSON.stringify({}),
+      });
+      if (!tagRes.ok) {
+        console.error(`Failed to apply tag ${tagName}:`, await tagRes.text());
+      }
     }
 
     return new Response(JSON.stringify({ success: true }), {
