@@ -14,7 +14,7 @@ import playbookAiWorkflows from "@/assets/playbook-ai-workflows.png";
 import playbookCtas from "@/assets/playbook-ctas.png";
 import playbookSubjectLines from "@/assets/playbook-subject-lines.png";
 
-const categories = ["All", "Cold Outreach", "Lead Generation", "Deliverability", "Copywriting", "Growth"] as const;
+const categories = ["All", "Cold Outreach", "Lead Generation", "Deliverability", "Copywriting"] as const;
 type Category = (typeof categories)[number];
 
 interface Playbook {
