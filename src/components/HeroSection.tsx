@@ -37,16 +37,10 @@ const HeroSection = () => {
           {/* YouTube Video */}
           <div className="mb-8">
             <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-premium hover:shadow-glow transition-all duration-500 border border-primary/20">
-              <iframe
-                src="https://fast.wistia.net/embed/iframe/c2tknwrvcg?seo=false&videoFoam=true"
-                title="Gamic Media - Overview Video"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="w-full h-full"
-              ></iframe>
-              <script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+              <script src="https://fast.wistia.com/player.js" async></script>
+              <script src="https://fast.wistia.com/embed/s5kwo67u7l.js" async type="module"></script>
+              <style>{`wistia-player[media-id='s5kwo67u7l']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/s5kwo67u7l/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }`}</style>
+              <wistia-player media-id="s5kwo67u7l" aspect="1.7777777777777777" className="w-full h-full"></wistia-player>
             </div>
           </div>
 
