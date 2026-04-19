@@ -55,7 +55,7 @@ const playbooks: Playbook[] = [
   {
     title: "Bullet-Proof Checklist To Avoid Spam",
     description:
-      "The complete technical checklist to keep your cold emails out of spam. Walks through SPF, DKIM, DMARC setup, domain warmup, sending volume rules, and ongoing reputation monitoring.",
+      "An extensive deliverability checklist to keep your cold emails out of spam. Covers SPF, DKIM, copy rules, sending limits, and the technical setup needed to consistently land in the primary inbox.",
     category: "Cold Outreach",
     image: playbookCopywriting,
     pages: 8,
@@ -64,7 +64,7 @@ const playbooks: Playbook[] = [
   {
     title: "5 Plug-and-Play AI Workflows For Cold Outreach",
     description:
-      "Five ready to deploy AI workflows that automate prospecting, message writing, and follow ups. Built with ChatGPT, Claude, and n8n to take 80% of the manual work off your plate.",
+      "Five ready to deploy AI workflows built with Clay, ChatGPT, and Claude to automate prospecting, message writing, and follow ups so you can take the manual work off your plate.",
     category: "Growth",
     image: playbookScaling,
     pages: 22,
