@@ -15,30 +15,40 @@ import playbookCopywriting from "@/assets/playbook-copywriting.jpg";
 import playbookScaling from "@/assets/playbook-scaling.jpg";
 
 const playbookData: Record<string, { title: string; image: string; description: string }> = {
-  "cold-email": {
-    title: "The Ultimate Cold Email Playbook",
+  "ultimate-cold-email-2026": {
+    title: "The Ultimate Cold Email Playbook in 2026",
     image: playbookColdEmail,
-    description: "Everything you need to write cold emails that actually get replies. Includes 15 proven templates, subject line formulas, and follow-up sequences.",
+    description: "The complete 2026 guide to cold email that actually gets replies. Covers deliverability, AI-powered personalization at scale, and multi-channel sequencing built for today's inbox filters.",
   },
-  "lead-gen": {
-    title: "Lead Generation Mastery",
+  "local-lead-gen-outreach": {
+    title: "The Local Lead Gen Cold Outreach Playbook",
     image: playbookLeadGen,
-    description: "A step-by-step system to find and qualify your ideal prospects using LinkedIn, Apollo, and scraping tools — without spending a dime on ads.",
+    description: "How to find and close local business clients using cold outreach. Includes proven scripts and targeting strategies for HVAC, dental, legal, and home service niches.",
   },
-  "sales-pipeline": {
-    title: "B2B Sales Pipeline Guide",
+  "cold-email-scripts-calls": {
+    title: "5 Cold Email Scripts To Book CALLS INSTANTLY",
     image: playbookSalesPipeline,
-    description: "Build a predictable pipeline that converts. Covers outreach cadences, CRM setup, deal stages, and forecasting for B2B service businesses.",
+    description: "Five battle-tested email templates that have booked meetings on day one. Each script comes with the psychology behind why it works and when to use it.",
   },
-  "copywriting": {
-    title: "Outreach Copywriting Secrets",
+  "spam-checklist": {
+    title: "Bullet-Proof Checklist To Avoid Spam",
     image: playbookCopywriting,
-    description: "Master the psychology behind messages that book meetings. Learn personalization frameworks, pain-point hooks, and CTA strategies that work.",
+    description: "The technical checklist to keep your emails landing in the primary inbox. SPF/DKIM/DMARC setup, warmup strategies, sending volume limits, and reputation monitoring.",
   },
-  "scaling": {
-    title: "Scaling Your Agency to $1M",
+  "ai-workflows-outreach": {
+    title: "5 Plug-and-Play AI Workflows For Cold Outreach",
     image: playbookScaling,
-    description: "The operational playbook for growing from freelancer to agency owner. Covers pricing, hiring, systems, client retention, and hitting 7 figures.",
+    description: "Five AI-powered workflows for prospecting, writing, and follow-ups. Use ChatGPT, Claude, and n8n to automate up to 80% of your outbound process.",
+  },
+  "ctas-3m-pipeline": {
+    title: "4 Cold Email CTAs for Over $3M In Pipeline",
+    image: playbookCopywriting,
+    description: "The exact call-to-action formulas behind $3M+ in generated pipeline. Soft CTAs, direct asks, and curiosity-gap closers that convert cold prospects into booked calls.",
+  },
+  "subject-lines-calls": {
+    title: "3 Subject Lines That Book You Calls This Week",
+    image: playbookColdEmail,
+    description: "Three subject line frameworks with 15+ variations each. Real open rate data, A/B testing methodology, and a guide to avoiding spam triggers.",
   },
 };
 

@@ -80,11 +80,13 @@ serve(async (req) => {
 
     // 2. Build tag names
     const playbookTags: Record<string, string> = {
-      "cold-email": "playbook-cold-email",
-      "lead-gen": "playbook-lead-gen",
-      "sales-pipeline": "playbook-sales-pipeline",
-      "copywriting": "playbook-copywriting",
-      "scaling": "playbook-scaling",
+      "ultimate-cold-email-2026": "playbook-ultimate-cold-email-2026",
+      "local-lead-gen-outreach": "playbook-local-lead-gen",
+      "cold-email-scripts-calls": "playbook-cold-email-scripts",
+      "spam-checklist": "playbook-spam-checklist",
+      "ai-workflows-outreach": "playbook-ai-workflows",
+      "ctas-3m-pipeline": "playbook-ctas-pipeline",
+      "subject-lines-calls": "playbook-subject-lines",
     };
 
     const tagNames = [playbookTags[playbook_id] || "playbook-download"];
