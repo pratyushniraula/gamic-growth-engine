@@ -10,9 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-4">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center">
-                <img src="/favicon.ico" alt="Gamic Media Logo" className="w-10 h-10 rounded-full" />
-              </div>
+              <img src={gamicLogo} alt="Gamic Media Logo" className="w-10 h-10 rounded-lg object-contain" />
               <span className="text-xl font-bold text-foreground">Gamic Media</span>
             </div>
             <p className="text-muted-foreground mb-6 w-full max-w-none">
