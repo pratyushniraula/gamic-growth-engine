@@ -6,11 +6,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import playbookColdEmail from "@/assets/playbook-cold-email.jpg";
-import playbookLeadGen from "@/assets/playbook-lead-gen.jpg";
-import playbookSalesPipeline from "@/assets/playbook-sales-pipeline.jpg";
-import playbookCopywriting from "@/assets/playbook-copywriting.jpg";
-import playbookScaling from "@/assets/playbook-scaling.jpg";
+import playbookColdEmail from "@/assets/playbook-cold-email.png";
+import playbookLocalLeadGen from "@/assets/playbook-local-lead-gen.png";
+import playbook5Scripts from "@/assets/playbook-5-scripts.png";
+import playbookSpamChecklist from "@/assets/playbook-spam-checklist.png";
+import playbookAiWorkflows from "@/assets/playbook-ai-workflows.png";
+import playbookCtas from "@/assets/playbook-ctas.png";
+import playbookSubjectLines from "@/assets/playbook-subject-lines.png";
 
 const categories = ["All", "Cold Outreach", "Lead Generation", "Sales", "Copywriting", "Growth"] as const;
 type Category = (typeof categories)[number];
@@ -39,7 +41,7 @@ const playbooks: Playbook[] = [
     description:
       "A step by step system for landing local business clients through cold outreach. Includes targeting frameworks, proven scripts, and case studies for HVAC, dental, legal, and home service niches.",
     category: "Lead Generation",
-    image: playbookLeadGen,
+    image: playbookLocalLeadGen,
     pages: 34,
     slug: "local-lead-gen-outreach",
   },
@@ -48,25 +50,25 @@ const playbooks: Playbook[] = [
     description:
       "Five plug and play cold email scripts engineered to book sales calls fast. Each template comes with the psychology behind why it works and exactly when to send it.",
     category: "Cold Outreach",
-    image: playbookSalesPipeline,
+    image: playbook5Scripts,
     pages: 12,
     slug: "cold-email-scripts-calls",
   },
   {
     title: "Bullet-Proof Checklist To Avoid Spam",
     description:
-      "An extensive deliverability checklist to keep your cold emails out of spam. Covers SPF, DKIM, copy rules, sending limits, and the technical setup needed to consistently land in the primary inbox.",
+      "An extensive deliverability checklist with SPF, DKIM, copy rules, and the technical setup to consistently land in the primary inbox instead of spam.",
     category: "Cold Outreach",
-    image: playbookCopywriting,
+    image: playbookSpamChecklist,
     pages: 8,
     slug: "spam-checklist",
   },
   {
     title: "5 Plug-and-Play AI Workflows For Cold Outreach",
     description:
-      "Five ready to deploy AI workflows built with Clay, ChatGPT, and Claude to automate prospecting, message writing, and follow ups so you can take the manual work off your plate.",
+      "Five ready to deploy AI workflows built with Clay, ChatGPT, and Claude that take the manual work off your plate across prospecting, message writing, and follow ups.",
     category: "Growth",
-    image: playbookScaling,
+    image: playbookAiWorkflows,
     pages: 22,
     slug: "ai-workflows-outreach",
   },
@@ -75,7 +77,7 @@ const playbooks: Playbook[] = [
     description:
       "The four exact call to action formulas that have driven over $3M in client pipeline. Soft asks, direct asks, and curiosity gap closers that consistently turn cold replies into booked meetings.",
     category: "Copywriting",
-    image: playbookCopywriting,
+    image: playbookCtas,
     pages: 14,
     slug: "ctas-3m-pipeline",
   },
@@ -84,7 +86,7 @@ const playbooks: Playbook[] = [
     description:
       "Three high performing subject line frameworks with 15+ tested variations of each. Includes real open rate benchmarks, A/B testing methodology, and a quick guide to avoiding spam triggers.",
     category: "Copywriting",
-    image: playbookColdEmail,
+    image: playbookSubjectLines,
     pages: 10,
     slug: "subject-lines-calls",
   },
