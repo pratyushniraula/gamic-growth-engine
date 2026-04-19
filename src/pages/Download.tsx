@@ -18,37 +18,37 @@ const playbookData: Record<string, { title: string; image: string; description: 
   "ultimate-cold-email-2026": {
     title: "The Ultimate Cold Email Playbook in 2026",
     image: playbookColdEmail,
-    description: "The complete 2026 guide to cold email that actually gets replies. Covers deliverability, AI-powered personalization at scale, and multi-channel sequencing built for today's inbox filters.",
+    description: "The complete 2026 guide to cold email that actually gets replies. Covers modern deliverability, AI personalization at scale, and multi-channel sequencing built for today's inbox filters.",
   },
   "local-lead-gen-outreach": {
     title: "The Local Lead Gen Cold Outreach Playbook",
     image: playbookLeadGen,
-    description: "How to find and close local business clients using cold outreach. Includes proven scripts and targeting strategies for HVAC, dental, legal, and home service niches.",
+    description: "A step by step system for landing local business clients through cold outreach. Includes targeting frameworks, proven scripts, and case studies for HVAC, dental, legal, and home service niches.",
   },
   "cold-email-scripts-calls": {
     title: "5 Cold Email Scripts To Book CALLS INSTANTLY",
     image: playbookSalesPipeline,
-    description: "Five battle-tested email templates that have booked meetings on day one. Each script comes with the psychology behind why it works and when to use it.",
+    description: "Five plug and play cold email scripts engineered to book sales calls fast. Each template comes with the psychology behind why it works and exactly when to send it.",
   },
   "spam-checklist": {
     title: "Bullet-Proof Checklist To Avoid Spam",
     image: playbookCopywriting,
-    description: "The technical checklist to keep your emails landing in the primary inbox. SPF/DKIM/DMARC setup, warmup strategies, sending volume limits, and reputation monitoring.",
+    description: "The complete technical checklist to keep your cold emails out of spam. Walks through SPF, DKIM, DMARC setup, domain warmup, sending volume rules, and ongoing reputation monitoring.",
   },
   "ai-workflows-outreach": {
     title: "5 Plug-and-Play AI Workflows For Cold Outreach",
     image: playbookScaling,
-    description: "Five AI-powered workflows for prospecting, writing, and follow-ups. Use ChatGPT, Claude, and n8n to automate up to 80% of your outbound process.",
+    description: "Five ready to deploy AI workflows that automate prospecting, message writing, and follow ups. Built with ChatGPT, Claude, and n8n to take 80% of the manual work off your plate.",
   },
   "ctas-3m-pipeline": {
     title: "4 Cold Email CTAs for Over $3M In Pipeline",
     image: playbookCopywriting,
-    description: "The exact call-to-action formulas behind $3M+ in generated pipeline. Soft CTAs, direct asks, and curiosity-gap closers that convert cold prospects into booked calls.",
+    description: "The four exact call to action formulas that have driven over $3M in client pipeline. Soft asks, direct asks, and curiosity gap closers that consistently turn cold replies into booked meetings.",
   },
   "subject-lines-calls": {
     title: "3 Subject Lines That Book You Calls This Week",
     image: playbookColdEmail,
-    description: "Three subject line frameworks with 15+ variations each. Real open rate data, A/B testing methodology, and a guide to avoiding spam triggers.",
+    description: "Three high performing subject line frameworks with 15+ tested variations of each. Includes real open rate benchmarks, A/B testing methodology, and a quick guide to avoiding spam triggers.",
   },
 };
 
