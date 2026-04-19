@@ -17,11 +17,11 @@ const Navigation = () => {
           <a href="#case-studies" className="text-muted-foreground hover:text-foreground transition-colors">
             Case Studies
           </a>
-          <a href="https://www.youtube.com/@AryanAryal3" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-            YouTube
-          </a>
           <a href="/resources" className="text-muted-foreground hover:text-foreground transition-colors">
             Free Playbooks
+          </a>
+          <a href="https://www.youtube.com/@AryanAryal3" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+            YouTube
           </a>
         </div>
         
