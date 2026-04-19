@@ -1,6 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
+// Type declaration for Wistia custom element
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'wistia-player': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & { 'media-id': string; aspect?: string }, HTMLElement>;
+    }
+  }
+}
+
 const HeroSection = () => {
   return (
     <section className="pt-24 pb-16 bg-gradient-subtle">
