@@ -67,7 +67,7 @@ const playbooks: Playbook[] = [
     title: "5 Plug-and-Play AI Workflows For Cold Outreach",
     description:
       "Five ready to deploy AI workflows built with Clay, ChatGPT, and Claude that take the manual work off your plate across prospecting, message writing, and follow ups.",
-    category: "Growth",
+    category: "Lead Generation",
     image: playbookAiWorkflows,
     pages: 22,
     slug: "ai-workflows-outreach",
