@@ -120,7 +120,7 @@ const Resources = () => {
             Free <span className="text-primary">Playbook Library</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-            Our lessons from booking 1,000+ qualified meetings and generating $1M+ in client revenue — expertly
+            Our lessons from booking 1,000+ qualified meetings and generating $1M+ in client revenue, expertly
             condensed into free downloadable playbooks.
           </p>
         </div>
