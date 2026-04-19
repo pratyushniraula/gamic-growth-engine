@@ -33,7 +33,7 @@ const playbooks: Playbook[] = [
       "The complete 2026 guide to cold email that actually gets replies. Covers modern deliverability, AI personalization at scale, and multi-channel sequencing built for today's inbox filters.",
     category: "Cold Outreach",
     image: playbookColdEmail,
-    pages: 48,
+    pages: 128,
     slug: "ultimate-cold-email-2026",
   },
   {
@@ -42,7 +42,7 @@ const playbooks: Playbook[] = [
       "A step by step system for landing local business clients through cold outreach. Includes targeting frameworks, proven scripts, and case studies for HVAC, dental, legal, and home service niches.",
     category: "Lead Generation",
     image: playbookLocalLeadGen,
-    pages: 34,
+    pages: 14,
     slug: "local-lead-gen-outreach",
   },
   {
@@ -51,7 +51,7 @@ const playbooks: Playbook[] = [
       "Five plug and play cold email scripts engineered to book sales calls fast. Each template comes with the psychology behind why it works and exactly when to send it.",
     category: "Cold Outreach",
     image: playbook5Scripts,
-    pages: 12,
+    pages: 37,
     slug: "cold-email-scripts-calls",
   },
   {
@@ -60,7 +60,7 @@ const playbooks: Playbook[] = [
       "An extensive deliverability checklist with SPF, DKIM, copy rules, and the technical setup to consistently land in the primary inbox instead of spam.",
     category: "Deliverability",
     image: playbookSpamChecklist,
-    pages: 8,
+    pages: 48,
     slug: "spam-checklist",
   },
   {
@@ -69,7 +69,7 @@ const playbooks: Playbook[] = [
       "Five ready to deploy AI workflows built with Clay, ChatGPT, and Claude that take the manual work off your plate across prospecting, message writing, and follow ups.",
     category: "Lead Generation",
     image: playbookAiWorkflows,
-    pages: 22,
+    pages: 37,
     slug: "ai-workflows-outreach",
   },
   {
@@ -78,7 +78,7 @@ const playbooks: Playbook[] = [
       "The four exact call to action formulas that have driven over $3M in client pipeline. Soft asks, direct asks, and curiosity gap closers that consistently turn cold replies into booked meetings.",
     category: "Copywriting",
     image: playbookCtas,
-    pages: 14,
+    pages: 30,
     slug: "ctas-3m-pipeline",
   },
   {
@@ -87,7 +87,7 @@ const playbooks: Playbook[] = [
       "Three high performing subject line frameworks with 15+ tested variations of each. Includes real open rate benchmarks, A/B testing methodology, and a quick guide to avoiding spam triggers.",
     category: "Copywriting",
     image: playbookSubjectLines,
-    pages: 10,
+    pages: 31,
     slug: "subject-lines-calls",
   },
 ];
