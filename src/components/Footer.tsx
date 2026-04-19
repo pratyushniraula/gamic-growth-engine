@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Youtube } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
+import gamicLogo from "@/assets/gamic-logo.png";
 
 const Footer = () => {
   return (

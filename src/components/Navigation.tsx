@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import gamicLogo from "@/assets/gamic-logo.png";
 
 const Navigation = () => {
   return (
