@@ -6,11 +6,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import playbookColdEmail from "@/assets/playbook-cold-email.jpg";
-import playbookLeadGen from "@/assets/playbook-lead-gen.jpg";
-import playbookSalesPipeline from "@/assets/playbook-sales-pipeline.jpg";
-import playbookCopywriting from "@/assets/playbook-copywriting.jpg";
-import playbookScaling from "@/assets/playbook-scaling.jpg";
+import playbookColdEmail from "@/assets/playbook-cold-email.png";
+import playbookLocalLeadGen from "@/assets/playbook-local-lead-gen.png";
+import playbook5Scripts from "@/assets/playbook-5-scripts.png";
+import playbookSpamChecklist from "@/assets/playbook-spam-checklist.png";
+import playbookAiWorkflows from "@/assets/playbook-ai-workflows.png";
+import playbookCtas from "@/assets/playbook-ctas.png";
+import playbookSubjectLines from "@/assets/playbook-subject-lines.png";
 
 const categories = ["All", "Cold Outreach", "Lead Generation", "Sales", "Copywriting", "Growth"] as const;
 type Category = (typeof categories)[number];
