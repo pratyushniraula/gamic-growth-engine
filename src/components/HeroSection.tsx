@@ -9,7 +9,7 @@ const HeroSection = () => {
           {/* Status Indicator */}
           <div className="inline-flex items-center px-5 py-2.5 rounded-lg bg-primary/10 text-primary text-sm font-medium mb-6 border border-primary/20">
             <div className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></div>
-            AGENCIES & B2B BUSINESSES
+            AGENCIES & FINANCIAL FIRMS
           </div>
 
           {/* Main Headline */}
