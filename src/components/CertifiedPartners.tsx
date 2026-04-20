@@ -10,8 +10,8 @@ const basePartners = [
   { name: "Apollo Partner", logo: partnerApollo },
 ];
 
-// Duplicate for seamless infinite scroll
-const partners = [...basePartners, ...basePartners, ...basePartners];
+// Duplicate once for seamless infinite scroll (animation translates -50%)
+const partners = [...basePartners, ...basePartners];
 
 const CertifiedPartners = () => {
   return (
@@ -30,16 +30,16 @@ const CertifiedPartners = () => {
               "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
           }}
         >
-          <div className="flex animate-scroll-fast gap-20 items-center">
+          <div className="flex animate-scroll-fast gap-16 items-center w-max">
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 flex items-center justify-center h-44 w-60 transition-all duration-300 hover:scale-105 grayscale-[20%] hover:grayscale-0"
+                className="flex-shrink-0 flex items-center justify-center h-32 w-48 transition-all duration-300 hover:scale-105"
               >
                 <img
                   src={partner.logo}
                   alt={`${partner.name} certified partner badge`}
-                  className="max-h-full max-w-full object-contain mix-blend-multiply dark:mix-blend-screen drop-shadow-sm"
+                  className="max-h-full max-w-full object-contain mix-blend-multiply dark:mix-blend-screen"
                   loading="lazy"
                 />
               </div>
