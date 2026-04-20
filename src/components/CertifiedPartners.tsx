@@ -39,7 +39,7 @@ const CertifiedPartners = () => {
                 <img
                   src={partner.logo}
                   alt={`${partner.name} certified partner badge`}
-                  className="max-h-full max-w-full object-contain mix-blend-multiply dark:mix-blend-screen"
+                  className="max-h-full max-w-full object-contain"
                   loading="lazy"
                 />
               </div>
