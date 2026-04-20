@@ -6,7 +6,17 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity" aria-label="Gamic Media — go to homepage">
+        <Link
+          to="/"
+          onClick={(e) => {
+            if (window.location.pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+          className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
+          aria-label="Gamic Media — go to homepage"
+        >
           <img src={gamicLogo} alt="Gamic Media Logo" className="w-10 h-10 rounded-lg object-contain" />
           <span className="text-xl font-bold text-foreground">Gamic Media</span>
         </Link>
