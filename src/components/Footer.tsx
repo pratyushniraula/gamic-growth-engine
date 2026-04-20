@@ -15,7 +15,7 @@ const Footer = () => {
               <span className="text-xl font-bold text-foreground">Gamic Media</span>
             </div>
             <p className="text-muted-foreground mb-6 w-full max-w-none">
-              The premium outbound lead generation agency for Agencies, B2B service providers, and SaaS companies.{" "}
+              The premium GTM agency for financial firms and agencies.{" "}
               <br />
               We use a mixture of AI outbound tools to book you qualified meetings on autopilot.
             </p>
