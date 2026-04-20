@@ -4,10 +4,10 @@ import partnerSmartlead from "@/assets/partner-smartlead.png";
 import partnerApollo from "@/assets/partner-apollo.png";
 
 const basePartners = [
-  { name: "Clay", logo: partnerClay, scale: 1.25 },
-  { name: "AI Ark Expert", logo: partnerAiArk, scale: 1 },
-  { name: "Smartlead Certified Partner", logo: partnerSmartlead, scale: 1 },
-  { name: "Apollo Partner", logo: partnerApollo, scale: 1 },
+  { name: "Clay", logo: partnerClay, scale: 1.25, href: null as string | null },
+  { name: "AI Ark Expert", logo: partnerAiArk, scale: 1, href: null as string | null },
+  { name: "Smartlead Certified Partner", logo: partnerSmartlead, scale: 1, href: "https://www.smartlead.ai/partner/aryan-aryal" },
+  { name: "Apollo Partner", logo: partnerApollo, scale: 1, href: null as string | null },
 ];
 
 // Duplicate once for seamless infinite scroll (animation translates -50%)
@@ -31,11 +31,8 @@ const CertifiedPartners = () => {
           }}
         >
           <div className="flex animate-scroll-fast gap-16 items-center w-max">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 flex items-center justify-center h-32 w-48 transition-all duration-300 hover:scale-105"
-              >
+            {partners.map((partner, index) => {
+              const content = (
                 <img
                   src={partner.logo}
                   alt={`${partner.name} certified partner badge`}
@@ -43,8 +40,26 @@ const CertifiedPartners = () => {
                   style={{ transform: `scale(${partner.scale})` }}
                   loading="lazy"
                 />
-              </div>
-            ))}
+              );
+              const wrapperClass =
+                "flex-shrink-0 flex items-center justify-center h-32 w-48 transition-all duration-300 hover:scale-105";
+              return partner.href ? (
+                <a
+                  key={index}
+                  href={partner.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={wrapperClass}
+                  aria-label={`${partner.name} – visit partner page`}
+                >
+                  {content}
+                </a>
+              ) : (
+                <div key={index} className={wrapperClass}>
+                  {content}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
