@@ -25,21 +25,21 @@ const CertifiedPartners = () => {
           className="w-full max-w-6xl mx-auto overflow-hidden"
           style={{
             maskImage:
-              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+              "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
             WebkitMaskImage:
-              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+              "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
           }}
         >
-          <div className="flex animate-scroll gap-16 items-center">
+          <div className="flex animate-scroll-fast gap-20 items-center">
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 flex items-center justify-center h-40 w-56 transition-all duration-300 hover:scale-105"
+                className="flex-shrink-0 flex items-center justify-center h-44 w-60 transition-all duration-300 hover:scale-105 grayscale-[20%] hover:grayscale-0"
               >
                 <img
                   src={partner.logo}
                   alt={`${partner.name} certified partner badge`}
-                  className="max-h-full max-w-full object-contain mix-blend-multiply dark:mix-blend-normal"
+                  className="max-h-full max-w-full object-contain mix-blend-multiply dark:mix-blend-screen drop-shadow-sm"
                   loading="lazy"
                 />
               </div>
