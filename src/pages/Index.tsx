@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import TrustedBy from "@/components/TrustedBy";
+import CertifiedPartners from "@/components/CertifiedPartners";
 import CaseStudies from "@/components/CaseStudies";
 import FreeResources from "@/components/FreeResources";
 import Testimonials from "@/components/Testimonials";
@@ -27,8 +28,9 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <AboutSection />
-      <TrustedBy />
-      <CaseStudies />
+        <TrustedBy />
+        <CertifiedPartners />
+        <CaseStudies />
       <FreeResources />
       <Testimonials />
       <CTASection />
