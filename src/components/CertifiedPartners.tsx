@@ -4,10 +4,10 @@ import partnerSmartlead from "@/assets/partner-smartlead.png";
 import partnerApollo from "@/assets/partner-apollo.png";
 
 const basePartners = [
-  { name: "Clay", logo: partnerClay },
-  { name: "AI Ark Expert", logo: partnerAiArk },
-  { name: "Smartlead Certified Partner", logo: partnerSmartlead },
-  { name: "Apollo Partner", logo: partnerApollo },
+  { name: "Clay", logo: partnerClay, scale: 1.25 },
+  { name: "AI Ark Expert", logo: partnerAiArk, scale: 1 },
+  { name: "Smartlead Certified Partner", logo: partnerSmartlead, scale: 1 },
+  { name: "Apollo Partner", logo: partnerApollo, scale: 1 },
 ];
 
 // Duplicate once for seamless infinite scroll (animation translates -50%)
@@ -40,6 +40,7 @@ const CertifiedPartners = () => {
                   src={partner.logo}
                   alt={`${partner.name} certified partner badge`}
                   className="max-h-full max-w-full object-contain"
+                  style={{ transform: `scale(${partner.scale})` }}
                   loading="lazy"
                 />
               </div>
