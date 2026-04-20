@@ -15,29 +15,35 @@ const partners = [...basePartners, ...basePartners, ...basePartners];
 
 const CertifiedPartners = () => {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-12 bg-gradient-subtle">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-lg font-semibold text-primary mb-8">
-            Certified Partners
-          </h2>
+        <h2 className="text-center text-sm font-semibold tracking-widest text-muted-foreground uppercase mb-8">
+          Certified Partners
+        </h2>
 
-          <div className="w-full max-w-5xl mx-auto overflow-hidden">
-            <div className="flex animate-scroll gap-12 items-center">
-              {partners.map((partner, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 flex items-center justify-center h-28 w-44 rounded-xl bg-foreground/95 p-4 transition-all duration-300 hover:scale-105 shadow-card"
-                >
-                  <img
-                    src={partner.logo}
-                    alt={`${partner.name} certified partner badge`}
-                    className="max-h-full max-w-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
+        <div
+          className="w-full max-w-6xl mx-auto overflow-hidden"
+          style={{
+            maskImage:
+              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+          }}
+        >
+          <div className="flex animate-scroll gap-16 items-center">
+            {partners.map((partner, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 flex items-center justify-center h-40 w-56 transition-all duration-300 hover:scale-105"
+              >
+                <img
+                  src={partner.logo}
+                  alt={`${partner.name} certified partner badge`}
+                  className="max-h-full max-w-full object-contain mix-blend-multiply dark:mix-blend-normal"
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
