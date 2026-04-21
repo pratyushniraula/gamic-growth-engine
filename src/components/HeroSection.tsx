@@ -38,7 +38,7 @@ const HeroSection = () => {
           <div className="mb-8">
             <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-premium hover:shadow-glow transition-all duration-500 border border-primary/20">
               <iframe
-                src="https://fast.wistia.net/embed/iframe/s5kwo67u7l?seo=false&videoFoam=true"
+                src="https://fast.wistia.net/embed/iframe/lphdfepth3?seo=false&videoFoam=true"
                 title="Gamic Media - VSL"
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
