@@ -18,7 +18,7 @@ const CertifiedPartners = () => {
     <section className="py-12 bg-gradient-subtle">
       <div className="container mx-auto px-4">
         <h2 className="text-center text-sm font-semibold tracking-widest text-muted-foreground uppercase mb-8">
-          Certified Partners
+          Official Partners of Gamic Media
         </h2>
 
         <div
