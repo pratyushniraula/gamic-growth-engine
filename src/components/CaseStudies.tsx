@@ -83,6 +83,18 @@ const CaseStudies = () => {
       image: "/faces/Aziz.jpeg",
     },
     {
+      company: "Channel Craft",
+      founder: "Kevin Johannes Worner",
+      role: "CEO",
+      results: "$1.2M in Pipeline & 97 Leads in 30 Days",
+      problem:
+        "Most of their leads and clients came from inbound referrals and their network, since they had already established a strong inbound acquisition channel through YouTube. They needed a reliable outbound system to complement that.",
+      solution:
+        "After working with us, they filled their calendar with qualified leads. We generated tons of leads for them to follow up with in the first 30 days alone and handled everything end-to-end.",
+      videoId: "5LqdN-wtdZo",
+      image: "/faces/Kevin.jpeg",
+    },
+    {
       company: "Brand Face Media",
       founder: "Bernardo Montanez",
       role: "CEO",
