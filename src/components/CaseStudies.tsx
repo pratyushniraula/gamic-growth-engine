@@ -88,9 +88,9 @@ const CaseStudies = () => {
       role: "CEO",
       results: "$1.2M in Pipeline & 97 Leads in 30 Days",
       problem:
-        "Most of their leads and clients came from inbound referrals and their network, since they had already established a strong inbound acquisition channel through YouTube. They needed a reliable outbound system to complement that.",
+        "Most of their leads and clients came from inbound referrals and their network, since they had already established a strong inbound advertising channel through their social media platforms. They needed a reliable outbound system to complement that.",
       solution:
-        "After working with us, they filled their calendar with qualified leads. We generated tons of leads for them to follow up with in the first 30 days alone and handled everything end-to-end.",
+        "We generated 97 leads in the first 30 days alone and handled everything end-to-end, resulting in $1.2M added to their pipeline.",
       videoId: "5LqdN-wtdZo",
       image: "/faces/Kevin.jpeg",
     },
