@@ -1,7 +1,9 @@
-import { AlertTriangle, Repeat, UserMinus } from "lucide-react";
+import { useState } from "react";
+import { AlertTriangle, Repeat, UserMinus, X } from "lucide-react";
 import peEmailReach from "@/assets/pe-email-reach.png.asset.json";
 
 const AboutSection = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const problems = [
     {
       icon: <Repeat className="h-6 w-6" aria-hidden="true" />,
@@ -81,7 +83,7 @@ const AboutSection = () => {
               <p className="text-sm font-medium mb-4">All in under 30 days.</p>
 
               <p className="text-muted-foreground mb-4">
-                We sourced lower-middle-market manufacturers around $1M–$5M EBITDA matching the buyer's exact criteria,
+                We sourced lower-middle-market manufacturers around $1M-$5M EBITDA matching the buyer's exact criteria,
                 layered in a CFO-hire readiness signal, and positioned the firm as a discreet sell-side advisor running a
                 buyer-backed search, not a broker blasting the market.
               </p>
@@ -123,22 +125,29 @@ const AboutSection = () => {
 
               <p className="text-muted-foreground mb-4">
                 The client buys founder-run youth sports businesses, but the owners were invisible to normal B2B databases.
-                We skipped LinkedIn and generic data providers and scraped the directories these businesses actually show up on
-                — tournament boards, camp registries, and governing-body listings — then worked backwards to find the named owner
+                We skipped LinkedIn and generic data providers and scraped the directories these businesses actually show up on,
+                including tournament boards, camp registries, and governing-body listings, then worked backwards to find the named owner
                 and verified every address before outreach.
               </p>
 
-              <img
-                src={peEmailReach.url}
-                alt="Email campaign results: 1,435 owners contacted, 198 replies, 66 interested"
-                className="w-full rounded-lg border shadow-sm"
-                loading="lazy"
-              />
+              <button
+                type="button"
+                onClick={() => setLightboxOpen(true)}
+                className="block w-full text-left group"
+                aria-label="Open email results screenshot"
+              >
+                <img
+                  src={peEmailReach.url}
+                  alt="Email campaign results: 1,435 owners contacted, 198 replies, 66 interested"
+                  className="w-full rounded-lg border shadow-sm group-hover:opacity-90 transition-opacity"
+                  loading="lazy"
+                />
+              </button>
             </div>
 
             <div className="bg-card rounded-xl p-8 border shadow-sm">
               <h3 className="text-2xl font-bold mb-1">Sell-Side Advisory Firm</h3>
-              <p className="text-muted-foreground mb-6">PR agencies, $1M–$15M revenue</p>
+              <p className="text-muted-foreground mb-6">PR agencies, $1M-$15M revenue</p>
 
               <div className="grid grid-cols-2 gap-6 mb-6">
                 <div>
@@ -154,7 +163,7 @@ const AboutSection = () => {
                   <div className="text-sm text-muted-foreground">In exact niche</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary">$1M–$15M</div>
+                  <div className="text-3xl font-bold text-primary">$1M-$15M</div>
                   <div className="text-sm text-muted-foreground">Revenue band targeted</div>
                 </div>
               </div>
@@ -163,7 +172,7 @@ const AboutSection = () => {
 
               <p className="text-muted-foreground mb-4">
                 We targeted PR agencies in a tight, unique niche, enriched each prospect with competitor-firm and
-                industry-specific signals, and opened conversations around consolidation and margin pressure — positioning
+                industry-specific signals, and opened conversations around consolidation and margin pressure, positioning
                 the firm as a trusted advisor with a no-pressure valuation conversation, not a broker.
               </p>
 
@@ -181,6 +190,30 @@ const AboutSection = () => {
           <p className="text-center text-sm text-muted-foreground mt-6">Reference available on request.</p>
         </div>
       </div>
+
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setLightboxOpen(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={() => setLightboxOpen(false)}
+            className="absolute top-4 right-4 text-white hover:text-primary transition-colors"
+            aria-label="Close screenshot"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <img
+            src={peEmailReach.url}
+            alt="Email campaign results: 1,435 owners contacted, 198 replies, 66 interested"
+            className="max-h-full max-w-full rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };
