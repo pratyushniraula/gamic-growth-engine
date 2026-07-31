@@ -1,4 +1,5 @@
 import { Play } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const FreeResources = () => {
   const videos = [
@@ -40,23 +41,25 @@ const FreeResources = () => {
   ];
 
   return (
-    <section id="free-resources" className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section id="free-resources" className="py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-6">
+        <Reveal className="text-center mb-16">
+          <p className="eyebrow mb-4">Free Resources</p>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Our <span className="text-primary">Free Resources</span>
+            Our <span className="text-primary-glow">Free Resources</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground measure mx-auto">
             Access our library of proven strategies, frameworks, and actionable insights to help you master cold
             outreach and lead generation
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {videos.map((video, index) => (
-            <div
+            <Reveal
               key={index}
-              className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-300 group"
+              delay={(index % 2) * 100}
+              className="surface-card overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 group"
             >
               <div className="relative aspect-video bg-muted rounded-lg overflow-hidden">
                 <iframe
@@ -70,12 +73,12 @@ const FreeResources = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary-glow transition-colors">
                   {video.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">{video.description}</p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
