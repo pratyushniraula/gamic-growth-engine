@@ -9,28 +9,28 @@ const HeroSection = () => {
           {/* Status Indicator */}
           <div className="inline-flex items-center px-5 py-2.5 rounded-lg bg-primary/10 text-primary text-sm font-medium mb-6 border border-primary/20">
             <div className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></div>
-            AGENCIES & FINANCIAL FIRMS
+            DEAL ORIGINATION FOR FINANCIAL FIRMS
           </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            We'll Book You <span className="text-primary">10-30 Qualified Sales Calls</span> Every Month
+            Off-Market Deal Flow for <span className="text-primary">M&amp;A Advisors &amp; Investment Banks</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            With Your Ideal Customers
+            We find owners showing exit signals, qualify them by phone, and book them onto your calendar, all under your brand. You just close.
           </p>
 
           {/* Value Props */}
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="text-muted-foreground">Personalized Outreach Strategy</span>
+              <span className="text-muted-foreground">Signal-Based Targeting</span>
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="text-muted-foreground">Done-For-You System</span>
+              <span className="text-muted-foreground">Human SDR Qualification</span>
             </div>
           </div>
 
@@ -64,19 +64,19 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Social Proof Numbers */}
+          {/* Trust Bar */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 pt-8 border-t border-border">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">$1M+</div>
-              <div className="text-sm text-muted-foreground">Revenue Generated for Clients</div>
+              <div className="text-3xl font-bold text-primary mb-2">20 days</div>
+              <div className="text-sm text-muted-foreground">To first qualified conversation</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">1,000+</div>
-              <div className="text-sm text-muted-foreground">Qualified Meetings Booked</div>
+              <div className="text-3xl font-bold text-primary mb-2">5–10</div>
+              <div className="text-sm text-muted-foreground">Qualified seller calls per month</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">98%</div>
-              <div className="text-sm text-muted-foreground">Client Satisfaction Rate</div>
+              <div className="text-3xl font-bold text-primary mb-2">100%</div>
+              <div className="text-sm text-muted-foreground">Under your brand</div>
             </div>
           </div>
         </div>

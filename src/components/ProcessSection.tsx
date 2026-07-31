@@ -1,85 +1,81 @@
-import { Target, Zap, Calendar, TrendingUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Target, Send, CalendarCheck, ArrowRight } from "lucide-react";
 
 const ProcessSection = () => {
   const steps = [
     {
       icon: Target,
       number: "01",
-      title: "Deep Business Analysis",
-      description: "We dive deep into your business, offers, and ideal customer profile to understand exactly who your perfect prospects are and what messaging will resonate.",
-      deliverables: ["Target Market Research", "Offer Optimization", "ICP Definition"]
+      title: "Deal criteria & shortlist",
+      description:
+        "We start from your exact thesis, sector, geography, revenue/EBITDA band, ownership structure, transaction type, and signal-score a qualified shortlist.",
+      deliverables: ["Thesis Intake", "Signal Scoring", "Qualified Shortlist"],
     },
     {
-      icon: Zap,
-      number: "02", 
-      title: "AI-Powered Campaign Setup",
-      description: "Using Clay and advanced AI tools, we build your complete outbound infrastructure with personalized email sequences, lead lists, and sending systems.",
-      deliverables: ["Email Infrastructure", "AI Personalization Setup", "Lead Database Creation"]
+      icon: Send,
+      number: "02",
+      title: "Signal-based outreach",
+      description:
+        "Personalized email and LinkedIn, 4–6 touches over 3–4 weeks, each message written to the owner's specific company and tenure. All under your brand.",
+      deliverables: ["Email & LinkedIn Sequences", "Owner-Specific Personalization", "Your Brand Throughout"],
     },
     {
-      icon: Calendar,
+      icon: CalendarCheck,
       number: "03",
-      title: "Automated Outreach Launch", 
-      description: "We launch targeted campaigns with hyper-personalized messaging to your ideal prospects and continuously optimize for maximum response rates.",
-      deliverables: ["Campaign Launch", "A/B Testing", "Response Optimization"]
+      title: "SDR qualification & handover",
+      description:
+        "Every reply is phone-qualified, then booked onto your calendar with a full brief, signals identified, notes, and a suggested first-call approach.",
+      deliverables: ["Phone Qualification", "Calendar Booking", "Full Pre-Call Brief"],
     },
-    {
-      icon: TrendingUp,
-      number: "04",
-      title: "Qualified Meetings Delivered",
-      description: "We handle all responses and book qualified meetings directly on your calendar. You focus on closing deals while we fill your pipeline.",
-      deliverables: ["Meeting Booking", "Lead Qualification", "Calendar Management"]
-    }
   ];
 
   return (
-    <section id="process" className="py-20 bg-gradient-subtle">
+    <section id="process" className="py-20 bg-gradient-subtle scroll-mt-24 md:scroll-mt-28">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            How We Generate <span className="text-primary">Qualified Meetings</span> for You
+            How It <span className="text-primary">Works</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our proven 4-step process combines AI technology, data intelligence, and human expertise to consistently book high-quality sales meetings with your ideal prospects.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <div className="bg-card rounded-2xl p-8 shadow-card hover:shadow-premium transition-all duration-300 h-full">
-                <div className="flex items-start space-x-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mb-4">
-                      <step.icon className="w-8 h-8 text-primary-foreground" />
+                <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mb-4">
+                  <step.icon className="w-8 h-8 text-primary-foreground" />
+                </div>
+                <div className="text-6xl font-bold text-primary/20 absolute top-4 right-6">{step.number}</div>
+
+                <h3 className="text-xl font-bold text-foreground mb-4">{step.title}</h3>
+                <p className="text-muted-foreground mb-6 leading-relaxed">{step.description}</p>
+
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold text-foreground mb-3">Deliverables:</h4>
+                  {step.deliverables.map((deliverable, idx) => (
+                    <div key={idx} className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      <span className="text-sm text-muted-foreground">{deliverable}</span>
                     </div>
-                    <div className="text-6xl font-bold text-primary/20 absolute top-4 right-6">
-                      {step.number}
-                    </div>
-                  </div>
-                  
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-foreground mb-4">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
-                      {step.description}
-                    </p>
-                    
-                    <div className="space-y-2">
-                      <h4 className="text-sm font-semibold text-foreground mb-3">Deliverables:</h4>
-                      {step.deliverables.map((deliverable, idx) => (
-                        <div key={idx} className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          <span className="text-sm text-muted-foreground">{deliverable}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <Button asChild variant="hero" size="xl" className="group">
+            <a
+              href="https://calendly.com/gamicmedia/discovery-call-clone?"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Book your free strategy call on Calendly"
+            >
+              Book Your Free Strategy Call
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>
