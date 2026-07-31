@@ -10,9 +10,9 @@ const SolutionSection = () => {
     },
     {
       icon: PhoneCall,
-      title: "Human SDR qualification",
+      title: "Human appointment setter qualification",
       description:
-        "Every positive reply gets a live SDR call confirming deal size, ownership structure, timing, and genuine interest before any introduction. You never enter a call blind.",
+        "Every positive reply gets a live appointment setter call confirming deal size, ownership structure, timing, and genuine interest before any introduction. You never enter a call blind.",
     },
     {
       icon: Shield,

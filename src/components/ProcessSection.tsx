@@ -22,7 +22,7 @@ const ProcessSection = () => {
     {
       icon: CalendarCheck,
       number: "03",
-      title: "SDR qualification & handover",
+      title: "Appointment setter qualification & handover",
       description:
         "Every reply is phone-qualified, then booked onto your calendar with a full brief, signals identified, notes, and a suggested first-call approach.",
       deliverables: ["Phone Qualification", "Calendar Booking", "Full Pre-Call Brief"],

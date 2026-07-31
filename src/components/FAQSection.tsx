@@ -8,7 +8,7 @@ const FAQSection = () => {
     },
     {
       q: "Will cold outreach damage my firm's reputation?",
-      a: "Every message runs under your brand, personalized to each owner, and no introduction happens until a human SDR has vetted the conversation. It reads as a discreet advisor, not a broker blasting the market.",
+      a: "Every message runs under your brand, personalized to each owner, and no introduction happens until a human appointment setter has vetted the conversation. It reads as a discreet advisor, not a broker blasting the market.",
     },
     {
       q: "How fast until I see real conversations?",
@@ -16,7 +16,7 @@ const FAQSection = () => {
     },
     {
       q: "What if the leads aren't actually qualified?",
-      a: "Every booked call is phone-confirmed for deal size, ownership, timing, and genuine interest first. That's the entire point of the SDR step.",
+      a: "Every booked call is phone-confirmed for deal size, ownership, timing, and genuine interest first. That's the entire point of the appointment setter step.",
     },
     {
       q: "Is it worth the cost?",
