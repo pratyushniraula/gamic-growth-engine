@@ -155,8 +155,8 @@ const AboutSection = () => {
                   <div className="text-sm text-muted-foreground">Leads sourced</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary">20</div>
-                  <div className="text-sm text-muted-foreground">Days to first conversations</div>
+                  <div className="text-3xl font-bold text-primary">17</div>
+                  <div className="text-sm text-muted-foreground">Calls booked</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-primary">100%</div>
