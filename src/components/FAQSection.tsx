@@ -12,7 +12,7 @@ const FAQSection = () => {
     },
     {
       q: "How fast until I see real conversations?",
-      a: "Outreach goes live within about 3 weeks of kickoff; first qualified conversations typically land around day 20.",
+      a: "Outreach goes live within about 2 weeks of kickoff; first qualified conversations typically land around day 14.",
     },
     {
       q: "What if the leads aren't actually qualified?",

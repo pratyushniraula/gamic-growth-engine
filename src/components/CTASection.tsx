@@ -27,7 +27,7 @@ const CTASection = () => {
             </div>
             <div className="bg-primary-foreground/10 rounded-xl p-5 backdrop-blur-sm">
               <div className="text-sm opacity-75 mb-1">Step 3</div>
-              <div className="font-semibold">Outreach Live in 3 Weeks</div>
+              <div className="font-semibold">Outreach Live in 2 Weeks</div>
             </div>
           </div>
 

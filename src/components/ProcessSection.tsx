@@ -16,7 +16,7 @@ const ProcessSection = () => {
       number: "02",
       title: "Signal-based outreach",
       description:
-        "Personalized email and LinkedIn, 4–6 touches over 3–4 weeks, each message written to the owner's specific company and tenure. All under your brand.",
+        "Personalized email and LinkedIn, 4–6 touches over 2 weeks, each message written to the owner's specific company and tenure. All under your brand.",
       deliverables: ["Email & LinkedIn Sequences", "Owner-Specific Personalization", "Your Brand Throughout"],
     },
     {

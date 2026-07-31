@@ -67,12 +67,12 @@ const HeroSection = () => {
           {/* Trust Bar */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 pt-8 border-t border-border">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">20 days</div>
-              <div className="text-sm text-muted-foreground">To first qualified conversation</div>
+              <div className="text-3xl font-bold text-primary mb-2">10–30</div>
+              <div className="text-sm text-muted-foreground">Qualified seller calls per month</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">5–10</div>
-              <div className="text-sm text-muted-foreground">Qualified seller calls per month</div>
+              <div className="text-3xl font-bold text-primary mb-2">14 days</div>
+              <div className="text-sm text-muted-foreground">To first qualified conversation</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">100%</div>
