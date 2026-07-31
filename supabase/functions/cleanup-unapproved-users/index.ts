@@ -11,15 +11,40 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders });
   }
 
-  // Require a shared cron secret for this privileged, service-role-backed job
+  // Authorization: allow either the shared cron secret (scheduled job)
+  // or an authenticated admin user's JWT.
   const cronSecret = Deno.env.get('CLEANUP_CRON_SECRET');
   const provided = req.headers.get('x-cron-secret');
-  if (!cronSecret || !provided || provided !== cronSecret) {
+  const cronAuthorized = Boolean(cronSecret && provided && provided === cronSecret);
+
+  let adminAuthorized = false;
+  if (!cronAuthorized) {
+    const authHeader = req.headers.get('Authorization') ?? '';
+    const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : '';
+    if (token) {
+      const supabaseAuth = createClient(
+        Deno.env.get('SUPABASE_URL') ?? '',
+        Deno.env.get('SUPABASE_ANON_KEY') ?? '',
+        { global: { headers: { Authorization: `Bearer ${token}` } } }
+      );
+      const { data: userData } = await supabaseAuth.auth.getUser();
+      if (userData?.user) {
+        const { data: isAdmin } = await supabaseAuth.rpc('has_role', {
+          _user_id: userData.user.id,
+          _role: 'admin',
+        });
+        adminAuthorized = isAdmin === true;
+      }
+    }
+  }
+
+  if (!cronAuthorized && !adminAuthorized) {
     return new Response(
       JSON.stringify({ error: 'Unauthorized' }),
       { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   }
+
 
   try {
     // Create admin client with service role key
