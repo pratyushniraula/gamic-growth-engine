@@ -122,7 +122,7 @@ const AboutSection = () => {
 
               <p className="text-muted-foreground">
                 We sourced 63 targets against a precise investment thesis, then filtered out unqualified owners through
-                signal scoring and live SDR vetting, so only genuinely relevant opportunities reached the calendar.
+                signal scoring and live appointment setter vetting, so only genuinely relevant opportunities reached the calendar.
               </p>
             </div>
 

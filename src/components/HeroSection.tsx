@@ -30,7 +30,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="text-muted-foreground">Human SDR Qualification</span>
+              <span className="text-muted-foreground">Human Appointment Setter Qualification</span>
             </div>
           </div>
 
