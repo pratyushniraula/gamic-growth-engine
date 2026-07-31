@@ -53,7 +53,7 @@ const AboutSection = () => {
             Here's what changes when the origination runs like a system.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
             <div className="bg-card rounded-xl p-8 border shadow-sm">
               <h3 className="text-2xl font-bold mb-1">Sell Side Boutique Group</h3>
               <p className="text-muted-foreground mb-6">Sell-side M&amp;A boutique, manufacturing</p>
@@ -86,7 +86,7 @@ const AboutSection = () => {
               </p>
 
               <a
-                href="#"
+                href="https://gamma.app/docs/CRR-Case-Study-tptymyf5wjfcc38?mode=doc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary font-medium hover:underline"
@@ -124,6 +124,47 @@ const AboutSection = () => {
                 We sourced 63 targets against a precise investment thesis, then filtered out unqualified owners through
                 signal scoring and live SDR vetting, so only genuinely relevant opportunities reached the calendar.
               </p>
+            </div>
+
+            <div className="bg-card rounded-xl p-8 border shadow-sm">
+              <h3 className="text-2xl font-bold mb-1">Sell-Side Advisory Firm</h3>
+              <p className="text-muted-foreground mb-6">PR agencies, $1M–$15M revenue</p>
+
+              <div className="grid grid-cols-2 gap-6 mb-6">
+                <div>
+                  <div className="text-3xl font-bold text-primary">61</div>
+                  <div className="text-sm text-muted-foreground">Leads sourced</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">20</div>
+                  <div className="text-sm text-muted-foreground">Days to first conversations</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">100%</div>
+                  <div className="text-sm text-muted-foreground">In exact niche</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">$1M–$15M</div>
+                  <div className="text-sm text-muted-foreground">Revenue band targeted</div>
+                </div>
+              </div>
+
+              <p className="text-sm font-medium mb-4">All in 20 days.</p>
+
+              <p className="text-muted-foreground mb-4">
+                We targeted PR agencies in a tight, unique niche, enriched each prospect with competitor-firm and
+                industry-specific signals, and opened conversations around consolidation and margin pressure — positioning
+                the firm as a trusted advisor with a no-pressure valuation conversation, not a broker.
+              </p>
+
+              <a
+                href="https://gamma.app/docs/GOP-e6ddtp51jograal?mode=doc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-medium hover:underline"
+              >
+                Check out the full breakdown here
+              </a>
             </div>
           </div>
 
