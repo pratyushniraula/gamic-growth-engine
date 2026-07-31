@@ -1,4 +1,4 @@
-import partnerClay from "@/assets/partner-clay.png";
+import partnerClay from "@/assets/partner-clay-dark.png";
 import partnerAiArk from "@/assets/partner-aiark.jpeg";
 import partnerSmartlead from "@/assets/partner-smartlead.png";
 import partnerApollo from "@/assets/partner-apollo.png";
