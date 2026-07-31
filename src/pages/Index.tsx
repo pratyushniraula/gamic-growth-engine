@@ -32,8 +32,11 @@ const Index = () => {
       <HeroSection />
       <CertifiedPartners />
       <AboutSection />
+      <SolutionSection />
+      <ProcessSection />
       <TrustedBy />
       <CaseStudies />
+      <FAQSection />
       <FreeResources />
       <Testimonials />
       <CTASection />
