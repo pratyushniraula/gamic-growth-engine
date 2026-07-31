@@ -4,7 +4,7 @@ import partnerSmartlead from "@/assets/partner-smartlead.png";
 import partnerApollo from "@/assets/partner-apollo.png";
 
 const basePartners = [
-  { name: "Clay", logo: partnerClay, scale: 1.25, href: null as string | null },
+  { name: "Clay", logo: partnerClay, scale: 1.55, href: null as string | null },
   { name: "AI Ark Expert", logo: partnerAiArk, scale: 1, href: null as string | null },
   { name: "Smartlead Certified Partner", logo: partnerSmartlead, scale: 1, href: "https://www.smartlead.ai/partner/aryan-aryal" },
   { name: "Apollo Partner", logo: partnerApollo, scale: 1, href: null as string | null },
