@@ -26,38 +26,42 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="how-we-operate" className="pt-20 pb-12 px-4 scroll-mt-24 md:scroll-mt-28">
+    <section id="how-we-operate" className="py-24 md:py-32 px-6 bg-background scroll-mt-24 md:scroll-mt-28">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
+        <Reveal className="text-center mb-16">
+          <p className="eyebrow mb-4">01 — The Problem</p>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            The One Problem Every <span className="text-primary">Financial Firm</span> Has
+            The One Problem Every <span className="text-primary-glow">Financial Firm</span> Has
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground measure mx-auto">
             You are not short on expertise. You are not short on execution. You are short on one thing, a consistent,
             repeatable source of qualified conversations with the right owners at the right time.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 mb-20">
           {problems.map((problem, index) => (
-            <div key={index} className="bg-card p-8 rounded-lg border shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center mb-4">
+            <Reveal
+              key={index}
+              delay={index * 100}
+              className="surface-card p-8 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40"
+            >
+              <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 text-primary flex items-center justify-center mb-6">
                 {problem.icon}
               </div>
               <h3 className="text-lg font-semibold mb-3">{problem.title}</h3>
               <p className="text-muted-foreground">{problem.description}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
         {/* Proof */}
-        <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 md:p-12 shadow-sm transition-shadow hover:shadow-xl">
-          <p className="text-center text-lg font-medium mb-8">
-            Here's what changes when the origination runs like a system.
-          </p>
+        <div className="rounded-2xl border border-border bg-card/50 p-6 md:p-10">
+          <p className="eyebrow text-center mb-10">Here's what changes when the origination runs like a system</p>
 
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-            <div className="bg-card rounded-xl p-8 border shadow-sm">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
+            <Reveal className="surface-card p-8">
+
               <h3 className="text-2xl font-bold mb-1">Sell Side Boutique Group</h3>
               <p className="text-muted-foreground mb-6">Sell-side M&amp;A boutique, manufacturing</p>
 
