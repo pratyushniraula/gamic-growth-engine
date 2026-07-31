@@ -92,30 +92,18 @@ const AboutSection = () => {
             <Reveal delay={100} className="surface-card p-8">
 
               <h3 className="text-2xl font-bold mb-1">Private Equity Firm</h3>
-              <p className="text-muted-foreground mb-6">Youth sports programs, $1M+ revenue</p>
+              <p className="text-sm text-muted-foreground mb-8">Youth sports programs, $1M+ revenue</p>
 
-              <div className="grid grid-cols-2 gap-6 mb-6">
-                <div>
-                  <div className="text-3xl font-bold text-primary">1,435</div>
-                  <div className="text-sm text-muted-foreground">Owners contacted</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary">198</div>
-                  <div className="text-sm text-muted-foreground">Replies received</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary">66</div>
-                  <div className="text-sm text-muted-foreground">Interested owners</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary">1 in 22</div>
-                  <div className="text-sm text-muted-foreground">Positive response rate</div>
-                </div>
+              <div className="grid grid-cols-2 gap-6 mb-8">
+                <CountUpStat value="1,435" label="Owners contacted" className="text-4xl" />
+                <CountUpStat value="198" label="Replies received" className="text-4xl" />
+                <CountUpStat value="66" label="Interested owners" className="text-4xl" />
+                <CountUpStat value="1 in 22" label="Positive response rate" className="text-4xl" />
               </div>
 
-              <p className="text-sm font-medium mb-4">Founder-run camps, tournaments, and travel teams.</p>
+              <p className="eyebrow mb-4">Founder-run camps, tournaments, and travel teams</p>
 
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-6">
                 The client buys founder-run youth sports businesses, but the owners were invisible to normal B2B databases.
                 We skipped LinkedIn and generic data providers and scraped the directories these businesses actually show up on,
                 including tournament boards, camp registries, and governing-body listings, then worked backwards to find the named owner
@@ -131,13 +119,14 @@ const AboutSection = () => {
                 <img
                   src={peEmailReach.url}
                   alt="Email campaign results: 1,435 owners contacted, 198 replies, 66 interested"
-                  className="w-full rounded-lg border shadow-sm group-hover:opacity-90 transition-opacity"
+                  className="w-full rounded-xl border border-border group-hover:opacity-90 transition-opacity"
                   loading="lazy"
                 />
               </button>
-            </div>
+            </Reveal>
 
-            <div className="bg-card rounded-xl p-8 border shadow-sm">
+            <Reveal delay={200} className="surface-card p-8">
+
               <h3 className="text-2xl font-bold mb-1">Sell-Side Advisory Firm</h3>
               <p className="text-muted-foreground mb-6">PR agencies, $1M-$15M revenue</p>
 
