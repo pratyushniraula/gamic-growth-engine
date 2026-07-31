@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { AlertTriangle, Repeat, UserMinus, X } from "lucide-react";
 import peEmailReach from "@/assets/pe-email-reach.png.asset.json";
+import Reveal from "@/components/Reveal";
+import CountUpStat from "@/components/CountUpStat";
 
 const AboutSection = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -126,32 +128,19 @@ const AboutSection = () => {
             </Reveal>
 
             <Reveal delay={200} className="surface-card p-8">
-
               <h3 className="text-2xl font-bold mb-1">Sell-Side Advisory Firm</h3>
-              <p className="text-muted-foreground mb-6">PR agencies, $1M-$15M revenue</p>
+              <p className="text-sm text-muted-foreground mb-8">PR agencies, $1M-$15M revenue</p>
 
-              <div className="grid grid-cols-2 gap-6 mb-6">
-                <div>
-                  <div className="text-3xl font-bold text-primary">61</div>
-                  <div className="text-sm text-muted-foreground">Leads sourced</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary">17</div>
-                  <div className="text-sm text-muted-foreground">Calls booked</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary">100%</div>
-                  <div className="text-sm text-muted-foreground">In exact niche</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary">20 Days</div>
-                  <div className="text-sm text-muted-foreground">For these results</div>
-                </div>
+              <div className="grid grid-cols-2 gap-6 mb-8">
+                <CountUpStat value="61" label="Leads sourced" className="text-4xl" />
+                <CountUpStat value="17" label="Calls booked" className="text-4xl" />
+                <CountUpStat value="100%" label="In exact niche" className="text-4xl" />
+                <CountUpStat value="20 Days" label="For these results" className="text-4xl" />
               </div>
 
-              <p className="text-sm font-medium mb-4">All in 20 days.</p>
+              <p className="eyebrow mb-4">All in 20 days</p>
 
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-6">
                 In just 20 days, we targeted PR agencies in a tight, unique niche, enriched each prospect with competitor-firm and
                 industry-specific signals, and opened conversations around consolidation and margin pressure, positioning
                 the firm as a trusted advisor with a no-pressure valuation conversation, not a broker.
@@ -161,14 +150,15 @@ const AboutSection = () => {
                 href="https://gamma.app/docs/GOP-e6ddtp51jograal?mode=doc"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary font-medium hover:underline"
+                className="text-primary font-medium hover:text-primary-glow transition-colors"
               >
                 Check out the full breakdown here
               </a>
-            </div>
+            </Reveal>
           </div>
 
-          <p className="text-center text-sm text-muted-foreground mt-6">Reference available on request.</p>
+          <p className="text-center eyebrow mt-8">Reference available on request</p>
+
         </div>
       </div>
 
