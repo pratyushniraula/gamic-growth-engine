@@ -53,36 +53,78 @@ const AboutSection = () => {
             Here's what changes when the origination runs like a system.
           </p>
 
-          <div className="max-w-3xl mx-auto bg-card rounded-xl p-8 border shadow-sm">
-            <h3 className="text-2xl font-bold mb-1">Carrara Strategy Group (CRR)</h3>
-            <p className="text-muted-foreground mb-6">Sell-side M&amp;A boutique, manufacturing</p>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-card rounded-xl p-8 border shadow-sm">
+              <h3 className="text-2xl font-bold mb-1">Sell Side Boutique Group</h3>
+              <p className="text-muted-foreground mb-6">Sell-side M&amp;A boutique, manufacturing</p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
-              <div>
-                <div className="text-3xl font-bold text-primary">43</div>
-                <div className="text-sm text-muted-foreground">Qualified seller leads</div>
+              <div className="grid grid-cols-2 gap-6 mb-6">
+                <div>
+                  <div className="text-3xl font-bold text-primary">43</div>
+                  <div className="text-sm text-muted-foreground">Qualified seller leads</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">9</div>
+                  <div className="text-sm text-muted-foreground">Calls booked</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">2</div>
+                  <div className="text-sm text-muted-foreground">Mandates signed</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">1</div>
+                  <div className="text-sm text-muted-foreground">NDA executed</div>
+                </div>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">9</div>
-                <div className="text-sm text-muted-foreground">Calls booked</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">2</div>
-                <div className="text-sm text-muted-foreground">Mandates signed</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">1</div>
-                <div className="text-sm text-muted-foreground">NDA executed</div>
-              </div>
+
+              <p className="text-sm font-medium mb-4">All in under 30 days.</p>
+
+              <p className="text-muted-foreground mb-4">
+                We sourced lower-middle-market manufacturers around $1M–$5M EBITDA matching the buyer's exact criteria,
+                layered in a CFO-hire readiness signal, and positioned the firm as a discreet sell-side advisor running a
+                buyer-backed search, not a broker blasting the market.
+              </p>
+
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-medium hover:underline"
+              >
+                Check out the full breakdown here
+              </a>
             </div>
 
-            <p className="text-sm font-medium mb-4">All in under 30 days.</p>
+            <div className="bg-card rounded-xl p-8 border shadow-sm">
+              <h3 className="text-2xl font-bold mb-1">Private Equity Firm</h3>
+              <p className="text-muted-foreground mb-6">Lower-middle-market buyout thesis</p>
 
-            <p className="text-muted-foreground">
-              We sourced lower-middle-market manufacturers around $1M–$5M EBITDA matching the buyer's exact criteria,
-              layered in a CFO-hire readiness signal, and positioned the firm as a discreet sell-side advisor running a
-              buyer-backed search, not a broker blasting the market.
-            </p>
+              <div className="grid grid-cols-2 gap-6 mb-6">
+                <div>
+                  <div className="text-3xl font-bold text-primary">14</div>
+                  <div className="text-sm text-muted-foreground">Days to first conversation</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">63</div>
+                  <div className="text-sm text-muted-foreground">Leads sourced</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">5+</div>
+                  <div className="text-sm text-muted-foreground">Calls booked</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">100%</div>
+                  <div className="text-sm text-muted-foreground">Matched to thesis</div>
+                </div>
+              </div>
+
+              <p className="text-sm font-medium mb-4">All in 14 days.</p>
+
+              <p className="text-muted-foreground">
+                We sourced 63 targets against a precise investment thesis, then filtered out unqualified owners through
+                signal scoring and live SDR vetting, so only genuinely relevant opportunities reached the calendar.
+              </p>
+            </div>
           </div>
 
           <p className="text-center text-sm text-muted-foreground mt-6">Reference available on request.</p>
