@@ -11,6 +11,16 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders });
   }
 
+  // Require a shared cron secret for this privileged, service-role-backed job
+  const cronSecret = Deno.env.get('CLEANUP_CRON_SECRET');
+  const provided = req.headers.get('x-cron-secret');
+  if (!cronSecret || !provided || provided !== cronSecret) {
+    return new Response(
+      JSON.stringify({ error: 'Unauthorized' }),
+      { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    );
+  }
+
   try {
     // Create admin client with service role key
     const supabaseAdmin = createClient(
