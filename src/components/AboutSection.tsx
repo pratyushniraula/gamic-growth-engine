@@ -1,4 +1,5 @@
 import { AlertTriangle, Repeat, UserMinus } from "lucide-react";
+import peEmailReach from "@/assets/pe-email-reach.png.asset.json";
 
 const AboutSection = () => {
   const problems = [
