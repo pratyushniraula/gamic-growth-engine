@@ -2,6 +2,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { useState } from "react";
+import Reveal from "@/components/Reveal";
 const CaseStudies = () => {
   const [openCards, setOpenCards] = useState<Record<number, boolean>>({});
   const toggleCard = (index: number) => {
@@ -108,21 +109,22 @@ const CaseStudies = () => {
     },
   ];
   return (
-    <section id="case-studies" className="py-20 bg-background scroll-mt-24 md:scroll-mt-28">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section id="case-studies" className="py-24 md:py-32 bg-background scroll-mt-24 md:scroll-mt-28">
+      <div className="container mx-auto px-6">
+        <Reveal className="text-center mb-16">
+          <p className="eyebrow mb-4">05 — Case Studies</p>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Real Results from <span className="text-primary">Real Clients</span>
+            Real Results from <span className="text-primary-glow">Real Clients</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground measure mx-auto">
             See how we've helped B2B companies consistently book qualified meetings and close deals.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
           {cases.map((caseStudy, index) => (
             <Collapsible key={index} open={openCards[index]} onOpenChange={() => toggleCard(index)}>
-              <div className="bg-card rounded-2xl p-8 shadow-card hover:shadow-premium transition-all duration-300 group">
+              <div className="surface-card p-8 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40 group">
                 {/* Header */}
                 <div className="flex items-center space-x-4 mb-6">
                   <img src={caseStudy.image} alt={caseStudy.founder} className="w-16 h-16 rounded-full object-cover" />
@@ -135,8 +137,9 @@ const CaseStudies = () => {
                 </div>
 
                 {/* Results */}
-                <div className="mb-6 p-4 bg-gradient-subtle rounded-lg">
-                  <p className="text-xl font-bold text-foreground">Results: {caseStudy.results}</p>
+                <div className="mb-6 p-4 rounded-xl border border-border bg-secondary/40">
+                  <p className="eyebrow mb-1">Results</p>
+                  <p className="text-xl font-bold text-primary">{caseStudy.results}</p>
                 </div>
 
                 {/* YouTube Video */}
@@ -154,13 +157,13 @@ const CaseStudies = () => {
 
                 {/* Snippet - always visible */}
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-foreground mb-2">Challenge:</h4>
+                  <h4 className="eyebrow mb-2">Challenge</h4>
                   <p className="text-sm text-muted-foreground">{caseStudy.problem}</p>
                 </div>
 
                 <CollapsibleContent className="space-y-4 mb-6">
                   <div>
-                    <h4 className="text-sm font-semibold text-foreground mb-2">Solution & Results:</h4>
+                    <h4 className="eyebrow mb-2">Solution & Results</h4>
                     <p className="text-sm text-muted-foreground">{caseStudy.solution}</p>
                   </div>
                 </CollapsibleContent>
@@ -169,7 +172,7 @@ const CaseStudies = () => {
                 <CollapsibleTrigger asChild>
                   <Button
                     variant="outline"
-                    className={`w-full transition-colors ${openCards[index] ? "bg-primary text-primary-foreground shadow-glow" : "hover:bg-primary hover:text-primary-foreground hover:shadow-glow"}`}
+                    className={`w-full transition-colors ${openCards[index] ? "border-primary text-primary-glow" : ""}`}
                   >
                     {openCards[index] ? "Show Less" : "Read Full Case Study"}
                     {openCards[index] ? (

@@ -4,8 +4,8 @@ import gamicLogo from "@/assets/gamic-logo.png";
 
 const Navigation = () => {
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+    <nav className="fixed top-0 w-full bg-background/85 backdrop-blur-xl border-b border-border z-50">
+      <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         <Link
           to="/"
           onClick={(e) => {
@@ -18,20 +18,20 @@ const Navigation = () => {
           aria-label="Gamic Media — go to homepage"
         >
           <img src={gamicLogo} alt="Gamic Media Logo" className="w-10 h-10 rounded-lg object-contain" />
-          <span className="text-xl font-bold text-foreground">Gamic Media</span>
+          <span className="text-xl font-display font-bold text-foreground">Gamic Media</span>
         </Link>
         
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/#how-we-operate" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/#how-we-operate" className="font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground hover:text-primary-glow transition-colors">
             Our Process
           </Link>
-          <Link to="/#case-studies" className="text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/#case-studies" className="font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground hover:text-primary-glow transition-colors">
             Case Studies
           </Link>
-          <a href="/resources" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a href="/resources" className="font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground hover:text-primary-glow transition-colors">
             Free Playbooks
           </a>
-          <a href="https://www.youtube.com/@AryanAryal3" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+          <a href="https://www.youtube.com/@AryanAryal3" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground hover:text-primary-glow transition-colors">
             YouTube
           </a>
         </div>

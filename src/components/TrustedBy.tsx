@@ -14,17 +14,17 @@ const baseCompanies = [
 const companies = [...baseCompanies, ...baseCompanies];
 
 const TrustedBy = () => {
-  return <section className="py-16 bg-blue-50 dark:bg-blue-950/20">
-      <div className="container mx-auto px-4">
+  return <section className="py-24 bg-background border-y border-border">
+      <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-lg font-semibold text-primary mb-8">
+          <h2 className="eyebrow mb-10">
             Trusted by Leading B2B Companies
           </h2>
           
           <div className="w-full max-w-5xl mx-auto overflow-hidden">
             <div className="flex animate-scroll gap-8">
               {companies.map((company, index) => (
-                <div key={index} className="flex-shrink-0 flex items-center justify-center h-14 px-6 bg-blue-100/70 text-primary font-medium text-sm hover:text-primary/80 hover:bg-blue-200/80 transition-all duration-300 hover:scale-105 backdrop-blur-sm dark:bg-blue-900/30 dark:text-primary dark:hover:text-primary/80 dark:hover:bg-blue-800/40 min-w-[200px]">
+                <div key={index} className="flex-shrink-0 flex items-center justify-center h-14 px-6 rounded-xl border border-border bg-card text-muted-foreground font-medium text-sm transition-colors duration-200 hover:text-foreground min-w-[200px]">
                   {company.name}
                 </div>
               ))}
@@ -33,10 +33,10 @@ const TrustedBy = () => {
         </div>
         
         <div className="max-w-3xl mx-auto text-center">
-          <blockquote className="text-xl text-muted-foreground italic">
+          <blockquote className="text-xl md:text-2xl font-display text-foreground">
             "Working with you has single-handedly kept my company alive."
           </blockquote>
-          <cite className="text-primary font-semibold mt-4 block">— Deepak Sharma, CEO of Deep Social Brands</cite>
+          <cite className="eyebrow mt-6 block not-italic">— Deepak Sharma, CEO of Deep Social Brands</cite>
         </div>
       </div>
     </section>;

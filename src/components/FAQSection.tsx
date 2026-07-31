@@ -1,3 +1,4 @@
+import Reveal from "@/components/Reveal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const FAQSection = () => {
@@ -29,17 +30,20 @@ const FAQSection = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-background scroll-mt-24 md:scroll-mt-28">
-      <div className="container mx-auto px-4">
+    <section id="faq" className="py-24 md:py-32 bg-background scroll-mt-24 md:scroll-mt-28">
+      <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-12 text-center">
-            Frequently Asked <span className="text-primary">Questions</span>
-          </h2>
+          <Reveal className="text-center mb-12">
+            <p className="eyebrow mb-4">Frequently Asked Questions</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+              Frequently Asked <span className="text-primary-glow">Questions</span>
+            </h2>
+          </Reveal>
 
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left text-base md:text-lg font-semibold">{faq.q}</AccordionTrigger>
+              <AccordionItem key={index} value={`item-${index}`} className="border-border">
+                <AccordionTrigger className="text-left text-base md:text-lg font-semibold hover:text-primary-glow">{faq.q}</AccordionTrigger>
                 <AccordionContent className="text-muted-foreground text-base leading-relaxed">{faq.a}</AccordionContent>
               </AccordionItem>
             ))}

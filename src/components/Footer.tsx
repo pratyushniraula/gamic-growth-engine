@@ -6,28 +6,28 @@ import gamicLogo from "@/assets/gamic-logo.png";
 const Footer = () => {
   return (
     <footer className="bg-background border-t border-border">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-6 py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-4">
             <div className="flex items-center space-x-3 mb-4">
               <img src={gamicLogo} alt="Gamic Media Logo" className="w-10 h-10 rounded-lg object-contain" />
-              <span className="text-xl font-bold text-foreground">Gamic Media</span>
+              <span className="text-xl font-display font-bold text-foreground">Gamic Media</span>
             </div>
 
             <nav
-              className="flex flex-wrap gap-x-3 gap-y-2 text-sm text-muted-foreground mb-3"
+              className="flex flex-wrap gap-x-3 gap-y-2 font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground mb-4"
               aria-label="Footer navigation"
             >
-              <a href="/#how-we-operate" className="hover:text-foreground transition-colors">
+              <a href="/#how-we-operate" className="hover:text-primary-glow transition-colors">
                 Our Process
               </a>
               <span aria-hidden="true">·</span>
-              <a href="/#case-studies" className="hover:text-foreground transition-colors">
+              <a href="/#case-studies" className="hover:text-primary-glow transition-colors">
                 Case Studies
               </a>
               <span aria-hidden="true">·</span>
-              <a href="/resources" className="hover:text-foreground transition-colors">
+              <a href="/resources" className="hover:text-primary-glow transition-colors">
                 Free Playbooks
               </a>
               <span aria-hidden="true">·</span>
@@ -35,7 +35,7 @@ const Footer = () => {
                 href="https://www.youtube.com/@AryanAryal3"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary-glow transition-colors"
               >
                 YouTube
               </a>
@@ -44,19 +44,19 @@ const Footer = () => {
                 href="https://calendly.com/gamicmedia/discovery-call-clone"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary-glow transition-colors"
               >
                 Book Strategy Call
               </a>
             </nav>
 
             <p className="text-sm text-muted-foreground mb-6">
-              <a href="mailto:aryan@gamicmedia.com" className="hover:text-foreground transition-colors">
+              <a href="mailto:aryan@gamicmedia.com" className="hover:text-primary-glow transition-colors">
                 aryan@gamicmedia.com
               </a>
             </p>
 
-            <p className="text-muted-foreground mb-6 w-full max-w-none">
+            <p className="text-muted-foreground mb-6 measure">
               Gamic Media — The deal origination and outbound desk for M&A advisors, investment banks, and B2B
               agencies. Signal-based outreach under your brand, qualified by real people, booked onto your calendar.
             </p>
@@ -98,7 +98,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">© 2026 Gamic Media. All rights reserved.</p>
+          <p className="eyebrow">© 2026 Gamic Media. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -15,9 +15,9 @@ const partners = [...basePartners, ...basePartners];
 
 const CertifiedPartners = () => {
   return (
-    <section className="py-12 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
-        <h2 className="text-center text-sm font-semibold tracking-widest text-muted-foreground uppercase mb-8">
+    <section className="py-16 bg-background">
+      <div className="container mx-auto px-6">
+        <h2 className="text-center eyebrow mb-10">
           Official Partners of Gamic Media
         </h2>
 

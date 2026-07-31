@@ -70,7 +70,7 @@ const Testimonials = () => {
                 className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-300"
               >
                 {/* Media Section */}
-                <div className="relative bg-gray-800 rounded-t-2xl overflow-hidden h-64">
+                <div className="relative bg-secondary rounded-t-2xl overflow-hidden h-64">
                   <div className="relative w-full h-full flex items-center justify-center">
                     <img
                       src={
@@ -160,7 +160,7 @@ const Testimonials = () => {
                     className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-300"
                   >
                     {/* Media Section */}
-                    <div className="relative bg-gray-800 rounded-t-2xl overflow-hidden h-64">
+                    <div className="relative bg-secondary rounded-t-2xl overflow-hidden h-64">
                       <div className="relative w-full h-full flex items-center justify-center">
                         <img
                           src={
