@@ -14,10 +14,51 @@ const Footer = () => {
               <img src={gamicLogo} alt="Gamic Media Logo" className="w-10 h-10 rounded-lg object-contain" />
               <span className="text-xl font-bold text-foreground">Gamic Media</span>
             </div>
+
+            <nav
+              className="flex flex-wrap gap-x-3 gap-y-2 text-sm text-muted-foreground mb-3"
+              aria-label="Footer navigation"
+            >
+              <a href="/#how-we-operate" className="hover:text-foreground transition-colors">
+                Our Process
+              </a>
+              <span aria-hidden="true">·</span>
+              <a href="/#case-studies" className="hover:text-foreground transition-colors">
+                Case Studies
+              </a>
+              <span aria-hidden="true">·</span>
+              <a href="/resources" className="hover:text-foreground transition-colors">
+                Free Playbooks
+              </a>
+              <span aria-hidden="true">·</span>
+              <a
+                href="https://www.youtube.com/@AryanAryal3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground transition-colors"
+              >
+                YouTube
+              </a>
+              <span aria-hidden="true">·</span>
+              <a
+                href="https://calendly.com/gamicmedia/discovery-call-clone"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground transition-colors"
+              >
+                Book Strategy Call
+              </a>
+            </nav>
+
+            <p className="text-sm text-muted-foreground mb-6">
+              <a href="mailto:aryan@gamicmedia.com" className="hover:text-foreground transition-colors">
+                aryan@gamicmedia.com
+              </a>
+            </p>
+
             <p className="text-muted-foreground mb-6 w-full max-w-none">
-              The premium GTM agency for financial firms and agencies.{" "}
-              <br />
-              We use a mixture of AI outbound tools to book you qualified meetings on autopilot.
+              Gamic Media — The deal origination and outbound desk for M&A advisors, investment banks, and B2B
+              agencies. Signal-based outreach under your brand, qualified by real people, booked onto your calendar.
             </p>
             <nav className="flex justify-end items-center gap-5 mt-6 w-full" aria-label="Social links">
               <a
