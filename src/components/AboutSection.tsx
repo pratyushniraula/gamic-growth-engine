@@ -130,12 +130,19 @@ const AboutSection = () => {
                 and verified every address before outreach.
               </p>
 
-              <img
-                src={peEmailReach.url}
-                alt="Email campaign results: 1,435 owners contacted, 198 replies, 66 interested"
-                className="w-full rounded-lg border shadow-sm"
-                loading="lazy"
-              />
+              <button
+                type="button"
+                onClick={() => setLightboxOpen(true)}
+                className="block w-full text-left group"
+                aria-label="Open email results screenshot"
+              >
+                <img
+                  src={peEmailReach.url}
+                  alt="Email campaign results: 1,435 owners contacted, 198 replies, 66 interested"
+                  className="w-full rounded-lg border shadow-sm group-hover:opacity-90 transition-opacity"
+                  loading="lazy"
+                />
+              </button>
             </div>
 
             <div className="bg-card rounded-xl p-8 border shadow-sm">
