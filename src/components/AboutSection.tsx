@@ -163,15 +163,15 @@ const AboutSection = () => {
                   <div className="text-sm text-muted-foreground">In exact niche</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary">$1M-$15M</div>
-                  <div className="text-sm text-muted-foreground">Revenue band targeted</div>
+                  <div className="text-3xl font-bold text-primary">20 Days</div>
+                  <div className="text-sm text-muted-foreground">For these results</div>
                 </div>
               </div>
 
               <p className="text-sm font-medium mb-4">All in 20 days.</p>
 
               <p className="text-muted-foreground mb-4">
-                We targeted PR agencies in a tight, unique niche, enriched each prospect with competitor-firm and
+                In just 20 days, we targeted PR agencies in a tight, unique niche, enriched each prospect with competitor-firm and
                 industry-specific signals, and opened conversations around consolidation and margin pressure, positioning
                 the firm as a trusted advisor with a no-pressure valuation conversation, not a broker.
               </p>
