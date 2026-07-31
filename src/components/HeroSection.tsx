@@ -1,42 +1,46 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import CountUpStat from "@/components/CountUpStat";
 
 const HeroSection = () => {
   return (
-    <section className="pt-24 pb-16 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
+    <section className="pt-32 pb-24 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="max-w-5xl mx-auto text-center">
           {/* Status Indicator */}
-          <div className="inline-flex items-center px-5 py-2.5 rounded-lg bg-primary/10 text-primary text-sm font-medium mb-6 border border-primary/20">
-            <div className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></div>
-            DEAL ORIGINATION FOR FINANCIAL FIRMS
+          <div className="inline-flex items-center px-4 py-2 rounded-full border border-border bg-card mb-8">
+            <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
+            <span className="eyebrow text-primary-foreground/90">Deal Origination for Financial Firms</span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Off-Market Deal Flow for <span className="text-primary">M&amp;A Advisors &amp; Investment Banks</span>
+          <h1
+            className="font-display font-bold text-foreground mb-8 leading-[1.05]"
+            style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
+          >
+            Off-Market Deal Flow for <span className="text-primary-glow">M&amp;A Advisors &amp; Investment Banks</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground mb-10 measure mx-auto leading-relaxed">
             We find owners showing exit signals, qualify them by phone, and book them onto your calendar, all under your brand. You just close.
           </p>
 
           {/* Value Props */}
-          <div className="flex flex-wrap justify-center gap-6 mb-10">
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12">
             <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="text-muted-foreground">Signal-Based Targeting</span>
+              <CheckCircle className="w-4 h-4 text-primary" />
+              <span className="text-sm text-muted-foreground">Signal-Based Targeting</span>
             </div>
             <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="text-muted-foreground">Human Appointment Setter Qualification</span>
+              <CheckCircle className="w-4 h-4 text-primary" />
+              <span className="text-sm text-muted-foreground">Human Appointment Setter Qualification</span>
             </div>
           </div>
 
           {/* VSL Video */}
-          <div className="mb-8">
-            <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-premium hover:shadow-glow transition-all duration-500 border border-primary/20">
+          <div className="mb-10">
+            <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-premium border border-border">
               <iframe
                 src="https://fast.wistia.net/embed/iframe/lphdfepth3?seo=false&videoFoam=true"
                 title="Gamic Media - VSL"
@@ -51,7 +55,7 @@ const HeroSection = () => {
 
           {/* CTA Button */}
           <div className="flex justify-center">
-            <Button asChild variant="hero" size="xl" className="group hover:animate-none">
+            <Button asChild variant="hero" size="xl" className="group w-full sm:w-auto">
               <a
                 href="https://calendly.com/gamicmedia/discovery-call-clone?"
                 target="_blank"
@@ -65,18 +69,15 @@ const HeroSection = () => {
           </div>
 
           {/* Trust Bar */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 pt-8 border-t border-border">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mt-20 pt-12 border-t border-border">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">10–30</div>
-              <div className="text-sm text-muted-foreground">Qualified seller calls per month</div>
+              <CountUpStat value="10–30" label="Qualified seller calls per month" className="text-4xl md:text-5xl" />
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">14 days</div>
-              <div className="text-sm text-muted-foreground">To first qualified conversation</div>
+              <CountUpStat value="14 days" label="To first qualified conversation" className="text-4xl md:text-5xl" />
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Under your brand</div>
+              <CountUpStat value="100%" label="Under your brand" className="text-4xl md:text-5xl" />
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { Filter, PhoneCall, Shield } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const SolutionSection = () => {
   const features = [
@@ -23,31 +24,33 @@ const SolutionSection = () => {
   ];
 
   return (
-    <section id="solution" className="py-20 bg-background scroll-mt-24 md:scroll-mt-28">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section id="solution" className="py-24 md:py-32 bg-background scroll-mt-24 md:scroll-mt-28">
+      <div className="container mx-auto px-6">
+        <Reveal className="text-center mb-16">
+          <p className="eyebrow mb-4">02 — The Approach</p>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Not Another Platform. <span className="text-primary">A Desk That Does the Work.</span>
+            Not Another Platform. <span className="text-primary-glow">A Desk That Does the Work.</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground measure mx-auto">
             Software hands you a database and leaves the work on your desk, the outreach, the follow-up, the qualifying,
             the guessing about who's real. Gamic runs the entire origination desk for you, under your brand, and hands
             you booked calls with a full brief. You were hired to close deals, not to prospect.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => (
-            <div
+            <Reveal
               key={index}
-              className="bg-card rounded-2xl p-8 shadow-card hover:shadow-premium transition-all duration-300"
+              delay={index * 100}
+              className="surface-card p-8 transition-all duration-200 hover:-translate-y-1 hover:border-primary/40"
             >
-              <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-6">
-                <feature.icon className="w-7 h-7 text-primary-foreground" />
+              <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
+                <feature.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{feature.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
