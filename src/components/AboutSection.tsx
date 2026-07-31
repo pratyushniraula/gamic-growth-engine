@@ -190,6 +190,30 @@ const AboutSection = () => {
           <p className="text-center text-sm text-muted-foreground mt-6">Reference available on request.</p>
         </div>
       </div>
+
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setLightboxOpen(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={() => setLightboxOpen(false)}
+            className="absolute top-4 right-4 text-white hover:text-primary transition-colors"
+            aria-label="Close screenshot"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <img
+            src={peEmailReach.url}
+            alt="Email campaign results: 1,435 owners contacted, 198 replies, 66 interested"
+            className="max-h-full max-w-full rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };
