@@ -1,5 +1,6 @@
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
+import Reveal from "@/components/Reveal";
 const Testimonials = () => {
   const [currentImageIndices, setCurrentImageIndices] = useState<number[]>([0, 0, 0]);
   const testimonials = [
@@ -51,23 +52,24 @@ const Testimonials = () => {
     });
   };
   return (
-    <section id="testimonials" className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section id="testimonials" className="py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-6">
+        <Reveal className="text-center mb-16">
+          <p className="eyebrow mb-4">Testimonials</p>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            What Our <span className="text-primary">Clients Say</span>
+            What Our <span className="text-primary-glow">Clients Say</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground measure mx-auto">
             Don't just take our word for it. Here's what B2B leaders are saying about working with Gamic.
           </p>
-        </div>
+        </Reveal>
 
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.slice(0, 2).map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-300"
+                className="surface-card overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:border-primary/40"
               >
                 {/* Media Section */}
                 <div className="relative bg-secondary rounded-t-2xl overflow-hidden h-64">
@@ -134,7 +136,7 @@ const Testimonials = () => {
 
                   {/* Results */}
                   <div className="bg-primary/5 rounded-lg p-3 mb-6">
-                    <div className="text-base font-semibold text-primary">Results:</div>
+                    <div className="eyebrow">Results</div>
                     <div className="text-base text-muted-foreground font-bold">{testimonial.results}</div>
                   </div>
 
@@ -142,7 +144,7 @@ const Testimonials = () => {
                   <div className="text-center">
                     <div className="font-semibold text-foreground text-lg">{testimonial.author}</div>
                     <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                    <div className="text-sm text-primary font-medium">{testimonial.company}</div>
+                    <div className="stat-label">{testimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -157,7 +159,7 @@ const Testimonials = () => {
                 return (
                   <div
                     key={index}
-                    className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-300"
+                    className="surface-card overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:border-primary/40"
                   >
                     {/* Media Section */}
                     <div className="relative bg-secondary rounded-t-2xl overflow-hidden h-64">
@@ -222,7 +224,7 @@ const Testimonials = () => {
 
                       {/* Results */}
                       <div className="bg-primary/5 rounded-lg p-3 mb-6">
-                        <div className="text-base font-semibold text-primary">Results:</div>
+                        <div className="eyebrow">Results</div>
                         <div className="text-base text-muted-foreground font-bold">{testimonial.results}</div>
                       </div>
 
@@ -230,7 +232,7 @@ const Testimonials = () => {
                       <div className="text-center">
                         <div className="font-semibold text-foreground text-lg">{testimonial.author}</div>
                         <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                        <div className="text-sm text-primary font-medium">{testimonial.company}</div>
+                        <div className="stat-label">{testimonial.company}</div>
                       </div>
                     </div>
                   </div>
