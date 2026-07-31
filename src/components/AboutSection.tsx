@@ -1,11 +1,8 @@
-import { useState } from "react";
-import { AlertTriangle, Repeat, UserMinus, X } from "lucide-react";
-import peEmailReach from "@/assets/pe-email-reach.png.asset.json";
+import { AlertTriangle, Repeat, UserMinus } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import CountUpStat from "@/components/CountUpStat";
 
 const AboutSection = () => {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
   const problems = [
     {
       icon: <Repeat className="h-6 w-6" aria-hidden="true" />,
@@ -62,7 +59,7 @@ const AboutSection = () => {
           <p className="eyebrow text-center mb-10">Here's what changes when the origination runs like a system</p>
 
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
-            <Reveal className="surface-card p-8">
+            <Reveal className="surface-card p-8 flex flex-col">
               <h3 className="text-2xl font-bold mb-1">Sell Side Boutique Group</h3>
               <p className="text-sm text-muted-foreground mb-8">Sell-side M&amp;A boutique, manufacturing</p>
 
@@ -85,15 +82,15 @@ const AboutSection = () => {
                 href="https://gamma.app/docs/CRR-Case-Study-tptymyf5wjfcc38?mode=doc"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary font-medium hover:text-primary-glow transition-colors"
+                className="mt-auto text-primary font-medium hover:text-primary-glow transition-colors"
               >
                 Check out the full breakdown here
               </a>
             </Reveal>
 
-            <Reveal delay={100} className="surface-card p-8">
-
+            <Reveal delay={100} className="surface-card p-8 flex flex-col">
               <h3 className="text-2xl font-bold mb-1">Private Equity Firm</h3>
+
               <p className="text-sm text-muted-foreground mb-8">Youth sports programs, $1M+ revenue</p>
 
               <div className="grid grid-cols-2 gap-6 mb-8">
@@ -106,28 +103,23 @@ const AboutSection = () => {
               <p className="eyebrow mb-4">Founder-run camps, tournaments, and travel teams</p>
 
               <p className="text-muted-foreground mb-6">
-                The client buys founder-run youth sports businesses, but the owners were invisible to normal B2B databases.
-                We skipped LinkedIn and generic data providers and scraped the directories these businesses actually show up on,
-                including tournament boards, camp registries, and governing-body listings, then worked backwards to find the named owner
-                and verified every address before outreach.
+                The client buys founder-run youth sports businesses, but the owners were invisible to standard B2B
+                databases. We skipped LinkedIn and generic providers, scraped the directories these businesses actually
+                appear on, including tournament boards, camp registries, and governing-body listings, then worked
+                backwards to the named owner and verified every address before outreach.
               </p>
 
-              <button
-                type="button"
-                onClick={() => setLightboxOpen(true)}
-                className="block w-full text-left group"
-                aria-label="Open email results screenshot"
+              <a
+                href="https://gamma.app/docs/GGC-Case-Study-ezhol9boggylm63?mode=doc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto text-primary font-medium hover:text-primary-glow transition-colors"
               >
-                <img
-                  src={peEmailReach.url}
-                  alt="Email campaign results: 1,435 owners contacted, 198 replies, 66 interested"
-                  className="w-full rounded-xl border border-border group-hover:opacity-90 transition-opacity"
-                  loading="lazy"
-                />
-              </button>
+                Check out the full breakdown here
+              </a>
             </Reveal>
 
-            <Reveal delay={200} className="surface-card p-8">
+            <Reveal delay={200} className="surface-card p-8 flex flex-col">
               <h3 className="text-2xl font-bold mb-1">Sell-Side Advisory Firm</h3>
               <p className="text-sm text-muted-foreground mb-8">PR agencies, $1M-$15M revenue</p>
 
@@ -150,41 +142,16 @@ const AboutSection = () => {
                 href="https://gamma.app/docs/GOP-e6ddtp51jograal?mode=doc"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary font-medium hover:text-primary-glow transition-colors"
+                className="mt-auto text-primary font-medium hover:text-primary-glow transition-colors"
               >
                 Check out the full breakdown here
               </a>
             </Reveal>
           </div>
 
-          <p className="text-center eyebrow mt-8">Reference available on request</p>
-
         </div>
       </div>
 
-      {lightboxOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
-          onClick={() => setLightboxOpen(false)}
-          role="dialog"
-          aria-modal="true"
-        >
-          <button
-            type="button"
-            onClick={() => setLightboxOpen(false)}
-            className="absolute top-4 right-4 text-white hover:text-primary transition-colors"
-            aria-label="Close screenshot"
-          >
-            <X className="w-8 h-8" />
-          </button>
-          <img
-            src={peEmailReach.url}
-            alt="Email campaign results: 1,435 owners contacted, 198 replies, 66 interested"
-            className="max-h-full max-w-full rounded-lg shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
     </section>
   );
 };
