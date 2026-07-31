@@ -83,7 +83,7 @@ const AboutSection = () => {
               <p className="text-sm font-medium mb-4">All in under 30 days.</p>
 
               <p className="text-muted-foreground mb-4">
-                We sourced lower-middle-market manufacturers around $1M–$5M EBITDA matching the buyer's exact criteria,
+                We sourced lower-middle-market manufacturers around $1M-$5M EBITDA matching the buyer's exact criteria,
                 layered in a CFO-hire readiness signal, and positioned the firm as a discreet sell-side advisor running a
                 buyer-backed search, not a broker blasting the market.
               </p>
@@ -125,8 +125,8 @@ const AboutSection = () => {
 
               <p className="text-muted-foreground mb-4">
                 The client buys founder-run youth sports businesses, but the owners were invisible to normal B2B databases.
-                We skipped LinkedIn and generic data providers and scraped the directories these businesses actually show up on
-                — tournament boards, camp registries, and governing-body listings — then worked backwards to find the named owner
+                We skipped LinkedIn and generic data providers and scraped the directories these businesses actually show up on,
+                including tournament boards, camp registries, and governing-body listings, then worked backwards to find the named owner
                 and verified every address before outreach.
               </p>
 
@@ -147,7 +147,7 @@ const AboutSection = () => {
 
             <div className="bg-card rounded-xl p-8 border shadow-sm">
               <h3 className="text-2xl font-bold mb-1">Sell-Side Advisory Firm</h3>
-              <p className="text-muted-foreground mb-6">PR agencies, $1M–$15M revenue</p>
+              <p className="text-muted-foreground mb-6">PR agencies, $1M-$15M revenue</p>
 
               <div className="grid grid-cols-2 gap-6 mb-6">
                 <div>
@@ -163,7 +163,7 @@ const AboutSection = () => {
                   <div className="text-sm text-muted-foreground">In exact niche</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary">$1M–$15M</div>
+                  <div className="text-3xl font-bold text-primary">$1M-$15M</div>
                   <div className="text-sm text-muted-foreground">Revenue band targeted</div>
                 </div>
               </div>
@@ -172,7 +172,7 @@ const AboutSection = () => {
 
               <p className="text-muted-foreground mb-4">
                 We targeted PR agencies in a tight, unique niche, enriched each prospect with competitor-firm and
-                industry-specific signals, and opened conversations around consolidation and margin pressure — positioning
+                industry-specific signals, and opened conversations around consolidation and margin pressure, positioning
                 the firm as a trusted advisor with a no-pressure valuation conversation, not a broker.
               </p>
 
