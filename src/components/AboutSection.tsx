@@ -1,7 +1,9 @@
-import { AlertTriangle, Repeat, UserMinus } from "lucide-react";
+import { useState } from "react";
+import { AlertTriangle, Repeat, UserMinus, X } from "lucide-react";
 import peEmailReach from "@/assets/pe-email-reach.png.asset.json";
 
 const AboutSection = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const problems = [
     {
       icon: <Repeat className="h-6 w-6" aria-hidden="true" />,
