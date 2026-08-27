@@ -58,25 +58,47 @@ const AboutSection = () => {
         <div className="rounded-2xl border border-border bg-card/50 p-6 md:p-10">
           <p className="eyebrow text-center mb-10">Here's what changes when the origination runs like a system</p>
 
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
-            <Reveal className="surface-card p-8 flex flex-col">
-              <h3 className="text-2xl font-bold mb-1">Sell Side Boutique Group</h3>
-              <p className="text-sm text-muted-foreground mb-8">Sell-side M&amp;A boutique, manufacturing</p>
-
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <CountUpStat value="43" label="Qualified seller leads" className="text-4xl" />
-                <CountUpStat value="9" label="Calls booked" className="text-4xl" />
-                <CountUpStat value="2" label="Mandates signed" className="text-4xl" />
-                <CountUpStat value="1" label="NDA executed" className="text-4xl" />
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 max-w-7xl mx-auto items-stretch">
+            {/* Card 1 — Carrara Strategy Group */}
+            <Reveal className="surface-card p-8 flex flex-col h-full">
+              <div className="mb-6">
+                <img
+                  src="/images/carrara-logo.png"
+                  alt="Carrara Strategy Group"
+                  className="h-8 w-auto object-contain mb-3"
+                />
+                <h3 className="text-2xl font-bold mb-1">Carrara Strategy Group</h3>
+                <p className="text-sm text-muted-foreground">Sell-side M&amp;A, lower-middle-market manufacturing</p>
               </div>
 
-              <p className="eyebrow mb-4">All in under 30 days</p>
+              <div className="grid grid-cols-2 gap-6 mb-8">
+                <CountUpStat value="130" label="Interested seller leads" className="text-4xl" />
+                <CountUpStat value="54" label="Conversations booked" className="text-4xl" />
+                <CountUpStat value="2" label="Mandates signed" className="text-4xl" />
+                <CountUpStat value="$10-20MM" label="Transaction in diligence" className="text-4xl" />
+              </div>
+
+              <p className="eyebrow mb-4">90 days — Memorial Day to Labor Day</p>
 
               <p className="text-muted-foreground mb-6">
-                We sourced lower-middle-market manufacturers around $1M-$5M EBITDA matching the buyer's exact criteria,
-                layered in a CFO-hire readiness signal, and positioned the firm as a discreet sell-side advisor running a
-                buyer-backed search, not a broker blasting the market.
+                We sourced manufacturers at $1M-$5M EBITDA matching the buyer's exact criteria, layered in a CFO-hire
+                readiness signal, and positioned Carrara as a discreet sell-side advisor running a buyer-backed search,
+                not a broker blasting the market.
               </p>
+
+              <div className="border-t border-primary/10 my-6" />
+
+              <div className="flex items-start gap-4 mb-6">
+                <img
+                  src="/images/marco-barone.jpg"
+                  alt="Marco Barone, Managing Partner at Carrara Strategy Group"
+                  className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+                />
+                <div>
+                  <p className="text-xl md:text-[1.25rem] italic text-primary-glow mb-2">"The calendar is full."</p>
+                  <p className="eyebrow text-muted-foreground">Marco Barone — Managing Partner, Carrara Strategy Group</p>
+                </div>
+              </div>
 
               <a
                 href="https://gamma.app/docs/CRR-Case-Study-tptymyf5wjfcc38?mode=doc"
@@ -88,25 +110,27 @@ const AboutSection = () => {
               </a>
             </Reveal>
 
-            <Reveal delay={100} className="surface-card p-8 flex flex-col">
+            {/* Card 2 — Private Equity Firm */}
+            <Reveal delay={100} className="surface-card p-8 flex flex-col h-full">
               <h3 className="text-2xl font-bold mb-1">Private Equity Firm</h3>
 
               <p className="text-sm text-muted-foreground mb-8">Youth sports programs, $1M+ revenue</p>
 
               <div className="grid grid-cols-2 gap-6 mb-8">
-                <CountUpStat value="1,435" label="Owners contacted" className="text-4xl" />
-                <CountUpStat value="198" label="Replies received" className="text-4xl" />
-                <CountUpStat value="66" label="Interested owners" className="text-4xl" />
-                <CountUpStat value="1 in 22" label="Positive response rate" className="text-4xl" />
+                <CountUpStat value="4,724" label="Owners built" className="text-4xl" />
+                <CountUpStat value="172" label="Interested owners" className="text-4xl" />
+                <CountUpStat value="140" label="Disqualified by us" className="text-4xl" />
+                <CountUpStat value="5" label="NDAs signed" className="text-4xl" />
               </div>
 
-              <p className="eyebrow mb-4">Founder-run camps, tournaments, and travel teams</p>
+              <p className="eyebrow mb-4">43 days</p>
 
               <p className="text-muted-foreground mb-6">
                 The client buys founder-run youth sports businesses, but the owners were invisible to standard B2B
                 databases. We skipped LinkedIn and generic providers, scraped the directories these businesses actually
                 appear on, including tournament boards, camp registries, and governing-body listings, then worked
-                backwards to the named owner and verified every address before outreach.
+                backwards to the named owner and verified every address before outreach. Of the 172 owners who came back
+                interested, we screened out 140 before a partner ever saw a name.
               </p>
 
               <a
@@ -119,15 +143,16 @@ const AboutSection = () => {
               </a>
             </Reveal>
 
-            <Reveal delay={200} className="surface-card p-8 flex flex-col">
+            {/* Card 3 — Sell-Side Advisory Firm */}
+            <Reveal delay={200} className="surface-card p-8 flex flex-col h-full">
               <h3 className="text-2xl font-bold mb-1">Sell-Side Advisory Firm</h3>
               <p className="text-sm text-muted-foreground mb-8">PR agencies, $1M-$15M revenue</p>
 
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <CountUpStat value="61" label="Leads sourced" className="text-4xl" />
                 <CountUpStat value="17" label="Calls booked" className="text-4xl" />
-                <CountUpStat value="100%" label="In exact niche" className="text-4xl" />
-                <CountUpStat value="20 Days" label="For these results" className="text-4xl" />
+                <CountUpStat value="$300K-$800K" label="In potential advisory fees" className="text-4xl" />
+                <CountUpStat value="20" label="Days" className="text-4xl" />
               </div>
 
               <p className="eyebrow mb-4">All in 20 days</p>
