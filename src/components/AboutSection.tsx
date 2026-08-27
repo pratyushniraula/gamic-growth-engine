@@ -62,11 +62,11 @@ const AboutSection = () => {
             {/* Card 1 — Carrara Strategy Group */}
             <Reveal className="surface-card p-8 flex flex-col h-full">
               <div className="mb-6">
-                <div className="inline-block bg-[#F8F9FC] rounded-lg px-3.5 py-2.5 mb-4">
+                <div className="inline-block bg-[#F8F9FC] rounded-lg px-2.5 py-1.5 mb-4">
                   <img
                     src="/images/carrara-logo.png"
                     alt="Carrara Strategy Group"
-                    className="h-14 w-auto object-contain"
+                    className="h-10 w-auto object-contain"
                   />
                 </div>
                 <h3 className="text-2xl font-bold mb-1">Carrara Strategy Group</h3>
