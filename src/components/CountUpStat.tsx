@@ -17,6 +17,8 @@ const CountUpStat = ({ value, label, className, labelClassName }: StatProps) => 
 
   const match = value.match(/(\d[\d,]*)(?!.*\d)/);
   const target = match ? Number(match[1].replace(/,/g, "")) : null;
+  const isLong = value.length > 6;
+  const isNoWrap = /[$\-]/.test(value);
 
   useEffect(() => {
     if (target === null || !match) return;
@@ -43,8 +45,17 @@ const CountUpStat = ({ value, label, className, labelClassName }: StatProps) => 
   }, [inView, target, value]);
 
   return (
-    <div ref={ref}>
-      <div className={cn("stat-value", className)}>{display}</div>
+    <div ref={ref} className="min-w-0">
+      <div
+        className={cn(
+          "stat-value break-words",
+          className,
+          isLong && "text-2xl md:text-3xl",
+          isNoWrap && "whitespace-nowrap"
+        )}
+      >
+        {display}
+      </div>
       {label && <div className={cn("stat-label mt-1", labelClassName)}>{label}</div>}
     </div>
   );
