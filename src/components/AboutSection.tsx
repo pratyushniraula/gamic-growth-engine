@@ -100,11 +100,13 @@ const AboutSection = () => {
                 </div>
               </div>
 
+              <div className="flex-grow min-h-0" />
+
               <a
                 href="https://gamma.app/docs/CRR-Case-Study-tptymyf5wjfcc38?mode=doc"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-auto text-primary font-medium hover:text-primary-glow transition-colors"
+                className="text-primary font-medium hover:text-primary-glow transition-colors"
               >
                 Check out the full breakdown here
               </a>
@@ -133,11 +135,13 @@ const AboutSection = () => {
                 interested, we screened out 140 before a partner ever saw a name.
               </p>
 
+              <div className="flex-grow min-h-0" />
+
               <a
                 href="https://gamma.app/docs/GGC-Case-Study-ezhol9boggylm63?mode=doc"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-auto text-primary font-medium hover:text-primary-glow transition-colors"
+                className="text-primary font-medium hover:text-primary-glow transition-colors"
               >
                 Check out the full breakdown here
               </a>
@@ -151,23 +155,26 @@ const AboutSection = () => {
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <CountUpStat value="61" label="Leads sourced" className="text-4xl" />
                 <CountUpStat value="17" label="Calls booked" className="text-4xl" />
-                <CountUpStat value="$300K-$800K" label="In potential advisory fees" className="text-4xl" />
-                <CountUpStat value="20" label="Days" className="text-4xl" />
+                <div className="col-span-2">
+                  <CountUpStat value="$300K-$800K" label="In potential advisory fees" className="text-3xl" />
+                </div>
               </div>
 
               <p className="eyebrow mb-4">All in 20 days</p>
 
               <p className="text-muted-foreground mb-6">
-                In just 20 days, we targeted PR agencies in a tight, unique niche, enriched each prospect with competitor-firm and
+                We targeted PR agencies in a tight, unique niche, enriched each prospect with competitor-firm and
                 industry-specific signals, and opened conversations around consolidation and margin pressure, positioning
                 the firm as a trusted advisor with a no-pressure valuation conversation, not a broker.
               </p>
+
+              <div className="flex-grow min-h-0" />
 
               <a
                 href="https://gamma.app/docs/GOP-e6ddtp51jograal?mode=doc"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-auto text-primary font-medium hover:text-primary-glow transition-colors"
+                className="text-primary font-medium hover:text-primary-glow transition-colors"
               >
                 Check out the full breakdown here
               </a>
