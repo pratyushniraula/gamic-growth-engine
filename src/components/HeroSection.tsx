@@ -1,8 +1,25 @@
+import { createElement, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import CountUpStat from "@/components/CountUpStat";
 
 const HeroSection = () => {
+  useEffect(() => {
+    const scripts = [
+      { src: "https://fast.wistia.com/player.js", type: "text/javascript" },
+      { src: "https://fast.wistia.com/embed/1pi6pqtegx.js", type: "module" },
+    ];
+
+    scripts.forEach(({ src, type }) => {
+      if (document.querySelector(`script[src="${src}"]`)) return;
+      const script = document.createElement("script");
+      script.src = src;
+      script.type = type;
+      script.async = true;
+      document.head.appendChild(script);
+    });
+  }, []);
+
   return (
     <section className="pt-32 pb-24 bg-background">
       <div className="container mx-auto px-6">
@@ -41,15 +58,12 @@ const HeroSection = () => {
           {/* VSL Video */}
           <div className="mb-10">
             <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-premium border border-border">
-              <iframe
-                src="https://fast.wistia.net/embed/iframe/lphdfepth3?seo=false&videoFoam=true"
-                title="Gamic Media - VSL"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="w-full h-full"
-              ></iframe>
+              {createElement("wistia-player", {
+                "media-id": "1pi6pqtegx",
+                aspect: "1.7777777777777777",
+                "aria-label": "Gamic Media video",
+                className: "gamic-vsl-player",
+              })}
             </div>
           </div>
 
