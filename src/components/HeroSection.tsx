@@ -57,7 +57,7 @@ const HeroSection = () => {
 
           {/* VSL Video */}
           <div className="mb-10">
-            <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-premium border border-border">
+            <div className="relative w-full max-w-6xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-premium border border-border">
               {createElement("wistia-player", {
                 "media-id": "1pi6pqtegx",
                 aspect: "1.7777777777777777",
