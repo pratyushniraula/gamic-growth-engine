@@ -1,0 +1,1 @@
+- Load Wistia inline player scripts in the video component and render its custom element, so the VSL uses Wistia's native inline experience without modifying the document shell.

@@ -142,6 +142,17 @@
   .surface-card {
     @apply bg-card border border-border rounded-2xl shadow-card;
   }
+
+  .gamic-vsl-player {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .gamic-vsl-player:not(:defined) {
+    background: center / contain no-repeat url("https://fast.wistia.com/embed/medias/1pi6pqtegx/swatch");
+    filter: blur(5px);
+  }
 }
 
 @layer utilities {
