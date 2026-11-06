@@ -75,7 +75,7 @@ const AboutSection = () => {
 
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <CountUpStat value="130" label="Interested seller leads" className="text-4xl" />
-                <CountUpStat value="54" label="Conversations booked" className="text-4xl" />
+                <CountUpStat value="80" label="Conversations booked" className="text-4xl" />
                 <CountUpStat value="10" label="Mandates signed" className="text-4xl" />
                 <CountUpStat value="$30M+" label="In transactions, approximately" className="text-4xl" />
               </div>
@@ -90,18 +90,6 @@ const AboutSection = () => {
 
               <div className="border-t border-primary/10 my-6" />
 
-              <div className="flex items-start gap-4 mb-6">
-                <img
-                  src="/images/marco-barone.jpg"
-                  alt="Marco Barone, Managing Partner at Carrara Strategy Group"
-                  className="w-12 h-12 rounded-full object-cover flex-shrink-0"
-                />
-                <div>
-                  <p className="text-xl md:text-[1.25rem] italic text-primary-glow mb-2">"The calendar is full."</p>
-                  <p className="eyebrow text-muted-foreground">Marco Barone — Managing Partner, Carrara Strategy Group</p>
-                </div>
-              </div>
-
               <div className="aspect-video w-full overflow-hidden rounded-lg border border-border mb-6">
                 <iframe
                   src="https://www.youtube-nocookie.com/embed/rC9xSSpV9ds"
@@ -112,6 +100,18 @@ const AboutSection = () => {
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
                 />
+              </div>
+
+              <div className="flex items-start gap-4 mb-6">
+                <img
+                  src="/images/marco-barone.jpg"
+                  alt="Marco Barone, Managing Partner at Carrara Strategy Group"
+                  className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+                />
+                <div>
+                  <p className="text-xl md:text-[1.25rem] italic text-primary-glow mb-2">"The calendar is full."</p>
+                  <p className="eyebrow text-muted-foreground">Marco Barone — Managing Partner, Carrara Strategy Group</p>
+                </div>
               </div>
 
               <div className="flex-grow min-h-0" />
