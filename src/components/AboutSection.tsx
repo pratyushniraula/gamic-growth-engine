@@ -76,11 +76,11 @@ const AboutSection = () => {
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <CountUpStat value="130" label="Interested seller leads" className="text-4xl" />
                 <CountUpStat value="54" label="Conversations booked" className="text-4xl" />
-                <CountUpStat value="2" label="Mandates signed" className="text-4xl" />
-                <CountUpStat value="$10-20MM" label="Transaction in diligence" className="text-4xl" />
+                <CountUpStat value="10" label="Mandates signed" className="text-4xl" />
+                <CountUpStat value="$30M+" label="In transactions, approximately" className="text-4xl" />
               </div>
 
-              <p className="eyebrow mb-4">90 days — Memorial Day to Labor Day</p>
+              <p className="eyebrow mb-4">5–6 months</p>
 
               <p className="text-muted-foreground mb-6">
                 We sourced manufacturers at $1M-$5M EBITDA matching the buyer's exact criteria, layered in a CFO-hire
@@ -100,6 +100,18 @@ const AboutSection = () => {
                   <p className="text-xl md:text-[1.25rem] italic text-primary-glow mb-2">"The calendar is full."</p>
                   <p className="eyebrow text-muted-foreground">Marco Barone — Managing Partner, Carrara Strategy Group</p>
                 </div>
+              </div>
+
+              <div className="aspect-video w-full overflow-hidden rounded-lg border border-border mb-6">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/rC9xSSpV9ds"
+                  title="Carrara Strategy Group case study video"
+                  className="h-full w-full"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
               </div>
 
               <div className="flex-grow min-h-0" />
