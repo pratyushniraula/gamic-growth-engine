@@ -185,7 +185,7 @@ const AboutSection = () => {
               <div className="flex-grow min-h-0" />
 
               <a
-                href="https://gamma.app/docs/GOP-e6ddtp51jograal?mode=doc"
+                href="https://gamma.app/docs/GOP-e6ddtp51jograal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary font-medium hover:text-primary-glow transition-colors"
