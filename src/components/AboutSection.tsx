@@ -117,7 +117,7 @@ const AboutSection = () => {
               <div className="flex-grow min-h-0" />
 
               <a
-                href="https://gamma.app/docs/CRR-Case-Study-tptymyf5wjfcc38?mode=doc"
+                href="https://gamma.app/docs/Carrara-Strategy-Group-Case-Study-mjsg79cvb9hbxbc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary font-medium hover:text-primary-glow transition-colors"
